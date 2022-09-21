@@ -23,4 +23,4 @@ Steps 1-4 are Windows setup instructions. Once you have completed steps 1-4, you
 
 Once Windows Terminal is setup, you should be good for the lifetime of your Windows install (pending needed updates if there are any).
 
-You will need to repeat steps 5-7 if you decide to delete your current install of Ubuntu and reinstall it.
+You will need to repeat steps 5-7 if you decide to delete your current install of Debian and reinstall it.
