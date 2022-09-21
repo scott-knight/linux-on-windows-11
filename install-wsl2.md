@@ -1,6 +1,6 @@
 # Install Windows 11 WSL 2
 
-This document explains how to install Windows 10 WSL 2. Information for this guide was taken from [here](https://www.tecklyfe.com/how-to-enable-wsl2-on-windows-10/), and [here](https://www.windowscentral.com/how-install-wsl2-windows-10).
+This document explains how to install Windows 11 WSL 2. Information for this guide was taken from [here](https://www.tecklyfe.com/how-to-enable-wsl2-on-windows-10/), and [here](https://www.windowscentral.com/how-install-wsl2-windows-10).
 
 ## Installation Steps
 
