@@ -15,13 +15,12 @@ To get everything working correctly, you will need to install the new Windows Te
 <br/>
 
 4. After the Windows Terminal app window loads, click the `Install` button.
-5. After it installs, click on the 3-dot elipses, and click `Pin to Start`
-
-![pin to start](https://user-images.githubusercontent.com/516548/112906501-e295a080-90b1-11eb-824d-a24eb588add8.png)
+5. After it installs, click the Microsoft Store Library icon on the lower left
+6. Then click, Get Updates
 
 <br/>
 
-6. Close Micrsoft Store.
+6. Close Micrsoft Store and reboot.
 7. Click on the Windows Start icon. You should see `Terminal` icon in the Start Menu
 
 ![terminal](https://user-images.githubusercontent.com/516548/112906652-24bee200-90b2-11eb-852e-3bf285f7c9d5.png)
