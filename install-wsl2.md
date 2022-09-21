@@ -1,27 +1,21 @@
 # Install Windows 11 WSL 2
 
-This document explains how to install Windows 11 WSL 2. Information for this guide was taken from [here](https://www.tecklyfe.com/how-to-enable-wsl2-on-windows-10/), and [here](https://www.windowscentral.com/how-install-wsl2-windows-10).
+This document explains how to install Windows 11 WSL 2. 
 
 ## Installation Steps
 
 1. Enter your computers BIOS and make sure (Hyper-V) virtualization is enabled (if it isn't already). Save the settings and reboot.
-2. Open the PowerShell as Administrator: Click the Windows Start icon. Scroll to and click the `Windows PowerShell` folder. Right-click on the `Windows PowerShell` icon. Click on `Run as Administrator`. 
+2. After rebooting, click the Windows Icon and the Settings icon
+3. Once settings is open, click Apps, then Optional Features, then scroll to see the More Windows Features selection. Click, More Windows features:
 
-![run as administrator](https://user-images.githubusercontent.com/516548/112900455-27690980-90a9-11eb-9d0f-0d9f898070a1.png)
+![apps-optional-features](https://user-images.githubusercontent.com/516548/191402388-f7504f4a-1ae3-49f1-8efc-2c653b2787bd.png)
 
-3. Run, one of the two, following commands in the console (either command does the same thing):
+4. Select, Virtual Machine Platform and Windows Subsystem for Linux.
 
-```sh
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-```
-OR
+![windows selection](https://user-images.githubusercontent.com/516548/191402641-3bd76611-842b-4f7c-836e-d163b8527f0c.png)
 
-```sh
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-```
-
-4. Reboot
-5. After the reboot, open PowerShell as Administrator (repeat step 2)
+5. Reboot (if prompted)
+6. After the reboot, open PowerShell as Administrator
 6. Run, one of the two, following commands in the console (either command does the same thing):
 
 ```sh
@@ -33,7 +27,7 @@ OR
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
-7. Reboot
+7. Reboot (if prompted)
 8. After the reboot, open PowerShell as Administrator (repeat step 2) 
 9. Run the following commands in the console::
 
