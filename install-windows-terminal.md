@@ -21,21 +21,22 @@ To get everything working correctly, you will need to install the new Windows Te
 <br/>
 
 6. Close Micrsoft Store and reboot.
-7. Click on the Windows Start icon. You should see `Terminal` icon in the Start Menu
+7. Click on the Windows Start icon, then type `Terminal`. You should see the terminal icon. Right-click the icon and select, Pin to Start.
 
-![terminal](https://user-images.githubusercontent.com/516548/112906652-24bee200-90b2-11eb-852e-3bf285f7c9d5.png)
+![terminal1](https://user-images.githubusercontent.com/516548/191406212-3ce8fb5d-eaae-4ab1-be89-447406b061ad.png)
+
 
 <br/>
 
 ## Using Terminal
 
-If you right-click on `Terminal` icon in the `Start Menu`. You will see a list of available terminial options:
+Click on the `Terminal` icon in the `Start Menu`. Once it opens, click the down arrow on the right, then click Settings:
 
-![terminal options](https://user-images.githubusercontent.com/516548/112906800-6bacd780-90b2-11eb-956c-bca8abee1805.png)
+![term-settings](https://user-images.githubusercontent.com/516548/191406723-a7aac225-6a78-4981-9f29-f65ebf4e2117.png)
+
+After clicking settings you will see a selection for Default Profile. Here you can select Debian, once it's installed.
 
 <br/>
-
-In this example, you can see that I already have Ubuntu installed. You will also see that option once it's installed on your computer. It won't be there until it's installed.
 
 Now you are ready to move to the [next setup step](https://github.com/scott-knight/ubuntu-on-windows-setup/blob/main/Install%20oh-my-posh-and-required-libraries.md).
 
