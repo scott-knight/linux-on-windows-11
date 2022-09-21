@@ -10,7 +10,7 @@ To get everything working correctly, you will need to install the new Windows Te
 2. In the search bar type `Windows Terminal`.
 3. Select `Windows Terminal` app.
 
-![store-windows-terminal](https://user-images.githubusercontent.com/516548/112906259-83379080-90b1-11eb-9405-bbf63c99fad3.png)
+![windows-terminal](https://user-images.githubusercontent.com/516548/191404365-c010101c-9742-4681-85ec-4dd6913650bd.png)
 
 <br/>
 
