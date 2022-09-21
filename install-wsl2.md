@@ -15,8 +15,8 @@ This document explains how to install Windows 11 WSL 2.
 ![windows selection](https://user-images.githubusercontent.com/516548/191402641-3bd76611-842b-4f7c-836e-d163b8527f0c.png)
 
 5. Reboot (if prompted)
-6. After the reboot, open PowerShell as Administrator
-6. Run, one of the two, following commands in the console (either command does the same thing):
+7. After the reboot, open PowerShell as Administrator
+8. Run, one of the two, following commands in the console (either command does the same thing):
 
 ```sh
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -27,9 +27,9 @@ OR
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
-7. Reboot (if prompted)
-8. After the reboot, open PowerShell as Administrator (repeat step 2) 
-9. Run the following commands in the console::
+9. Reboot (if prompted)
+10. After the reboot, open PowerShell as Administrator (repeat step 2) 
+11. Run the following commands in the console::
 
 ```sh
 wsl --set-default-version 2
