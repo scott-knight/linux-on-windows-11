@@ -82,7 +82,6 @@ Below is an example of settings. You can copy/paste any (or all) of these settin
 {
   "workbench.startupEditor": "newUntitledFile",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Sunburst",
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
@@ -94,13 +93,27 @@ Below is an example of settings. You can copy/paste any (or all) of these settin
   "editor.rulers": [
     120
   ],
-"explorer.confirmDragAndDrop": false,
+  "scss.validate": false,
+  "explorer.confirmDragAndDrop": false,
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
-  }
+  },
+"svelte.enable-ts-plugin": true,
+"security.workspace.trust.untrustedFiles": "open",
+"files.insertFinalNewline": true,
+"html.format.endWithNewline": true,
+"vscode-edge-devtools.mirrorEdits": true,
+"bracket-pair-colorizer-2.depreciation-notice": false,
+"workbench.editor.showTabs": true,
+"ruby.intellisense": "rubyLocate",
+"git.autofetch": true,
+"workbench.colorTheme": "Sunburst",
+"redhat.telemetry.enabled": false,
+"yaml.maxItemsComputed": 200000,
+"githubPullRequests.pullBranch": "never",
 }
 ```
 
 Once your account is ready to sync, your extensions are installed and your JSON settings are in place, you are good to go. The next time you install VS Code, simply log in to your account (as previously described) and all the extensions and settings will automatically pull down to yourl local VS Code, saving you a ton of time in setup.
 
-Now you are ready to move to the [next setup step](https://github.com/scott-knight/ubuntu-on-windows-setup/blob/main/install-windows-terminal.md).
+Now you are ready to move to the [next setup step](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-windows-terminal.md).
