@@ -8,7 +8,7 @@ Once you have Ubuntu installed you will need to configure Windows Terminal to us
 
 1. To open the `Windows Terminal` settings, click the `Start Menu` icon, and click the `Terminal` icon 
 
-![windows-terminal-icon](https://user-images.githubusercontent.com/516548/112922118-8b9fc380-90d1-11eb-9d23-131cdd7e92f1.png)
+![Terminal Icon Start Menu](https://user-images.githubusercontent.com/516548/192063544-fc6a4fdf-ce4b-4eb4-a160-502a99e01b2d.png)
 
 <br/>
 
