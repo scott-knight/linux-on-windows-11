@@ -18,7 +18,23 @@ wsl --update
 
 <br/>
 
+## Install Debian
+
+If you would like to use Debain, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, I've noted where there are installation differences. Where is mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian.  
+
+To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
+
+```sh
+wsl --install -d Debian
+```
+
+Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
+
+<br/>
+
 ## Install Ubuntu
+
+If you would like to use Ubuntu, the setup requires a number of steps. 
 
 1. In the Windows Store, and search for Ubuntu:
 
