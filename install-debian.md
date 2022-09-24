@@ -16,46 +16,47 @@ Once open, run the following:
 wsl --update
 ```
 
+<br/>
 
 ## Install Debian
 
-You can download and install any version of Ubuntu, there is a way to do it via the console. However, the easiest way to install Ubuntu is to download it from the Microsoft Store. 
+1. In the Windows PowerShell, run the following:
 
-1. Open the Microsoft Store
-2. In the search field, type `ubuntu`
+```sh
+wsl -l -o
+```
 
-![store-ubuntu](https://user-images.githubusercontent.com/516548/112919729-46799280-90cd-11eb-849e-0e7495bb1f3f.png)
+This will list the available Linux distros availabe for WSL
 
-<br/>
-
-3. Select the first option, `Ubuntu app`. This will install the latest LTS of Ubuntu. 
-4. Once installed, click the `Launch` button. This will open a new termial session. 
-5. In the terminal session, it will ask for a user name. Input any username you want. I use the first inital of my first name in combination with my last name `sknight`.
-6. After creating your user name, it will ask for a password. Choose a password and hit enter. It will ask you to re-enter the password again to verify.
-7. Once done with setting up your user name and password, it will open a Bash console session, you will in the Ubuntu instance in your home directory. 
+![linux-distros](https://user-images.githubusercontent.com/516548/192078030-273b9c25-f144-4942-9810-bba6048386aa.png)
 
 <br/>
 
-## Opening an Ubuntu instance
+2. To install the Debian distro, run the following command:
 
-Now that you have Ubuntu installed, you can right-click on the Windows Terminal icon in the `Start Menu`. You will see Ubuntu in the list.
+```sh
+wsl --install -d Debian
+```
 
-![terminal-ubuntu](https://user-images.githubusercontent.com/516548/112920657-03b8ba00-90cf-11eb-928f-0bc4743efed5.png)
+3. You will be prompted to create a UNIX user name. Type what you want
+4. You will be prompted to create a new password. Type something that you will remember. This will be your password needed to do Admin things in the console.
+
+![new-debian](https://user-images.githubusercontent.com/516548/192078174-125877f1-ab0a-4a6f-8011-a9a3473c134b.png)
 
 <br/>
 
-## Connecting VSCode to your Ubuntu instance
+## Connecting VSCode to your Debian instance
 
-1. In the Ubuntu console, type the following:
+1. In the Debian console, type the following:
 
 ```sh
 code .
 ```
 
-This will attempt to open VSCode and connect VSCode to your WSL2, Ubuntu instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
+This will attempt to open VSCode and connect VSCode to your Debian instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
 
 <br/>
 
 2. Close VSCode and the terminal 
 
-The next step, [update the settings of Windows Terminal](https://github.com/scott-knight/ubuntu-on-windows-setup/blob/main/configure-windows-terminal.md).
+The next step, [update the settings of Windows Terminal](https://github.com/scott-knight/debian-on-windows-11/blob/main/configure-windows-terminal.md).
