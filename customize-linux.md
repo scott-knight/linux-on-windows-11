@@ -139,7 +139,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a basic set of utilities
 
 ```sh
-brew install automake curl elixir erlang node postgres python ruby sqlite
+brew install automake curl elixir erlang node postgres python ruby sqlite vips
 ```
 
 <br/>
