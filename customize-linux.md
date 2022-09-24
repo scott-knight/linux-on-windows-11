@@ -129,7 +129,7 @@ Reference found [here](https://docs.brew.sh/Homebrew-on-Linux)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
-4. Reload the ubuntu shell.
+4. Reload the Linux shell.
 5. Add BREW taps
 
 ```sh
@@ -178,19 +178,31 @@ Run the following:
 wajig install keychain
 ```
 
-Once installed, start the ssh-agent
+OR 
+
+```sh
+sudo apt-get keychain
+```
+
+<br/>
+
+Once installed, start the ssh-agent:
 
 ```sh
 ssh-agent
 ```
 
-Add this to the bottom of your .zshrc file
+<br/>
+
+Using VIM, copy this to the bottom of your .zshrc file:
 
 ```
-export HOSTNAME=BIGBRAIN
+# BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
+# you will see the hostname of your computer. Replace BIGBRAIN with that name  
+export HOSTNAME=BIGBRAIN 
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source $HOME/.keychain/$HOSTNAME-sh
+source /$HOSTNAME-sh
 ```
 
 <br/>
@@ -227,14 +239,14 @@ git clone https://github.com/jf/rbenv-gemset.git "$(rbenv root)/plugins/rbenv-ge
 git clone https://github.com/rkh/rbenv-whatis.git "$(rbenv root)/plugins/rbenv-whatis" &&
 git clone https://github.com/rkh/rbenv-use.git "$(rbenv root)/plugins/rbenv-use" &&
 git clone https://github.com/tpope/rbenv-aliases.git "$(rbenv root)/plugins/rbenv-aliases" &&
-cd $HOME/.rbenv && mkdir versions && src/configure && make -C src && cd $HOME && rbenv alias --auto
+cd $HOME/.rbenv && mkdir versions && cd $HOME && rbenv alias --auto
 ```
 
 <br/>
 
 ## Install NVM
 
-To install NVM, run the following:
+NVM documenation is [found here](https://github.com/nvm-sh/nvm#installing-and-updating). To install NVM, run the following:
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -283,7 +295,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 ## Copy the .zshrc Content
 
-Replace the entire `.zshrc` file with this code:
+Using VIM, replace the entire `.zshrc` file with this code:
 
 ```zsh
 # If you come from bash you might have to change your $PATH.
@@ -421,6 +433,11 @@ export RBENV_ROOT="${HOME}/.rbenv"
 export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 ZFUNCT=~/.zsh_functions
 if [ -f "$ZFUNCT" ]
 then
@@ -447,7 +464,7 @@ export HOSTNAME=BIGBRAIN
 source /$HOSTNAME-sh
 ```
 
-Reload the ubuntu instance
+Reload the Linux instance
 
 <br/>
 
@@ -705,7 +722,7 @@ function gits () {
 
 ## Copy .gemrc
 
-Replace the contents of `.gemrc` with the following:
+Using VIM, replace the contents of `.gemrc` with the following:
 
 ```ruby
 ---
@@ -723,7 +740,7 @@ update: --no-rdoc --no-ri --no-document
 
 ## Copy gitconfig
 
-Replace the contents of `.gitconfig` with the following:
+Using VIM, replace the contents of `.gitconfig` with the following:
 
 ```sh
 [user]
