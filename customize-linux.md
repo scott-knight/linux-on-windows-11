@@ -31,7 +31,7 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 To install wajig, run the following:
 
 ```sh
-sudo apt install wajig
+sudo apt install wajig git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
 ```
 
 Once finished, run the following:
@@ -49,7 +49,7 @@ You will use this command to update Debian from now on.
 To install `build-essential` and related utilities, run the following:
 
 ```sh
-wajig install -y build-essential pkg-config libssl-dev
+wajig install -y pkg-config gcc checkinstall clang make curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
 ```
 
 <br/>
@@ -58,9 +58,11 @@ Setup for these files will come in a later step.
 
 <br/>
 
-## Install liff7 for bootsnap gem
+## Install liff for bootsnap gem
 
 Rails uses bootsnap which uses libff7 (as of date 2021/09/15). To install it, run the following:
+
+DO THIS ONLY IF bootsnap DOESNT WORK
 
 ```sh
 wget http://es.archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi8_3.4.2-4_amd64.deb
@@ -115,8 +117,10 @@ touch .zsh_functions .zsh_alias_list .pryrc .gemrc .gitconfig
 Install the required utilities by running the following:
 
 ```sh
-wajig install -y gcc clang make libssl-dev libreadline-dev zlib1g-dev
+wajig install -y
 ```
+
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
 
 <br/>
 
@@ -263,7 +267,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 Once finished, run the following:
 
 ```sh
-npm install -g spaceship-zsh-theme
+npm install -g spaceship-prompt
 ```
 
 Once finished, run the following:
@@ -279,10 +283,10 @@ Replace the entire `.zshrc` file with this code:
 
 ```zsh
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -303,14 +307,13 @@ ZSH_THEME="spaceship"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -325,8 +328,9 @@ HYPHEN_INSENSITIVE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -359,7 +363,6 @@ plugins=(
   ruby
   vscode
   yarn
-  zsh_reload
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -392,22 +395,6 @@ export LANG=en_US.UTF-8
 alias zshconfig="code ${HOME}/.zshrc"
 alias ohmyzsh="code ${HOME}/.oh-my-zsh"
 
-# BREW
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
-export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-
-# export OPENSSL_PATH="$(brew --prefix openssl@1.1)"
-
-# RBENV
-export RBENV_ROOT="${HOME}/.rbenv"
-export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-# export OPENSSL_PATH="$(brew --prefix openssl@1.1)"
-# export PATH="${OPENSSL_PATH}/bin:$PATH"
-# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=${OPENSSL_PATH}"
-
 source "/home/sknight/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 # SPACESHIP_USER_SHOW=always
 # SPACESHIP_DIR_TRUNC_PREFIX=../
@@ -420,6 +407,15 @@ SPACESHIP_RUBY_SHOW=true
 SPACESHIP_NODE_SHOW=true
 SPACESHIP_BATTERY_SHOW=false
 
+# BREW
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
+export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
+
+# RBENV
+export RBENV_ROOT="${HOME}/.rbenv"
+export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 ZFUNCT=~/.zsh_functions
 if [ -f "$ZFUNCT" ]
@@ -699,53 +695,6 @@ function gits () {
 
 <br/>
 
-## Copy .pryrc
-
-Replace the contents of `.pryrc` with the following:
-
-```ruby
-if defined?(PryByebug)
-  Pry.commands.alias_command 'wh', 'whereami'
-  Pry.commands.alias_command 'c', 'continue'
-  Pry.commands.alias_command 's', 'step'
-  Pry.commands.alias_command 'n', 'next'
-  Pry.commands.alias_command 'f', 'finish'
-
-  # Hit Enter to repeat last command
-  Pry::Commands.command /^$/, "repeat last command" do
-    _pry_.run_command Pry.history.to_a.last
-  end
-end
-
-
-# == Pry-Nav - Using pry as a debugger ==
-Pry.commands.alias_command 'wh', 'whereami' rescue nil
-Pry.commands.alias_command 'c', 'continue' rescue nil
-Pry.commands.alias_command 's', 'step' rescue nil
-Pry.commands.alias_command 'n', 'next' rescue nil
-Pry.commands.alias_command 'f', 'finish' rescue nil
-Pry.commands.alias_command 'r!', 'reload!' rescue nil
-
-# === Listing config ===
-# Better colors - by default the headings for methods are too
-# similar to method name colors leading to a "soup"
-# These colors are optimized for use with Solarized scheme
-# for your terminal
-Pry.config.ls.separator = "\n" # new lines between methods
-Pry.config.ls.heading_color = :magenta
-Pry.config.ls.public_method_color = :green
-Pry.config.ls.protected_method_color = :yellow
-Pry.config.ls.private_method_color = :bright_black
-
-Pry.config.hooks.add_hook(:before_session, :rails) do
-  if defined?(Rails)
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
-  end
-end
-```
-
-<br/>
-
 ## Copy .gemrc
 
 Replace the contents of `.gemrc` with the following:
@@ -796,3 +745,11 @@ Replace the email and username with your values.
 ## Reload
 
 After you have completed the setup, close and reload the ubuntu instance.
+
+## Install Ruby via RVM
+
+You will need to use Brew OpenSSL. Run the following:
+
+```sh
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
+```
