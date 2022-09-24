@@ -26,26 +26,26 @@ You will also want to update the Terminal to do specific things.
 
 <br/>
 
-4. Once the settings open, on the left nav, click `Defaults`. Once the default list opens, click the `Run this profile as administrator` toggle. Then click `Save`.
+3. Once the settings open, on the left nav, click `Defaults`. Once the default list opens, click the `Run this profile as administrator` toggle. Then click `Save`.
 
 ![terminal-default](https://user-images.githubusercontent.com/516548/192075058-c0baa9c7-1a40-4c11-9c73-ef3d1f4b5077.png)
 
 <br/>
 
-5. On the left-hand nav, click `Windows PowerShell`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
+4. On the left-hand nav, click `Windows PowerShell`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
 
 
 <br/>
 
-6. When the Apperance settings are available, for `Font Face` select `CaskaydiaCove NerdFont Mono`, then click `save` 
+5. When the Apperance settings are available, for `Font Face` select `CaskaydiaCove NerdFont Mono`, then click `save` 
 
 <br/>
 
-7. On the left-hand nav, click `Debian`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
+6. On the left-hand nav, click `Debian`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
 
-8. When the Apperance settings are available, for `Font Face` select `Cascadia Code PL`, then click `save` 
+7. When the Apperance settings are available, for `Font Face` select `Cascadia Code PL`, then click `save` 
 
-9. On the left-hand nav, click `Startup`. On the right, in the `Default Profile` select `Debian`. Then click `Save`
+8. On the left-hand nav, click `Startup`. On the right, in the `Default Profile` select `Debian`. Then click `Save`
 
 ![debian](https://user-images.githubusercontent.com/516548/192075687-0d3eb87e-5536-4492-84db-0760c3c1c61b.png)
 
