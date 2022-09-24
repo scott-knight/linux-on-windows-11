@@ -1,6 +1,6 @@
-# Installing Debian
+# Installing Linux (Ubuntu)
 
-This document demonstrates how to install the current supported release of Debian on Windows 11. This document assumes WSL2 has been installed on Windows 11. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+This document demonstrates how to install the current supported release of Linux (Ubuntu) on Windows 11. This document assumes WSL2 has been installed and is ready to bue used. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 ## Update WSL
 
@@ -18,27 +18,19 @@ wsl --update
 
 <br/>
 
-## Install Debian
+## Install Ubuntu
 
-1. In the Windows PowerShell, run the following:
+1. In the Windows Store, and search for Ubuntu:
 
-```sh
-wsl -l -o
-```
+![ubuntu22](https://user-images.githubusercontent.com/516548/192082167-6b8ee768-0684-4851-af15-2d3f13c99c1b.png)
 
-This will list the available Linux distros availabe for WSL
-
-![linux-distros](https://user-images.githubusercontent.com/516548/192078030-273b9c25-f144-4942-9810-bba6048386aa.png)
+2. We want to install the latest supproted version (in this example we see that 22.04 is the lastest. Click that tile and click `Install`.
+3. Once downloaded, click `Open`
 
 <br/>
 
-2. To install the Debian distro, run the following command:
 
-```sh
-wsl --install -d Debian
-```
-
-3. You will be prompted to create a UNIX user name. Type what you want
+2. You will be prompted to create a UNIX user name. Type what you want
 4. You will be prompted to create a new password. Type something that you will remember. This will be your password needed to do Admin things in the console.
 
 ![new-debian](https://user-images.githubusercontent.com/516548/192078174-125877f1-ab0a-4a6f-8011-a9a3473c134b.png)
