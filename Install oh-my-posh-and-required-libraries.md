@@ -21,7 +21,7 @@ These are the steps to install the `Windows PowerShell`. Documentation can be [f
 
 ## Install Git For Windows
 
-You need `Git for Windows` to install `Posh-Git` and `PowerLine`. It says to do this in the [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup). 
+You need `Git for Windows` for `Posh-Git`.
 
 Download and install [Git for Windows](https://git-scm.com/downloads)
 
@@ -58,5 +58,11 @@ A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It
 ## Notes for oh-my-posh
 
 You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-ubuntu)
+
+<br/>
+
+## Setup PowerLine Icons
+
+There may be more to do for this (I don't recall what more I did with this). Read the instructions in the [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup). 
 
 Now you're ready for the next step, [install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md).
