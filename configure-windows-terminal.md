@@ -8,7 +8,7 @@ Follow the instructions [found here](https://learn.microsoft.com/en-us/powershel
 
 Once you have Debian installed you will need to configure Windows Terminal to use the correct icons. Again, you don't have to do this step if you aren't using Windows Terminal powershell or a zsh theme that doesn't require them.
 
-
+You will also want to update the Terminal to do specific things.
 
 <br/>
 
@@ -26,52 +26,35 @@ Once you have Debian installed you will need to configure Windows Terminal to us
 
 <br/>
 
-4. Once the settings open, on the left nav, click `Defaults`. Once the default list opens, click the `Run this profile as administrator` toggle.
+4. Once the settings open, on the left nav, click `Defaults`. Once the default list opens, click the `Run this profile as administrator` toggle. Then click `Save`.
 
 ![terminal-default](https://user-images.githubusercontent.com/516548/192075058-c0baa9c7-1a40-4c11-9c73-ef3d1f4b5077.png)
 
 <br/>
 
-5. If you are using VSCode, after you click `Open JSON file`, a VSCode will open showing you the settings. 
+5. On the left-hand nav, click `Windows PowerShell`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
 
 
 <br/>
 
-5. Scroll down to the `profile > defaults > list` section. In each section where you would like to use the `powerline fonts`, append the following attribute to each item in the list:
-
-```json
-"fontFace":  "Cascadia Code PL"
-```
+6. When the Apperance settings are available, for `Font Face` select `CaskaydiaCove NerdFont Mono`, then click `save` 
 
 <br/>
 
-6. When you have appened each item in the list, it should look like this:
+7. On the left-hand nav, click `Debian`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
+8. When the Apperance settings are available, for `Font Face` select `Cascadia Code PL`, then click `save` 
 
 ![font-face](https://user-images.githubusercontent.com/516548/112923270-99eedf00-90d3-11eb-9f97-9c6a19c63da9.png)
 
 <br/> 
 
-7. You can set the default `Windows Terminal` shell by copying a `guid` from the desired shell in the list an pasting it in the `defaultProfile` attribute of the settings file
+9. On the left-hand nav, click `Startup`. On the right, in the `Default Profile` select `Debian`. Then click `Save`
 
-![settings-default-profile](https://user-images.githubusercontent.com/516548/112922863-d66e0b00-90d2-11eb-9b24-99e4fb533c5c.png)
-
-<br/>
-
-In the example you can see that I pasted the `ubuntu` shell `guid` in the `defaultProfile` attribute. 
+![debian](https://user-images.githubusercontent.com/516548/192075687-0d3eb87e-5536-4492-84db-0760c3c1c61b.png)
 
 <br/>
 
-After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open desired shell.
+After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Debian` shell.
 
-## Change the Starting Directory
-
-In the ubuntu profile, add the following:
-
-```json
- "startingDirectory": "\\\\wsl$\\Ubuntu\\home\\sknight"
- ```
- 
-Change the name `sknight` to your home directory name, then save the file
-
-Now you are ready to [customize Ubuntu](https://github.com/scott-knight/ubuntu-on-windows-setup/blob/main/configure-ubuntu.md)
+Now you are ready to [customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md)
  
