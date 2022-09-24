@@ -439,19 +439,12 @@ else
   echo "not sure what happened with ${ZASYS}"
 fi
 
-ZJS=~/.zsh_jobsauce
-if [ -f "$ZJS" ]
-then
-  source "$ZJS"
-  echo "using ${ZJS}"
-else
-  echo "not sure what happened with ${ZJS}"
-fi
-
-export HOSTNAME=BIGBRAIN
+# BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
+# you will see the hostname of your computer. Replace BIGBRAIN with that name  
+export HOSTNAME=BIGBRAIN 
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source $HOME/.keychain/$HOSTNAME-sh
+source /$HOSTNAME-sh
 ```
 
 Reload the ubuntu instance
