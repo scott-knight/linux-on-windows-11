@@ -14,11 +14,17 @@ Once you have Ubuntu installed you will need to configure Windows Terminal to us
 
 2. Once `Windows Terminal` opens, click the down arrow (carret) to reveal the menu with the `settings` option. You can also see the shortcut next to each option. You can use those shortcut keys to open what you need in the future. However, for this setup, simply click `settings`. 
 
-![terminal-settings](https://user-images.githubusercontent.com/516548/112922923-ef76bc00-90d2-11eb-9396-5bbdaee57106.png)
+![terminal-settings](https://user-images.githubusercontent.com/516548/192074778-d5afefac-568d-4a71-96fc-4cd0120f66d4.png)
 
 <br/>
 
-4. If you are using VSCode, after you click `settings`, a VSCode will open showing you the settings. 
+4. Once the settings open, in the lower left corner, click `Open JSON file`
+
+![terminal-settings2](https://user-images.githubusercontent.com/516548/192074835-8535c398-7677-4ef9-98fa-ca36e1386041.png)
+
+<br/>
+
+5. If you are using VSCode, after you click `Open JSON file`, a VSCode will open showing you the settings. 
 
 ![all-settings](https://user-images.githubusercontent.com/516548/112923040-24830e80-90d3-11eb-83c9-5f46a4fdc3cc.png)
 
