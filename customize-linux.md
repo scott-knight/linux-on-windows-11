@@ -24,14 +24,14 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 <br/>
 
-## Install Wajig
+## Install Wajig (not available for Debian)
 
 [`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface. 
 
 To install wajig, run the following:
 
 ```sh
-sudo apt install wajig git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+sudo apt install wajig git curl
 ```
 
 Once finished, run the following:
@@ -44,12 +44,30 @@ You will use this command to update Debian from now on.
 
 <br/>
 
-## Install Build-Essential and Related Utilities
+## Install Linux Libraries
 
-To install `build-essential` and related utilities, run the following:
+To install Linux libraries with `wajig`, run the following:
 
 ```sh
-wajig install -y pkg-config gcc checkinstall clang make curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
+wajig install -y autoconf bison build-essential checkinstall clang gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev
+```
+
+To install the libraries using `apt`, run the following:
+
+```sh
+sudo apt-get install -y autoconf bison build-essential checkinstall clang gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev
+```
+
+To install VIPS libraries, run the following:
+
+```sh
+wajig install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
+```
+
+Or
+
+```sh
+sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
 ```
 
 <br/>
@@ -60,7 +78,7 @@ Setup for these files will come in a later step.
 
 ## Install liff for bootsnap gem
 
-Rails uses bootsnap which uses libff7 (as of date 2021/09/15). To install it, run the following:
+Rails uses bootsnap which uses libff8 (as of date 2021/09/15). To install it, run the following:
 
 DO THIS ONLY IF bootsnap DOESNT WORK
 
