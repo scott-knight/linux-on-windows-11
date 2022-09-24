@@ -1,6 +1,6 @@
 # Installing Linux on Windows 11
 
-This content demonstrates how to setup Ubuntu on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use).
+This content demonstrates how to setup Linux (Ubuntu) on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use).
 
 ### DISCLAMER
 
