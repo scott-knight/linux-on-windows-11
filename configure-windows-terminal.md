@@ -42,11 +42,8 @@ You will also want to update the Terminal to do specific things.
 <br/>
 
 7. On the left-hand nav, click `Debian`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
+
 8. When the Apperance settings are available, for `Font Face` select `Cascadia Code PL`, then click `save` 
-
-![font-face](https://user-images.githubusercontent.com/516548/112923270-99eedf00-90d3-11eb-9f97-9c6a19c63da9.png)
-
-<br/> 
 
 9. On the left-hand nav, click `Startup`. On the right, in the `Default Profile` select `Debian`. Then click `Save`
 
