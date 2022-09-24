@@ -1,6 +1,14 @@
+# Update Powershell
+
+Follow the instructions [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+
+<br/>
+
 # Configure Windows Terminal
 
-Once you have Ubuntu installed you will need to configure Windows Terminal to use the correct Powerline icons. Again, you don't have to do this step if you aren't using Windows Terminal powershell or a zsh theme that doesn't require them.
+Once you have Debian installed you will need to configure Windows Terminal to use the correct icons. Again, you don't have to do this step if you aren't using Windows Terminal powershell or a zsh theme that doesn't require them.
+
+
 
 <br/>
 
@@ -18,15 +26,14 @@ Once you have Ubuntu installed you will need to configure Windows Terminal to us
 
 <br/>
 
-4. Once the settings open, in the lower left corner, click `Open JSON file`
+4. Once the settings open, on the left nav, click `Defaults`. Once the default list opens, click the `Run this profile as administrator` toggle.
 
-![terminal-settings2](https://user-images.githubusercontent.com/516548/192074835-8535c398-7677-4ef9-98fa-ca36e1386041.png)
+![terminal-default](https://user-images.githubusercontent.com/516548/192075058-c0baa9c7-1a40-4c11-9c73-ef3d1f4b5077.png)
 
 <br/>
 
 5. If you are using VSCode, after you click `Open JSON file`, a VSCode will open showing you the settings. 
 
-![all-settings](https://user-images.githubusercontent.com/516548/112923040-24830e80-90d3-11eb-83c9-5f46a4fdc3cc.png)
 
 <br/>
 
