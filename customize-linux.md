@@ -49,7 +49,7 @@ You will use this command to update Debian from now on.
 To install `build-essential` and related utilities, run the following:
 
 ```sh
-wajig install -y pkg-config gcc checkinstall clang make curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+wajig install -y pkg-config gcc checkinstall clang make curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
 ```
 
 <br/>
