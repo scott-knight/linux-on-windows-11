@@ -1,13 +1,13 @@
-# Customize Debian
+# Customize Linux (Ubuntu)
 
-This is the step-by-step guide for customizing Debian to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Debian will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Debian instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md). It will be a completely clean install of Debian, no settings will carry over.
+This is the step-by-step guide for customizing Linux to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Linux will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Linux instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md). It will be a completely clean install of Linux, no settings will carry over.
 
 <br/>
 
-## Update Debian
+## Update Linux (Ubuntu)
 
-1. Close all open `Windows Terminal` instances. Open a new `Windows Termial` instance and select Debian (if you didn't set it as the default).
-2. You should update `Debian` with the latest security patches and other default updates by running the following:
+1. Close all open `Windows Terminal` instances. Open a new `Windows Termial` instance and select Ubuntu (if you didn't set it as the default).
+2. You should update `Ubuntu` with the latest security patches and other default updates by running the following:
 
 ```sh
 sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
@@ -21,46 +21,17 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 <br/>
 
-## Install build-essential, Curl, and Git
-
-To install brew, we will need to install Curl and Git. Run the following:
-
-```sh
-sudo apt install build-essential curl git
-```
 
 <br/>
 
-## Install HOMEBREW
-
-[Homebrew](https://brew.sh/) is a very simple utility manager that will be used to install a variety of tools. 
-
-To install brew, run the following:
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Once done, run the following:
-
-```sh
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sknight/.profile && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-```
-
-Then run
-
-```sh
-brew install gcc
-```
-
-
+## Install Wajig
 
 [`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface. 
 
 To install wajig, run the following:
 
 ```sh
-brew install wajig
+sudo apt install wajig
 ```
 
 Once finished, run the following:
