@@ -30,6 +30,8 @@ wsl --install -d Debian
 
 Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
 
+![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
+
 <br/>
 
 ## Install Ubuntu
