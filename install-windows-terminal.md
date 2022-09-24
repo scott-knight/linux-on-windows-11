@@ -34,9 +34,9 @@ Click on the `Terminal` icon in the `Start Menu`. Once it opens, click the down 
 
 ![term-settings](https://user-images.githubusercontent.com/516548/191406723-a7aac225-6a78-4981-9f29-f65ebf4e2117.png)
 
-After clicking settings you will see a selection for Default Profile. Here you can select Debian, once it's installed.
+After clicking settings you will see a selection for Default Profile. Here you can select Linux (Ubuntu), once it's installed.
 
 <br/>
 
-Now you are ready to move to the [next setup step](https://github.com/scott-knight/debian-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
+Now you are ready to move to the [next setup step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
 
