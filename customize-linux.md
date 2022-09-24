@@ -459,6 +459,15 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 
 
+ZASYS=$HOME/.zsh_alias_list
+if [ -f "$ZASYS" ]
+then
+  source "$ZASYS"
+  echo "using ${ZASYS}"
+else
+  echo "not sure what happened with ${ZASYS}"
+fi
+
 ZFUNCT=$HOME/.zsh_functions
 if [ -f "$ZFUNCT" ]
 then
@@ -466,15 +475,6 @@ then
   echo "using ${ZFUNCT}"
 else
   echo "not sure what happened with ${ZFUNCT}"
-fi
-
-ZCAST=$HOME/.zsh_castellan
-if [ -f "$ZCAST" ]
-then
-  source "$ZCAST"
-  echo "using ${ZCAST}"
-else
-  echo "not sure what happened with ${ZCAST}"
 fi
 
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
