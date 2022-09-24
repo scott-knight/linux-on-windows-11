@@ -45,9 +45,11 @@ Update-Module posh-git
 
 <br/>
 
-## Install Oh-my-Posh
+## Install Oh-my-Posh (and PowerLine Icons)
 
-A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It's much easier to do now, but there are few more steps involved. The install document for `Oh-my-Posh` can be [found here](https://ohmyposh.dev/docs/installation/windows)
+The [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup) has detailed instructions for installing `Oh-my-Posh` and the related icons. Follow the notes outlined.
+
+A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It's much easier to do now. The [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup) basically describes doing the following:
 
 1. [Install Oh-my-Posh](https://ohmyposh.dev/docs/installation/windows)
 2. [Install a Nerd Font](https://ohmyposh.dev/docs/installation/fonts).
@@ -58,12 +60,6 @@ A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It
 ## Notes for oh-my-posh
 
 You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-ubuntu)
-
-<br/>
-
-## Setup PowerLine Icons
-
-There may be more to do for this (I don't recall what more I did with this). Read the instructions in the [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup). 
 
 <br/>
 
