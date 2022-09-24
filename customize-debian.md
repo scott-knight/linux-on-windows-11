@@ -1,35 +1,75 @@
-# Customize Ubuntu
+# Customize Debian
 
-This is the step-by-step guide for customizing Ubuntu to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Ubuntu runs with or without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply delete the Ubuntu instance and reinstall it. It will be a completely clean install of Ubuntu, no settings will carry over.
+This is the step-by-step guide for customizing Debian to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Debian will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Debian instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md). It will be a completely clean install of Debian, no settings will carry over.
 
 <br/>
 
-## Update Ubuntu
+## Update Debian
 
-1. Close all open `Windows Terminal` windows. Open a new `Ubuntu` window.
-2. You should update `Ubuntu` with the latest security patches and other default updates by running the following:
+1. Close all open `Windows Terminal` instances. Open a new `Windows Termial` instance and select Debian (if you didn't set it as the default).
+2. You should update `Debian` with the latest security patches and other default updates by running the following:
 
 ```sh
 sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
 ```
 
-<br/>
-
-## Install Wajig
-
-`Wajig` is a simple package installation tool. `Keychain` Allows you to store your `SSH` keys in a local keychain for the time your Windows OS is up and running. To install the utilities, run the following:
+Or run
 
 ```sh
-sudo apt-get install wajig
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+```
+
+<br/>
+
+## Install build-essential, Curl, and Git
+
+To install brew, we will need to install Curl and Git. Run the following:
+
+```sh
+sudo apt install build-essential curl git
+```
+
+<br/>
+
+## Install HOMEBREW
+
+[Homebrew](https://brew.sh/) is a very simple utility manager that will be used to install a variety of tools. 
+
+To install brew, run the following:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once done, run the following:
+
+```sh
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sknight/.profile && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+Then run
+
+```sh
+brew install gcc
+```
+
+
+
+[`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface. 
+
+To install wajig, run the following:
+
+```sh
+brew install wajig
 ```
 
 Once finished, run the following:
 
 ```sh
-wajig update
+wajig update && wajig distupgrade
 ```
 
-You will use this command to update Ubuntu from now on.
+You will use this command to update Debian from now on.
 
 <br/>
 
@@ -52,8 +92,8 @@ Setup for these files will come in a later step.
 Rails uses bootsnap which uses libff7 (as of date 2021/09/15). To install it, run the following:
 
 ```sh
-wget http://es.archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi7_3.3-4_amd64.deb
-sudo dpkg -i libffi7_3.3-4_amd64.deb
+wget http://es.archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi8_3.4.2-4_amd64.deb
+sudo dpkg -i libffi8_3.4.2-4_amd64.deb
 ```
 
 <br/>
