@@ -65,6 +65,9 @@ Then click `Open` again. It should open the dialog as expected.
 
 ![ubuntu-apperance](https://user-images.githubusercontent.com/516548/192082890-1540c8e6-0ac9-4d07-a328-40ba8b2baa2b.png)
 
+
+After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Ubuntu` shell.
+
 <br/>
 
 ## Connecting VSCode to your Linux instance
