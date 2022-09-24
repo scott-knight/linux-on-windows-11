@@ -746,6 +746,8 @@ Replace the email and username with your values.
 
 After you have completed the setup, close and reload the ubuntu instance.
 
+<br/>
+
 ## Install Ruby via RVM
 
 You will need to use Brew OpenSSL. Run the following:
