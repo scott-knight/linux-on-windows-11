@@ -57,6 +57,6 @@ A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It
 
 ## Notes for oh-my-posh
 
-You can actually use `oh-my-posh` with Debian. However, I prefer `oh-my-zsh`. You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-debian)
+You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-ubuntu)
 
-Now you're ready for the next step, [install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md).
+Now you're ready for the next step, [install Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md).
