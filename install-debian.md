@@ -1,8 +1,23 @@
-# Installing Ubuntu
+# Installing Debian
 
-This document demonstrates how to install the current supported release of Ubuntu on Windows 10.
+This document demonstrates how to install the current supported release of Debian on Windows 11. This document assumes WSL2 has been installed on Windows 11. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
-## Download and Install Ubuntu
+## Update WSL
+
+To ensure you have the latest version of WSL, open the Windows PowerShell as an Administrator
+
+![run-as-administrator](https://user-images.githubusercontent.com/516548/192077877-6748108f-fdd2-4c83-b0ba-3ac31224c9bf.png)
+
+<br/>
+
+Once open, run the following:
+
+```sh
+wsl --update
+```
+
+
+## Install Debian
 
 You can download and install any version of Ubuntu, there is a way to do it via the console. However, the easiest way to install Ubuntu is to download it from the Microsoft Store. 
 
