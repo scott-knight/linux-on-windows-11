@@ -34,10 +34,9 @@ You will also want to update the Terminal to do specific things.
 
 4. On the left-hand nav, click `Windows PowerShell`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
 
-
-<br/>
-
 5. When the Apperance settings are available, for `Font Face` select `CaskaydiaCove NerdFont Mono`, then click `save` 
+
+![nf-mono](https://user-images.githubusercontent.com/516548/192075947-40c909b7-a59c-4dd9-ad6a-4f407db5ad06.png)
 
 <br/>
 
