@@ -112,18 +112,6 @@ touch .zsh_functions .zsh_alias_list .pryrc .gemrc .gitconfig
 ```
 <br/>
 
-## Install RBENV and BREW Depenencies
-
-Install the required utilities by running the following:
-
-```sh
-wajig install -y
-```
-
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
-
-<br/>
-
 ## Install BREW for Linux
 
 Reference found [here](https://docs.brew.sh/Homebrew-on-Linux)
@@ -171,6 +159,7 @@ Copy the following to the new `config` file:
 ```sh
 Host *
   AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
 ```
 
 You will need to add the new public key to your github account. You can copy the key by running the following:
@@ -189,10 +178,19 @@ Run the following:
 wajig install keychain
 ```
 
-Once installed, at your key to your keychain
+Once installed, start the ssh-agent
+
+```sh
+ssh-agent
+```
+
+Add this to the bottom of your .zshrc file
 
 ```
+export HOSTNAME=BIGBRAIN
+
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
+source $HOME/.keychain/$HOSTNAME-sh
 ```
 
 <br/>
@@ -234,13 +232,18 @@ cd $HOME/.rbenv && mkdir versions && src/configure && make -C src && cd $HOME &&
 
 <br/>
 
-## Install NGrok
+## Install NVM
 
-To install ngrok, run the following:
+To install NVM, run the following:
 
 ```sh
-npm i -g ngrok
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
+
+Once installed, run the following:
+
+```sh
+nvm install --lts
 
 <br/>
 
@@ -435,9 +438,19 @@ else
   echo "not sure what happened with ${ZASYS}"
 fi
 
-# /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed25519
+ZJS=~/.zsh_jobsauce
+if [ -f "$ZJS" ]
+then
+  source "$ZJS"
+  echo "using ${ZJS}"
+else
+  echo "not sure what happened with ${ZJS}"
+fi
+
+export HOSTNAME=BIGBRAIN
+
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source $HOME/.keychain/$HOST-sh
+source $HOME/.keychain/$HOSTNAME-sh
 ```
 
 Reload the ubuntu instance
@@ -453,10 +466,11 @@ Replace the entire `.zsh_alias_list` file with this code:
 
 # SYSTEM
 alias ll='ls -FlaG'
-alias reload='src'
-alias home="cd ${HOME}"
-alias dls="cd ${HOME}/Downloads"
+alias reload='omz reload'
+alias home='cd ~'
+alias dls="cd ~/Downloads"
 alias myip="curl https://ipecho.net/plain; echo"
+alias ehosts="sudo vim /private/etc/hosts"
 alias pbcopy="clip.exe"
 alias pbpaste="powershell.exe -command 'Get-Clipboard' | head -n -1"
 
@@ -748,7 +762,7 @@ After you have completed the setup, close and reload the ubuntu instance.
 
 <br/>
 
-## Install Ruby via RVM
+## Install Ruby via RBENV
 
 You will need to use Brew OpenSSL. Run the following:
 
