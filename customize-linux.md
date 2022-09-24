@@ -49,13 +49,13 @@ You will use this command to update Debian from now on.
 To install Linux libraries with `wajig`, run the following:
 
 ```sh
-wajig install -y autoconf bison build-essential checkinstall clang gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev
+wajig install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev zsh
 ```
 
 To install the libraries using `apt`, run the following:
 
 ```sh
-sudo apt-get install -y autoconf bison build-essential checkinstall clang gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev
+sudo apt-get install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev zsh
 ```
 
 To install VIPS libraries, run the following:
@@ -72,15 +72,12 @@ sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev
 
 <br/>
 
-Setup for these files will come in a later step.
 
-<br/>
+## Install libff for bootsnap gem (DONT DO)
 
-## Install liff for bootsnap gem
+This section is here, mainly for documentation purposes.
 
-Rails uses bootsnap which uses libff8 (as of date 2021/09/15). To install it, run the following:
-
-DO THIS ONLY IF bootsnap DOESNT WORK
+Rails uses bootsnap which uses libff. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, to install it, run the following:
 
 ```sh
 wget http://es.archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi8_3.4.2-4_amd64.deb
@@ -89,23 +86,16 @@ sudo dpkg -i libffi8_3.4.2-4_amd64.deb
 
 <br/>
 
-## Install Git
+## Create System Files
 
-To install Git, run the following:
+Run the following:
 
 ```sh
-wajig install -y git
+touch .zsh_functions .zsh_alias_list .gemrc .gitconfig
 ```
-
 <br/>
 
-## Install Zsh
-
-To install zsh, run the following:
-
-```sh
-wajig install -y zsh
-```
+## Setup Zsh
 
 Make zsh your default shell, run the following:
 
@@ -113,22 +103,14 @@ Make zsh your default shell, run the following:
 chsh -s $(which zsh)
 ```
 
-Once changed, restart the Ubuntu instance.
+Once changed, restart the Linux instance.
 
 You will be prompted to make a selection to create a `.zshrc` file. Select the option that simply adds the comment code and creates the file.
 
-Close all instances and start a new Ubuntu instance.
+Close all instances and start a new Linux instance.
 
 <br/>
 
-## Create System Files
-
-Run the following:
-
-```sh
-touch .zsh_functions .zsh_alias_list .pryrc .gemrc .gitconfig
-```
-<br/>
 
 ## Install BREW for Linux
 
@@ -157,7 +139,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a basic set of utilities
 
 ```sh
-brew install automake curl elixir erlang node postgres python ruby sqlite vips
+brew install elixir erlang node python ruby sqlite vips postgresql@14
 ```
 
 <br/>
@@ -478,7 +460,7 @@ Reload the ubuntu instance
 
 ## Copy .zsh_alias_list Content
 
-Replace the entire `.zsh_alias_list` file with this code:
+Using VIM, replace the entire `.zsh_alias_list` file with this code:
 
 ```zsh
 #! /bin/zsh
@@ -565,7 +547,7 @@ From now on, when you want to reload the shell, simply type `reload`
 
 ## Copy .zsh_functions
 
-Replace the contents of `.zsh_functions` with the following:
+Using VIM, replace the contents of `.zsh_functions` with the following:
 
 ```zsh
 #! /bin/zsh
@@ -777,7 +759,7 @@ Replace the email and username with your values.
 
 ## Reload
 
-After you have completed the setup, close and reload the ubuntu instance.
+After you have completed the setup, close and reload the Linux instance.
 
 <br/>
 
@@ -788,3 +770,5 @@ You will need to use Brew OpenSSL. Run the following:
 ```sh
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
 ```
+
+
