@@ -435,10 +435,31 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-ZFUNCT=~/.zsh_functions
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+
+
+ZFUNCT=$HOME/.zsh_functions
 if [ -f "$ZFUNCT" ]
 then
   source "$ZFUNCT"
@@ -447,13 +468,13 @@ else
   echo "not sure what happened with ${ZFUNCT}"
 fi
 
-ZASYS=~/.zsh_alias_list
-if [ -f "$ZASYS" ]
+ZCAST=$HOME/.zsh_castellan
+if [ -f "$ZCAST" ]
 then
-  source "$ZASYS"
-  echo "using ${ZASYS}"
+  source "$ZCAST"
+  echo "using ${ZCAST}"
 else
-  echo "not sure what happened with ${ZASYS}"
+  echo "not sure what happened with ${ZCAST}"
 fi
 
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
