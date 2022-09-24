@@ -40,17 +40,6 @@ You will also want to update the Terminal to do specific things.
 
 <br/>
 
-6. On the left-hand nav, click `Debian`. On the right, scroll down until you see `Apperance`, then click `Apperance`.  
 
-7. When the Apperance settings are available, for `Font Face` select `Cascadia Code PL`, then click `save` 
-
-8. On the left-hand nav, click `Startup`. On the right, in the `Default Profile` select `Debian`. Then click `Save`
-
-![debian](https://user-images.githubusercontent.com/516548/192075687-0d3eb87e-5536-4492-84db-0760c3c1c61b.png)
-
-<br/>
-
-After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Debian` shell.
-
-Now you are ready to [customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md)
+Now you are ready to [customize Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
  
