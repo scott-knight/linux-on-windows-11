@@ -65,4 +65,6 @@ You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You
 
 There may be more to do for this (I don't recall what more I did with this). Read the instructions in the [Powerline Setup doc](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup). 
 
+<br/>
+
 Now you're ready for the next step, [install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md).
