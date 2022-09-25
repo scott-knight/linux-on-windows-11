@@ -497,7 +497,7 @@ fi
 export HOSTNAME=BIGBRAIN 
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source /$HOSTNAME-sh
+source $HOME/.keychain/$HOSTNAME-sh
 ```
 
 Reload the Linux instance
