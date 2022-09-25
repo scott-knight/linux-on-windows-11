@@ -480,6 +480,7 @@ SPACESHIP_DIR_TRUNC_REPO=true
 SPACESHIP_RUBY_SHOW=true
 SPACESHIP_NODE_SHOW=true
 SPACESHIP_BATTERY_SHOW=false
+SPACESHIP_GIT_BRANCH_SHOW=true
 
 # BREW
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
