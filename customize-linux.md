@@ -16,7 +16,7 @@ sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i 
 Or run
 
 ```sh
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
 ```
 
 <br/>
