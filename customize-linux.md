@@ -170,6 +170,14 @@ clip.exe < ${HOME}/.ssh/id_ed25519.pub
 
 <br/>
 
+If you copy contents from another `.ssh` to this setup, you will may need to change the file level permissions:
+
+```sh
+chmod 400 $HOME/.ssh/*
+```
+
+<br/>
+
 ## INSTALL KEYCHAIN
 
 Run the following:
