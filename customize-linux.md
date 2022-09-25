@@ -168,7 +168,7 @@ brew install gcc node python ruby
 7. Install DBs
 
 ```sh
-brew install sqlite postgresql@14
+brew install postgresql@14 libpq && echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 8. Install image compression libraries
@@ -495,6 +495,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
 
+# Postgres Libs
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
 export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
@@ -525,7 +528,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
-
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
 then
@@ -544,14 +546,14 @@ else
   echo "not sure what happened with ${ZFUNCT}"
 fi
 
-# ZSAUCE=$HOME/.zsh_jobsauce
-# if [ -f "$ZSAUCE" ]
-# then
-#   source "$ZSAUCE"
-#   echo "using ${ZSAUCE}"
-# else
-#   echo "not sure what happened with ${ZSAUCE}"
-# fi
+ZSAUCE=$HOME/.zsh_jobsauce
+if [ -f "$ZSAUCE" ]
+then
+  source "$ZSAUCE"
+  echo "using ${ZSAUCE}"
+else
+  echo "not sure what happened with ${ZSAUCE}"
+fi
 
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
