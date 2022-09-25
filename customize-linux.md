@@ -159,10 +159,10 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
 brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew tap homebrew/cask-versions && brew tap Homebrew/homebrew-core
 ```
 
-6. Install a programming apps
+6. Install a Node and Ruby
 
 ```sh
-brew install elixir erlang node python ruby
+brew install node python ruby
 ```
 
 7. Install DBs
@@ -175,6 +175,12 @@ brew install sqlite postgresql@14
 
 ```sh
 brew install vips
+```
+
+9. Install Elixir
+
+```sh
+brew install erlang elixir && brew postinstall docbook docbook-xsl
 ```
 
 <br/>
