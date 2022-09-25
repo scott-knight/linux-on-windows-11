@@ -49,13 +49,13 @@ You will use this command to update Debian from now on.
 To install Linux libraries with `wajig`, run the following:
 
 ```sh
-wajig install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev zsh
+wajig install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
 ```
 
 To install the libraries using `apt`, run the following:
 
 ```sh
-sudo apt-get install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config zlib1g-dev zsh
+sudo apt-get install -y autoconf bison build-essential checkinstall clang git gcc libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
 ```
 
 To install VIPS libraries, run the following:
