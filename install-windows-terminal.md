@@ -38,5 +38,5 @@ After clicking settings you will see a selection for Default Profile. Here you c
 
 <br/>
 
-Now you are ready to move to the [next setup step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
+Now you are ready to [Install Oh-my-Posh and Required Libraries](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
 
