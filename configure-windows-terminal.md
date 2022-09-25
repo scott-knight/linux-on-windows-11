@@ -1,6 +1,6 @@
 # Update Powershell
 
-Follow the instructions [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+To update PowerShell (when needed), follow the instructions [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
 
 <br/>
 
