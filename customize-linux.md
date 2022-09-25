@@ -432,12 +432,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   colorize
   git
-  node
-  npm
   rbenv
   ruby
+  python
+  elixir
   vscode
+  node
+  npm
   yarn
+  aws
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -480,8 +483,10 @@ SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_DIR_TRUNC_REPO=true
 SPACESHIP_RUBY_SHOW=true
 SPACESHIP_NODE_SHOW=true
+SPACESHIP_ELIXIR_SHOW=true
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_GIT_BRANCH_SHOW=true
+SPACESHIP_PROMPT_ASYNC=true
 
 # BREW
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
