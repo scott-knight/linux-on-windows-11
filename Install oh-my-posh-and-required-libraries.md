@@ -4,7 +4,7 @@ This document contains information on how to install oh-my-posh and various libr
 
 [Oh-my-posh](https://ohmyposh.dev/) is similar to [oh-my-zsh](https://ohmyz.sh/). It works in Windows PowerShell which is used in the Windows Terminal. There's minimal setup needed for running (my personal preference) zsh instances. YOU DO NOT HAVE TO DO THIS STEP if you don't plan on using a powershell or zsh theme which requires Powerline icons. 
 
-Sources: [Powerline Setup](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup), [Cascadia Code](https://github.com/microsoft/cascadia-code)
+Sources: [Powerline Setup](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup), [Custom Prompt Setup](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup), [Cascadia Code](https://github.com/microsoft/cascadia-code)
 
 <br/>
 
