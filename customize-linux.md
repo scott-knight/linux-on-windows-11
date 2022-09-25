@@ -900,7 +900,7 @@ After you have completed the setup, close and reload the Linux instance.
 Install the Ruby you want:
 
 ```sh
-cd $HOME && rbenv install 3.1.2
+cd $HOME && rbenv install 3.1.2 --verbose
 ```
 
 Then 
