@@ -18,22 +18,6 @@ wsl --update
 
 <br/>
 
-## Installing Debian
-
-If you would like to use Debain, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, it's noted where there are installation differences. Where it mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian. When setting up Rails, using Brew to install Postresql, the pg gem is unable to install using Debian (it says there are missing libraries, which I was unable to resolve -- this doesn't happen with Ubuntu).
-
-To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
-
-```sh
-wsl --install -d Debian
-```
-
-Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
-
-![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
-
-<br/>
-
 ## Install Ubuntu
 
 If you would like to use Ubuntu, the setup requires a number of steps. 
@@ -85,6 +69,22 @@ Then click `Open` again. It should open the dialog as expected.
 
 
 After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Ubuntu` shell.
+
+<br/>
+
+## Installing Debian
+
+If you would like to use Debain instead of Ubuntu, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, it's noted where there are installation differences. Where it mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian. However, with Debian, when setting up Rails, using Brew to install Postresql, I was unable to resolve an issue with the pg gem install (it says there are missing libraries which I was unable to resolve -- this doesn't happen with Ubuntu).
+
+To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
+
+```sh
+wsl --install -d Debian
+```
+
+Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
+
+![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
 
 <br/>
 
