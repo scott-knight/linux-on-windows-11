@@ -18,9 +18,9 @@ wsl --update
 
 <br/>
 
-## Install Debian
+## Installing Debian
 
-If you would like to use Debain, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, I've noted where there are installation differences. Where is mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian.  
+If you would like to use Debain, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, it's noted where there are installation differences. Where it mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian. When setting up Rails, using Brew to install Postresql, the pg gem is unable to install using Debian (it says there are missing libraries, which I was unable to resolve -- this doesn't happen with Ubuntu).
 
 To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
 
