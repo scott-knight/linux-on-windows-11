@@ -63,4 +63,4 @@ You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You
 
 <br/>
 
-Now you're ready for the next step, [install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md).
+Now you're ready for the next step, [Configure Windows Terminal](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md).
