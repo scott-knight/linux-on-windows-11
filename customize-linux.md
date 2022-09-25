@@ -162,7 +162,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a Node and Ruby
 
 ```sh
-brew install node python ruby
+brew install gcc node python ruby
 ```
 
 7. Install DBs
