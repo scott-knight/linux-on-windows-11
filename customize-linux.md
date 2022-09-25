@@ -69,7 +69,7 @@ sudo aptitude full-upgrade
 To install Linux libraries with `wajig`, run the following:
 
 ```sh
-wajig install -y autoconf bison build-essential checkinstall clang git curl gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
+wajig install -y autoconf bison build-essential checkinstall clang git curl gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim wget zlib1g-dev zsh
 ```
 
 <br/>
@@ -77,7 +77,7 @@ wajig install -y autoconf bison build-essential checkinstall clang git curl gcc 
 To install the libraries using `apt-get`, run the following:
 
 ```sh
-sudo apt-get install -y autoconf bison build-essential checkinstall clang curl git gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
+sudo apt-get install -y autoconf bison build-essential checkinstall clang curl git gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim wgit zlib1g-dev zsh
 ```
 
 <br/>
