@@ -873,7 +873,7 @@ After you have completed the setup, close and reload the Linux instance.
 
 ## Install Ruby via RBENV
 
-You will need to use Brew OpenSSL. Run the following:
+If you run into issues installing Ruby because of SSL incompatibility (in Ubuntu), you will need to use Brew OpenSSL. Run the following:
 
 ```sh
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
