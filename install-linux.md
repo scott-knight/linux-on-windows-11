@@ -31,7 +31,7 @@ If you would like to use Ubuntu, the setup requires a number of steps.
 
 <br/>
 
-NOTE: If you have trouble at the console when it opens, run the following:
+NOTE: If you have trouble in the console when it opens (likely from reinstalling it several times like I did), run the following:
 
 ```sh
 wsl --unregister Ubuntu-22.04
