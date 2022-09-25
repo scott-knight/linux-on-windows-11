@@ -185,6 +185,17 @@ brew install erlang elixir && brew postinstall docbook docbook-xsl
 
 <br/>
 
+
+## Install Yarn
+
+To install yarn, run the following:
+
+```sh
+npm install --global yarn
+```
+
+<br/>
+
 ## Setup SSH Key
 
 To connect via ssh to external services you will need to generate a new private and public key. Follow the instructions [found here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new set.
@@ -305,16 +316,6 @@ Once installed, run the following:
 
 ```sh
 nvm install --lts && nvm install --latest-npm
-```
-
-<br/>
-
-## Install Yarn
-
-To install yarn, run the following:
-
-```sh
-npm i -g yarn
 ```
 
 <br/>
