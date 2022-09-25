@@ -114,7 +114,7 @@ sudo dpkg -i libffi8_3.4.2-4_amd64.deb
 Run the following:
 
 ```sh
-touch .zsh_functions .zsh_alias_list .gemrc .gitconfig
+touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
 ```
 <br/>
 
@@ -574,8 +574,19 @@ alias ehosts="sudo vim /private/etc/hosts"
 alias pbcopy="clip.exe"
 alias pbpaste="powershell.exe -command 'Get-Clipboard' | head -n -1"
 
+
+# Projects code
+PROJCS=$HOME/dev.projects
+alias dev="cd $PROJCS && ll"
+alias sdev="dev"
+alias sui="cd $PROJCS/sandbox-js"
+alias sjs="sui"
+alias sapi="cd $PROJCS/sandbox-api"
+
+
 # ERLANG
 alias erlang="echo Erlang version is: ; erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell ; echo use the command erl to start the Erlang CLI"
+
 
 # Ruby/Rails
 alias echomigrate="echo Performing rails migration"
