@@ -492,6 +492,15 @@ else
   echo "not sure what happened with ${ZFUNCT}"
 fi
 
+# ZSAUCE=$HOME/.zsh_jobsauce
+# if [ -f "$ZSAUCE" ]
+# then
+#   source "$ZSAUCE"
+#   echo "using ${ZSAUCE}"
+# else
+#   echo "not sure what happened with ${ZSAUCE}"
+# fi
+
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
 export HOSTNAME=BIGBRAIN 
@@ -605,15 +614,22 @@ function gitdel(){
   git fetch --all --prune
 }
 
-function update_ubuntu () {
-  echo ''
-  echo 'Updating Ubuntu files, please wait...'
-  wajig update &&
-  wajig upgrade -y &&
-  wajig autoremove &&
-  wajig autoclean &&
-  echo 'Update of Ubuntu complete!'
-}
+# function update_ubuntu () {
+#   echo ''
+#   echo 'Updating Ubuntu files, please wait...'
+#   wajig update &&
+#   wajig upgrade -y &&
+#   wajig autoremove &&
+#   wajig autoclean &&
+#   echo 'Update of Ubuntu complete!'
+# }
+
+# function update_debian () {
+#   echo ''
+#   echo 'Updating Debian files, please wait...'
+#   sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+#   echo 'Update of Debian complete!'
+# }
 
 function upgrade_ohmyzsh(){
   echo ''
@@ -713,7 +729,8 @@ function update_omz() {
 
 function update() {
   echo "Upgrading ALL the things..."
-  update_ubuntu &&
+  # update_ubuntu &&
+  # update_debian &&
   update_omz &&
   update_rbenv &&
   update_brew &&
