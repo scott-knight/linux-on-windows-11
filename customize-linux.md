@@ -902,13 +902,6 @@ Install the Ruby you want:
 ```sh
 cd $HOME && rbenv install 3.1.2 --verbose
 ```
-
-Then 
-
-```sh
-gem update --system
-```
-
 <br/>
 
 ### Issues When Installing Ruby
@@ -916,9 +909,16 @@ gem update --system
 If you run into issues installing Ruby because of SSL incompatibility (in Ubuntu), you will need to use Brew OpenSSL. Run the following:
 
 ```sh
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2 --verbose
 ```
 
+<br/>
+
+### Update Rubygems
+
+```sh
+gem update --system
+```
 <br/>
 
 ## Install Yarn
