@@ -339,7 +339,7 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/
 Then
 
 ```sh
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
 ```
 
 Once finished, run the following:
@@ -476,7 +476,7 @@ export LANG=en_US.UTF-8
 alias zshconfig="code ${HOME}/.zshrc"
 alias ohmyzsh="code ${HOME}/.oh-my-zsh"
 
-source "/home/sknight/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+source "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
 # SPACESHIP_USER_SHOW=always
 # SPACESHIP_DIR_TRUNC_PREFIX=../
 SPACESHIP_TIME_COLOR=blue
