@@ -96,19 +96,6 @@ sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev
 
 <br/>
 
-## Install libff for bootsnap gem (DONT DO)
-
-This section is here, mainly for documentation purposes.
-
-Rails uses bootsnap which uses libff. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, to install it, run the following:
-
-```sh
-wget http://es.archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi8_3.4.2-4_amd64.deb
-sudo dpkg -i libffi8_3.4.2-4_amd64.deb
-```
-
-<br/>
-
 ## Create System Files
 
 Run the following:
@@ -928,3 +915,25 @@ To install yarn, run the following:
 npm install --global yarn
 ```
 
+## Notes for Rails Setups
+
+This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run.
+
+<br/>
+
+### Installing libffi for Bootsnap gem (Debian)
+
+Rails uses bootsnap which uses libffi. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, you may see this error that looks something like this:
+
+> LoadError: libffi.so.8: cannot open shared object file: No such file or 
+> directory - /home/sknight/dev.projects/jobsauce-app/.gems/gems/ffi-1.15.5/lib/ffi_c.so
+
+This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1. 
+
+To install the specific version needed (as outlined in the error), and to get the app to ignore the system version, you do the following:
+
+```sh
+gem install ffi --version '1.15.5' -- --disable-system-libffi
+```
+
+<br/>
