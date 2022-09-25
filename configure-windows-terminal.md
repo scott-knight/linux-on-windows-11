@@ -1,9 +1,3 @@
-# Update Powershell
-
-To update PowerShell (when needed), follow the instructions [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
-
-<br/>
-
 # Configure Windows Terminal
 
 Once you have Debian installed you will need to configure Windows Terminal to use the correct icons. Again, you don't have to do this step if you aren't using Windows Terminal powershell or a zsh theme that doesn't require them.
@@ -40,6 +34,11 @@ You will also want to update the Terminal to do specific things.
 
 <br/>
 
+# Updating Windows Powershell
+
+To update Windows PowerShell (when needed), follow the instructions [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+
+<br/>
 
 Now you are ready to [Install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
  
