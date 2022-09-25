@@ -177,10 +177,16 @@ brew install sqlite postgresql@14
 brew install vips
 ```
 
-9. Install Elixir (if you need/want it)
+9. Run post installs
 
 ```sh
-brew install erlang elixir && brew postinstall docbook docbook-xsl
+brew postinstall docbook docbook-xsl
+```
+
+10. Install Elixir (if you need/want it)
+
+```sh
+brew install erlang elixir
 ```
 
 <br/>
