@@ -200,7 +200,6 @@ Copy the following to the new `config` file:
 ```sh
 Host *
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/gitlab_ed25519
   IdentityFile ~/.ssh/id_ed25519
 ```
 
@@ -215,7 +214,7 @@ clip.exe < ${HOME}/.ssh/id_ed25519.pub
 If you copy contents from another `.ssh` to this setup, you will may need to change the file level permissions:
 
 ```sh
-chmod 400 $HOME/.ssh/id_ed25519 && chmod 400 $HOME/.ssh/gitlab_ed25519
+chmod 400 $HOME/.ssh/id_ed25519
 ```
 
 <br/>
@@ -251,7 +250,7 @@ Using VIM, copy this to the bottom of your .zshrc file:
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
 export HOSTNAME=BIGBRAIN 
 
-/usr/bin/keychain --clear $HOME/.ssh/id_ed25519 $HOME/.ssh/gitlab_ed25519
+/usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
@@ -547,7 +546,7 @@ fi
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
 export HOSTNAME=BIGBRAIN 
 
-/usr/bin/keychain --clear $HOME/.ssh/id_ed25519 $HOME/.ssh/gitlab_ed25519
+/usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
