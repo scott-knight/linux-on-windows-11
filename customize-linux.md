@@ -282,7 +282,7 @@ Close and reload the Ubuntu instance
 To install RBENV plugins, run the following:
 
 ```
-mkdir -p "$(rbenv root)"/plugins &&
+mkdir -p "$(rbenv root)"/plugins "$(rbenv root)"/versions &&
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)/plugins/ruby-build" &&
 git clone https://github.com/jf/rbenv-gemset.git "$(rbenv root)/plugins/rbenv-gemset" &&
 git clone https://github.com/rkh/rbenv-whatis.git "$(rbenv root)/plugins/rbenv-whatis" &&
