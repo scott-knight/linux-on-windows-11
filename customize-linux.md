@@ -149,7 +149,7 @@ Reference found [here](https://docs.brew.sh/Homebrew-on-Linux)
 3. Once finished, add the following to your `.zshrc` file
 
 ```sh
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
 ```
 
 4. Reload the Linux shell.
