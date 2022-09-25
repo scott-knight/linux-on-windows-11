@@ -31,7 +31,7 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 To install wajig, run the following:
 
 ```sh
-sudo apt install wajig
+sudo apt install wajig aptitude -y
 ```
 
 Once finished, run the following:
@@ -41,6 +41,16 @@ wajig update && wajig distupgrade
 ```
 
 You will use this command to update Debian from now on.
+
+<br/>
+
+### Force Install of Updated Libraries
+
+After you run updates, you may get notice that a couple of libraries were not updated. If you want to force update, you can run the following:
+
+```sh
+sudo aptitude full-upgrade
+```
 
 <br/>
 
