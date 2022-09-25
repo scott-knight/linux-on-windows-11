@@ -251,7 +251,7 @@ Using VIM, copy this to the bottom of your .zshrc file:
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
 export HOSTNAME=BIGBRAIN 
 
-/usr/bin/keychain --clear $HOME/.ssh/id_ed25519
+/usr/bin/keychain --clear $HOME/.ssh/id_ed25519 $HOME/.ssh/gitlab_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
@@ -547,7 +547,7 @@ fi
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
 export HOSTNAME=BIGBRAIN 
 
-/usr/bin/keychain --clear $HOME/.ssh/id_ed25519
+/usr/bin/keychain --clear $HOME/.ssh/id_ed25519 $HOME/.ssh/gitlab_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
