@@ -680,7 +680,7 @@ function gitdel(){
 # function update_debian () {
 #   echo ''
 #   echo 'Updating Debian files, please wait...'
-#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'n &&
+#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
 #   echo 'Update of Debian complete!'
 # }
 
