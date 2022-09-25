@@ -162,7 +162,19 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a basic set of utilities
 
 ```sh
-brew install elixir erlang node python ruby sqlite vips postgresql@14
+brew install elixir erlang node python ruby
+```
+
+Then do
+
+```sh
+brew install sqlite postgresql@14
+```
+
+Then do 
+
+```sh
+brew install vips
 ```
 
 <br/>
