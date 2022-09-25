@@ -310,7 +310,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 Once installed, run the following:
 
 ```sh
-nvm install --lts && npm install npm@latest -g
+nvm install 18 && npm install npm@latest -g
 ```
 
 <br/>
