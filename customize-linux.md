@@ -72,11 +72,15 @@ To install Linux libraries with `wajig`, run the following:
 wajig install -y autoconf bison build-essential checkinstall clang git curl gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
 ```
 
-To install the libraries using `apt`, run the following:
+<br/>
+
+To install the libraries using `apt-get`, run the following:
 
 ```sh
 sudo apt-get install -y autoconf bison build-essential checkinstall clang curl git gcc libssl-dev libpq-dev libyaml-dev libreadline6-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim zlib1g-dev zsh
 ```
+
+<br/>
 
 To install VIPS libraries, run the following:
 
@@ -91,7 +95,6 @@ sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev
 ```
 
 <br/>
-
 
 ## Install libff for bootsnap gem (DONT DO)
 
