@@ -15,7 +15,7 @@ Below is the step-by-step guide on how to install all the bits needed to get a L
 4. [Install oh-my-posh and required libraries](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md)
 5. [Configure Windows Terminal](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
 6. [Install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
-7. [Configure Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+7. [Customize Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 ### IMPORTANT NOTES
 
