@@ -159,7 +159,7 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
 brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew tap homebrew/cask-versions && brew tap Homebrew/homebrew-core
 ```
 
-6. Install a basic set of utilities
+6. Install a programming apps
 
 ```sh
 brew install elixir erlang node python ruby
