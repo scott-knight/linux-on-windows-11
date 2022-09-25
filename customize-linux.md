@@ -37,10 +37,20 @@ sudo apt install wajig aptitude -y
 Once finished, run the following:
 
 ```sh
-wajig update && wajig distupgrade
+wajig update && wajig upgrade -y && wajig distupgrade -y && wajig autoremove && wajig autoclean
 ```
 
-You will use this command to update Debian from now on.
+You should use this command to update Ubuntu from now on.
+
+<br/>
+
+### Updating Debian
+
+To update Debian, run the following:
+
+```sh
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
+```
 
 <br/>
 
@@ -629,6 +639,7 @@ function gitdel(){
 #   echo 'Updating Ubuntu files, please wait...'
 #   wajig update &&
 #   wajig upgrade -y &&
+#   wajig distupgrade -y &&
 #   wajig autoremove &&
 #   wajig autoclean &&
 #   echo 'Update of Ubuntu complete!'
@@ -639,6 +650,7 @@ function gitdel(){
 #   echo 'Updating Debian files, please wait...'
 #   sudo apt-get update && 
 #   sudo apt-get upgrade &&
+#   sudo apt-get dist-upgrade -y &&
 #   sudo apt-get autoremove &&
 #   sudo apt-get autoclean &&
 #   echo 'Update of Debian complete!'
