@@ -185,17 +185,6 @@ brew install erlang elixir && brew postinstall docbook docbook-xsl
 
 <br/>
 
-
-## Install Yarn
-
-To install yarn, run the following:
-
-```sh
-npm install --global yarn
-```
-
-<br/>
-
 ## Setup SSH Key
 
 To connect via ssh to external services you will need to generate a new private and public key. Follow the instructions [found here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new set.
@@ -890,10 +879,35 @@ After you have completed the setup, close and reload the Linux instance.
 
 ## Install Ruby via RBENV
 
+Install the Ruby you want:
+
+```sh
+cd $HOME && rbenv install 3.1.2
+```
+
+Then 
+
+```sh
+gem update --system
+```
+
+<br/>
+
+### Issues When Installing Ruby
+
 If you run into issues installing Ruby because of SSL incompatibility (in Ubuntu), you will need to use Brew OpenSSL. Run the following:
 
 ```sh
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2
 ```
 
+<br/>
+
+## Install Yarn
+
+NVM no longer honors global installs of yarn. You will need to install Yarn in node version you are running. To install yarn, run the following:
+
+```sh
+npm install yarn
+```
 
