@@ -589,8 +589,8 @@ alias yl="ylist"
 alias ylg="ylist | grep $1"
 alias ydev="yarn dev"
 
-alias pstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start"
-alias pstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres stop"
+alias pstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@14 start"
+alias pstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@14 stop"
 alias pupdate="brew postgresql-upgrade-database"
 
 alias python="$(brew --prefix python)"
