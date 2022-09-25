@@ -341,15 +341,10 @@ git clone https://github.com/gusaiani/elixir-oh-my-zsh.git $HOME/.oh-my-zsh/cust
 The [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt) is a clean .oh-my-zsh theme. To install it, run the following:
 
 ```sh
-
-
-Once finished, run the following:
-
-```sh
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1 && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
 ```
 
-
+<br/>
 
 ## Copy the .zshrc Content
 
