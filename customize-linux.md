@@ -901,7 +901,7 @@ cd $HOME && rbenv install 3.1.2 --verbose
 ```
 <br/>
 
-### Issues When Installing Ruby
+### Issues When Installing Ruby on Ubuntu
 
 If you run into issues installing Ruby because of SSL incompatibility (in Ubuntu), you will need to use Brew OpenSSL. Run the following:
 
