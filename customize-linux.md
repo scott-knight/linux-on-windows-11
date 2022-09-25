@@ -165,13 +165,13 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 brew install elixir erlang node python ruby
 ```
 
-Then do
+7. Install DBs
 
 ```sh
 brew install sqlite postgresql@14
 ```
 
-Then do 
+8. Install image compression libraries
 
 ```sh
 brew install vips
