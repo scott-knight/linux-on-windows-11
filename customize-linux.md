@@ -49,7 +49,7 @@ You should use this command to update Ubuntu from now on.
 To update Debian, run the following:
 
 ```sh
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
+sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
 ```
 
 <br/>
@@ -648,11 +648,7 @@ function gitdel(){
 # function update_debian () {
 #   echo ''
 #   echo 'Updating Debian files, please wait...'
-#   sudo apt-get update && 
-#   sudo apt-get upgrade &&
-#   sudo apt-get dist-upgrade -y &&
-#   sudo apt-get autoremove &&
-#   sudo apt-get autoclean &&
+#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'n &&
 #   echo 'Update of Debian complete!'
 # }
 
