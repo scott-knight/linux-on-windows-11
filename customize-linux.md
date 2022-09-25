@@ -189,7 +189,7 @@ wajig install keychain
 OR 
 
 ```sh
-sudo apt-get keychain
+sudo apt-get install keychain
 ```
 
 <br/>
