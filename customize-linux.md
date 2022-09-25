@@ -194,10 +194,10 @@ sudo apt-get install keychain
 
 <br/>
 
-Once installed, start the ssh-agent:
+Once installed, start `keychain` to create the `$HOME\.keychain` directory and start the `ssh-agent`:
 
 ```sh
-ssh-agent
+keychain
 ```
 
 <br/>
