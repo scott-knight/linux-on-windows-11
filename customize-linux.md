@@ -920,9 +920,11 @@ gem update --system
 
 ## Install Yarn
 
-NVM no longer honors global installs of yarn. You will need to install Yarn in node version you are running. To install yarn, run the following:
+NVM no longer honors global installs of yarn. You will need to install Yarn in node version you are running. I also ran into an issue when using earlier versions of node while trying to run yarn. I ended up having use the node to get yarn to work as expected.
+
+To install yarn, run the following:
 
 ```sh
-npm install yarn
+npm install --global yarn
 ```
 
