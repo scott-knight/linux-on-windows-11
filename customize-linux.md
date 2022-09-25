@@ -210,7 +210,7 @@ Using VIM, copy this to the bottom of your .zshrc file:
 export HOSTNAME=BIGBRAIN 
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source /$HOSTNAME-sh
+source $HOSTNAME-sh
 ```
 
 <br/>
