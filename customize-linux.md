@@ -46,7 +46,7 @@ You will use this command to update Debian from now on.
 
 ### Force Install of Updated Libraries
 
-After you run updates, you may get notice that a couple of libraries were not updated. If you want to force update, you can run the following:
+After you run updates, [you may see a notice that a couple of libraries were not upgraded](https://askubuntu.com/questions/601/the-following-packages-have-been-kept-back-why-and-how-do-i-solve-it). If you want to force update, you can run the following:
 
 ```sh
 sudo aptitude full-upgrade
