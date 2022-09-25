@@ -288,7 +288,7 @@ git clone https://github.com/jf/rbenv-gemset.git "$(rbenv root)/plugins/rbenv-ge
 git clone https://github.com/rkh/rbenv-whatis.git "$(rbenv root)/plugins/rbenv-whatis" &&
 git clone https://github.com/rkh/rbenv-use.git "$(rbenv root)/plugins/rbenv-use" &&
 git clone https://github.com/tpope/rbenv-aliases.git "$(rbenv root)/plugins/rbenv-aliases" &&
-cd rbenv alias --auto
+rbenv alias --auto
 ```
 
 <br/>
