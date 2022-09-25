@@ -279,7 +279,7 @@ export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 ```
 
-Close and reload the Ubuntu instance
+Close and reload the Linux instance
 
 <br/>
 
