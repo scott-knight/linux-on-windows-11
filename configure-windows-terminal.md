@@ -41,5 +41,5 @@ You will also want to update the Terminal to do specific things.
 <br/>
 
 
-Now you are ready to [customize Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+Now you are ready to [Install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
  
