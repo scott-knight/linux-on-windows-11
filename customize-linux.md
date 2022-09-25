@@ -352,6 +352,14 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 
 ## Copy the .zshrc Content
 
+Run the following to clear out .zshrc:
+
+```sh
+truncate -s 0 .zshrc
+```
+
+<br/>
+
 Using VIM, replace the entire `.zshrc` file with this code:
 
 ```zsh
