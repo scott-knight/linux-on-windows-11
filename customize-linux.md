@@ -356,7 +356,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="spaceship"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -422,12 +422,14 @@ plugins=(
   colorize
   git
   rbenv
+  rails
   ruby
   python
   elixir
   vscode
   node
   npm
+  nvm
   yarn
   aws
   zsh-syntax-highlighting
@@ -475,15 +477,13 @@ SPACESHIP_NODE_SHOW=true
 SPACESHIP_ELIXIR_SHOW=true
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_GIT_BRANCH_SHOW=true
-SPACESHIP_PROMPT_ASYNC=true
+SPACESHIP_PROMPT_ASYNC=false
 
 # BREW
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-
-# Postgres Libs
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
@@ -515,6 +515,7 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
+
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
 then
@@ -533,25 +534,22 @@ else
   echo "not sure what happened with ${ZFUNCT}"
 fi
 
-ZSAUCE=$HOME/.zsh_jobsauce
-if [ -f "$ZSAUCE" ]
-then
-  source "$ZSAUCE"
-  echo "using ${ZSAUCE}"
-else
-  echo "not sure what happened with ${ZSAUCE}"
-fi
+# ZSAUCE=$HOME/.zsh_jobsauce
+# if [ -f "$ZSAUCE" ]
+# then
+#   source "$ZSAUCE"
+#   echo "using ${ZSAUCE}"
+# else
+#   echo "not sure what happened with ${ZSAUCE}"
+# fi
 
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-# you will see the hostname of your computer. Replace BIGBRAIN with that name  
-export HOSTNAME=BIGBRAIN 
+# you will see the hostname of your computer. Replace BIGBRAIN with that name
+export HOSTNAME=BIGBRAIN
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
 ```
 
 Reload the Linux instance
@@ -636,6 +634,10 @@ alias gsadd="echo -e > .ruby-gemset"             # creates a generic gemset file
 alias rubyadd="echo \$1 > .ruby-version"         # allows you to set the desired ruby version, ex: rubyadd 2.3.1
 alias rmgems='echo Removing .rbenv-gemsets ; rm -rf .rbenv-gemsets'
 alias rbvdoc='curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash'
+
+# nvm
+alias nvms="nvm list"
+alias nvmlist="nvm ls-remote"
 
 # Yarn
 alias yup="yarn upgrade --latest"
