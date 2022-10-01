@@ -92,6 +92,8 @@ wsl --install -d Debian
 
 ![new-settings](https://user-images.githubusercontent.com/516548/192082679-8cc094a2-e920-4b00-943e-91a3e75ccb4b.png)
 
+<br/>
+
 4. On the left-nav, scroll down and click `Debian`. On the right, select `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono`. Then click `Save` and close the settings tab.
 
 ![debian-font](https://user-images.githubusercontent.com/516548/193384119-47cb6b12-ffdb-468d-b65b-76b004b6b062.png)
