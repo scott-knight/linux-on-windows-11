@@ -76,15 +76,25 @@ After you save the settings, when you click on the `Windows Terminal` icon in th
 
 If you would like to use Debain instead of Ubuntu, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, it's noted where there are installation differences. Where it mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian. However, with Debian, when setting up Rails, using Brew to install Postresql, I was unable to resolve an issue with the pg gem install (it says there are missing libraries which I was unable to resolve -- this doesn't happen with Ubuntu).
 
-To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
+1 . To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
 
 ```sh
 wsl --install -d Debian
 ```
 
-Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
+2. Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
 
 ![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
+
+<br/>
+
+3. When finished, click the down-arrow in the tab bar and click `Settings`.
+
+![new-settings](https://user-images.githubusercontent.com/516548/192082679-8cc094a2-e920-4b00-943e-91a3e75ccb4b.png)
+
+4. On the left-nav, scroll down and click `Debian`. On the right, select `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono`. Then click `Save` and close the settings tab.
+
+![debian-font](https://user-images.githubusercontent.com/516548/193384119-47cb6b12-ffdb-468d-b65b-76b004b6b062.png)
 
 <br/>
 
