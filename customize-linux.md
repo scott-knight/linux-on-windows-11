@@ -58,6 +58,14 @@ sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i 
 
 After you run updates, [you may see a notice that a couple of libraries were not upgraded](https://askubuntu.com/questions/601/the-following-packages-have-been-kept-back-why-and-how-do-i-solve-it). If you want to force update, you can run the following:
 
+Install aptitude
+
+```
+sudo apt install aptitude -y
+```
+
+Run the update
+
 ```sh
 sudo aptitude full-upgrade
 ```
