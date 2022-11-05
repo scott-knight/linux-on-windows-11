@@ -1,3 +1,5 @@
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
+
 # Customize Linux (Ubuntu)
 
 This is the step-by-step guide for customizing Linux to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Linux will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Linux instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md). It will be a completely clean install of Linux, no settings will carry over.
