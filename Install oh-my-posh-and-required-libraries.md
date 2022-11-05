@@ -1,4 +1,4 @@
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md)
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md) ,,, [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
 <br/>
 # Install oh-my-posh and Required Libraries
 
