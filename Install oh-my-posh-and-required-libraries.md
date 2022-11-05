@@ -64,3 +64,4 @@ You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You
 <br/>
 
 Now you're ready to [Configure Windows Terminal](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md).
+<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md)
