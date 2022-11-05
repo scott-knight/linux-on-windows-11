@@ -1,3 +1,5 @@
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md)
+<br/>
 # Configure Windows Terminal
 
 Once you have Debian installed you will need to configure Windows Terminal to use the correct icons. Again, you don't have to do this step if you aren't using Windows Terminal powershell or a zsh theme that doesn't require them.
