@@ -117,5 +117,4 @@ Below is an example of settings. You can copy/paste any (or all) of these settin
 Once your account is ready to sync, your extensions are installed and your JSON settings are in place, you are good to go. The next time you install VS Code, simply log in to your account (as previously described) and all the extensions and settings will automatically pull down to yourl local VS Code, saving you a ton of time in setup.
 
 Now you are ready to [Install Windows Termial](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md).
-
 [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-wsl2.md)
