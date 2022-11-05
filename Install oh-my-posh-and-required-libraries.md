@@ -1,3 +1,5 @@
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md)
+<br/>
 # Install oh-my-posh and Required Libraries
 
 This document contains information on how to install oh-my-posh and various libraies used for powershell and zsh themes which use Powerline Icons in the console.
