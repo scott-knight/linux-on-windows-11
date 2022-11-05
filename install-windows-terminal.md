@@ -1,3 +1,5 @@
+ [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md) [Install Oh-my-Posh and Required Libraries](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
+<br/>
 # Install Windows Terminal
 
 To get everything working correctly, you will need to install the new Windows Terminal as it IS NOT installed in Windows by default. Source, [Microsoft Overview](https://docs.microsoft.com/en-us/windows/terminal/).
