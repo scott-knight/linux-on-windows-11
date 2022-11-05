@@ -115,3 +115,4 @@ This will attempt to open VSCode and connect VSCode to your Linux instance. I'm 
 2. Close VSCode and the terminal 
 
 Now you are ready to [Customize Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
