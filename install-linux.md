@@ -1,3 +1,5 @@
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+<br/>
 # Installing Linux (Ubuntu)
 
 This document demonstrates how to install the current supported release of Linux (Ubuntu) on Windows 11. This document assumes WSL2 has been installed and is ready to use. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
