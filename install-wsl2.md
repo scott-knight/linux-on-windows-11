@@ -1,3 +1,5 @@
+[Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md)
+<br/>
 # Install Windows 11 WSL 2
 
 This document explains how to install Windows 11 WSL 2. 
