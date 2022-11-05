@@ -949,5 +949,4 @@ To install the specific version needed (as outlined in the error), and to get th
 ```sh
 gem install ffi --version '1.15.5' -- --disable-system-libffi
 ```
-
-<br/>
+<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
