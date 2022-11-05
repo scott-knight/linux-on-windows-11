@@ -1,3 +1,5 @@
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-wsl2.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md).
+<br/>
 # Install VS Code
 
 You don't actually have to do this step if you prefer using VIM or Nano to edit config files or write code. I prefer using it, therefore recommend installing it. One of the great features of VS Code is the ability to save/sync your VS Code settings to Github.
