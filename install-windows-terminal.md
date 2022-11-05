@@ -39,4 +39,4 @@ After clicking settings you will see a selection for Default Profile. Here you c
 <br/>
 
 Now you are ready to [Install Oh-my-Posh and Required Libraries](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
-
+<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md)
