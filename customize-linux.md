@@ -16,12 +16,6 @@ wsl --update
 
 Once updated, start a linux terminal instance and run the following:
 
-```bash
-sudo vi /etc/wsl.conf
-```
-
-or 
-
 ```bash 
 sudo nano /etc/wsl.conf
 ```
@@ -33,7 +27,7 @@ Add the following to the file:
 systemd=true
 ```
 
-Save the file and close the editor. With the above steps done, close your WSL distro Windows and run `wsl.exe --shutdown` from `PowerShell` to restart your WSL instances. When you relaunch Ubuntu or Debian you should have systemd running. You can check this with the command `systemctl list-unit-files --type=service` which should show your services’ status.
+Use ctrl+O to save the file and close the editor. With the above steps done, close your WSL distro Windows and run `wsl.exe --shutdown` from `PowerShell` to restart your WSL instances. When you relaunch Ubuntu or Debian you should have systemd running. You can check this with the command `systemctl list-unit-files --type=service` which should show your services’ status.
 
 <br/>
 
