@@ -190,7 +190,7 @@ brew install gcc node python ruby
 7. Install DBs
 
 ```sh
-brew install postgresql@15 libpq && echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+brew install postgresql@15 libpq && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 8. Install image compression libraries
