@@ -27,7 +27,7 @@ Add the following to the file:
 systemd=true
 ```
 
-Use ctrl+O to save the file and close the editor. With the above steps done, close your WSL distro Windows and run `wsl.exe --shutdown` from `PowerShell` to restart your WSL instances. When you relaunch Ubuntu or Debian you should have systemd running. You can check this with the command `systemctl list-unit-files --type=service` which should show your services’ status.
+Use `ctrl+o` to save the file and `ctrl+x` close the editor. With the above steps done, close your WSL distro Windows and run `wsl.exe --shutdown` from `PowerShell` to restart your WSL instances. When you relaunch Ubuntu or Debian you should have systemd running. You can check this with the command `systemctl list-unit-files --type=service` which should show your services’ status.
 
 <br/>
 
