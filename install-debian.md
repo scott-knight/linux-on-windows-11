@@ -103,7 +103,7 @@ sudo nano /etc/wsl.conf
 
 <br/>
 
-3. In the nano editor, copy the following:
+3. In the nano editor (or use vim, either way), copy the following:
 
 ```txt
 [boot]
