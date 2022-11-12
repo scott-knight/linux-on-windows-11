@@ -890,7 +890,7 @@ which pg_config
 Note the result then run the following:
 
 ```zsh
-gem install pg -- --with-pg-config=/home/linuxbrew/.linuxbrew/opt/libpq/bin/pg_config
+gem install pg  --  --with-pg-lib=/usr/lib
 ```
 
 <br/>
