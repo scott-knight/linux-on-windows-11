@@ -1,7 +1,7 @@
 [PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [NEXT](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 # Debian
-Debiain is a thinner install of Linux than Ubuntu, and sets up a bit easier as well.
+Debiain is a thinner install of Linux than Ubuntu (Ubuntu is a wrapper or enhancement of Debain), and sets up a bit easier as well.
 
 *I find that Windows and WSL installs change often. If things don't work as described in this doc, they changed something. By the time you read this doc, it's possible that some of these steps may no longer be required. It's also possible that new steps will be required to get everything working. Either way, I do what I can to keep this document updated, but be prepared to troubleshoot issues as they arise.*
 
