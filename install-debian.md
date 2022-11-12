@@ -95,6 +95,8 @@ function setupTransdeb() {
 setupTransdeb
 ```
 
+deb http://ftp.us.debian.org/debian sid main
+
 Once completed, you are ready to do the [NEXT SETUP STEP]()
 
 [PREVIOUS STEP]()
