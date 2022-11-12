@@ -581,12 +581,12 @@ function gitdel(){
 #   echo 'Update of Ubuntu complete!'
 # }
 
-# function update_debian () {
-#   echo ''
-#   echo 'Updating Debian files, please wait...'
-#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
-#   echo 'Update of Debian complete!'
-# }
+function update_debian () {
+  echo ''
+  echo 'Updating Debian files, please wait...'
+  sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
+  echo 'Update of Debian complete!'
+}
 
 function upgrade_ohmyzsh(){
   echo ''
@@ -687,7 +687,7 @@ function update_omz() {
 function update() {
   echo "Upgrading ALL the things..."
   # update_ubuntu &&
-  # update_debian &&
+  update_debian &&
   update_omz &&
   update_rbenv &&
   update_brew &&
