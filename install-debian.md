@@ -74,29 +74,49 @@ sudo aptitude full-upgrade
 
 ## Setup Systemd
 
-This step is very important! We will install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). We will need to setup Debian to use [Genie for Debian](https://github.com/arkane-systems/genie#debian).
+This step is very important! We will install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). We will need to setup Debian to use Systemd by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
 
-1. Follow the setup steps [found here](https://arkane-systems.github.io/wsl-transdebian/)
+1. In the Debian console, run the following:
 
 ```bash
-function setupTransdeb() {  
-  DEB_URL="https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main"
-
-  sudo apt install lsb-release
-  sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
-  sudo chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
-  sudo touch /etc/apt/sources.list.d/wsl-transdebian.list
-  echo "deb ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
-  echo "deb-src ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
-  sudo apt update -y && sudo apt upgrade -y
-  sudo apt install -y bottle-imp
-}
-
-setupTransdeb
+sudo nano /etc/wsl.conf
 ```
 
-deb http://ftp.us.debian.org/debian sid main
+<br/>
 
-Once completed, you are ready to do the [NEXT SETUP STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+2. In the nano editor, copy the following:
+
+```txt
+[boot]
+systemd=true
+```
+
+<br/>
+
+3. To save, use `ctrl+o` close the file. Then type `y` to save the file. Then hit `enter` to close the file.  
+
+<br/>
+
+4. Open Windows `Powershell` as an administrator. Type the following:
+
+```powershell
+wsl.exe --shutdown
+```
+
+<br/>
+
+5. After the Debian instance closes, reopen it and run the following:
+
+```sh
+systemctl list-unit-files --type=service
+```
+
+You should see a table of info:
+
+![systemctl](https://user-images.githubusercontent.com/516548/201456791-a90c2475-c0e5-4dc8-a113-fc3637cb059e.png)
+
+<br/>
+
+You are ready to move to the [NEXT SETUP STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 [PREVIOUS](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
