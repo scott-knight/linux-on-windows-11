@@ -1,4 +1,4 @@
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
+[Prev](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md) ... [Next](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
 <br/>
 # Configure Windows Terminal
 
@@ -42,5 +42,5 @@ To update Windows PowerShell (when needed), follow the instructions [found here]
 
 <br/>
 
-Now you are ready to [Install Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md)
+Now you are ready to [Install Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
 <br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md) 
