@@ -1,7 +1,7 @@
 [PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [NEXT](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 # Debian
-Debiain is a thinner install of Linux than Ubuntu. As of 11/11/2022, `Systemd` is required to run services in Debian, but systemd isn't installed with the WSL version of Debian. Oddly, this wasn't the case during the summer of 2022, but something changed. This installation document addresses the current state of installing everything needed to get Debian running to run a Rails/Postgresql instance. 
+Debiain is a thinner install of Linux than Ubuntu, and sets up a bit easier as well.
 
 *I find that Windows and WSL installs change often. If things don't work as described in this doc, they changed something. By the time you read this doc, it's possible that some of these steps may no longer be required. It's also possible that new steps will be required to get everything working. Either way, I do what I can to keep this document updated, but be prepared to troubleshoot issues as they arise.*
 
