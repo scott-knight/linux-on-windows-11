@@ -55,7 +55,7 @@ sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i 
 2. Install system utilities by running the following:
 
 ```sh
-sudo apt-get install -y aptitude autoconf bison build-essential checkinstall clang curl gawk git gcc libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config policykit-1 python3 python3-pip python3-psutil wget vim zlib1g-dev zsh
+sudo apt-get install -y aptitude autoconf bison build-essential checkinstall clang curl daemonize dbus gawk git gcc libc6 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config policykit-1 python3 python3-pip python3-psutil systemd systemd-container wget vim zlib1g-dev zsh
 ```
 
 3. Install VIPS libraries (used by Rails to manage images):
@@ -74,7 +74,30 @@ sudo aptitude full-upgrade
 
 ## Setup Systemd
 
-This step is very important! We will install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). Instructions for part of the setup [originated from here](https://technologydragonslayer.com/2022/03/19/enable-systemd-in-wsl2-debian-11/). 
+This step is very important! We will install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). We will need to setup Debian to use [Genie for Debian](https://github.com/arkane-systems/genie#debian).
+
+1. Follow the setup steps [found here](https://arkane-systems.github.io/wsl-transdebian/)
+
+```bash
+function setupTransdeb() {  
+  DEB_URL=deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+
+  sudo apt install lsb-release
+  sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
+  sudo chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
+  sudo touch /etc/apt/sources.list.d/wsl-transdebian.list
+  echo "deb ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
+  echo "deb-src ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
+  sudo apt update && sudo apt upgrade
+}
+
+setupTransdeb
+```
+
+
+
+
+================================================================================================================================================================
 
 There are a couple of things to know before you proceed. 
   * The installed Debian version (if this is sub-versioned, simply use the main version number, ie `11.5` will be `11`).
