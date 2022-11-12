@@ -117,7 +117,7 @@ nano setup-systemd.sh
 
 <br/> 
 
-Here is where you will need to have the noted versions for `DEBIAN_VERSION`, `GENIE_VERSION`, and `NET_VERSION`. Copy the contents of code block below into your nano editor instance and update the version numbers:
+6. Here is where you will need to have the noted versions for `DEBIAN_VERSION`, `GENIE_VERSION`, and `NET_VERSION`. Copy the contents of code block below into your nano editor instance and update the version numbers:
 
 ```sh
 #! /usr/bin/env bash
@@ -182,7 +182,7 @@ Use `ctrl+x` to close the file. Hit `y` to write the file. Hit `enter` to save t
 
 <br/>
 
-Make the file executable:
+7. Make the file executable:
 
 ```sh
 sudo chmod +x setup-systemd.sh
@@ -190,7 +190,7 @@ sudo chmod +x setup-systemd.sh
 
 <br/>
 
-Run the script:
+8. Run the script:
 
 ```sh
 ./setup-systemd.sh
@@ -198,9 +198,11 @@ Run the script:
 
 <br/>
 
-Close the Debian teminal. 
+9. Close the Debian teminal. 
 
-Open a `Windows PowerShell` (running as administrator), and run the following:
+<br/>
+
+10. Open a `Windows PowerShell` terminal (running as administrator), and run the following:
 
 ```sh
 wsl.exe --shutdown
@@ -208,7 +210,7 @@ wsl.exe --shutdown
 
 <br/>
 
-Re-ppen the Debian console and run the following:
+11. Re-ppen the Debian console and run the following:
 
 ```sh
 sudo systemctl status time-sync.target
