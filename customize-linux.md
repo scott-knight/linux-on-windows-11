@@ -120,12 +120,6 @@ chmod 400 $HOME/.ssh/id_ed25519
 
 Run the following:
 
-```
-wajig install keychain
-```
-
-OR 
-
 ```sh
 sudo apt-get install keychain
 ```
@@ -140,7 +134,7 @@ keychain
 
 <br/>
 
-Using VIM, copy this to the bottom of your .zshrc file:
+Using VIM or Nano, copy this to the bottom of your .zshrc file:
 
 ```
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
@@ -551,9 +545,9 @@ alias yl="ylist"
 alias ylg="ylist | grep $1"
 alias ydev="yarn dev"
 
-alias pstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@14 start"
-alias pstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@14 stop"
-alias pupdate="brew postgresql-upgrade-database"
+alias pgstart="brew services start postgresql@15"
+alias pgstop="brew services stop postgresql@15"
+alias pgupdate="brew postgresql-upgrade-database"
 
 alias python="$(brew --prefix python)"
 ```
@@ -800,7 +794,7 @@ cd $HOME && rbenv install 3.1.2 --verbose
 
 ### Issues When Installing Ruby on Ubuntu
 
-If you run into issues installing Ruby because of SSL incompatibility (in Ubuntu), you will need to use Brew OpenSSL. Run the following:
+If you run into issues installing Ruby because of SSL incompatibility, you will need to use Brew OpenSSL. Run the following:
 
 ```sh
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2 --verbose
@@ -817,7 +811,7 @@ gem update --system
 
 ## Install Yarn
 
-NVM no longer honors global installs of yarn. You will need to install Yarn in node version you are running. I also ran into an issue when using earlier versions of node while trying to run yarn. I ended up having use the node to get yarn to work as expected.
+NVM no longer honors global installs of yarn. You will need to install Yarn in the node version you are running. I also ran into an issue when using earlier versions of node while trying to run yarn. I ended up having use the current node to get yarn to work as expected.
 
 To install yarn, run the following:
 
