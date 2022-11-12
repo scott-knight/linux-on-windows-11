@@ -13,7 +13,7 @@ Debiain is a thinner install of Linux than Ubuntu. As of 11/11/2022, `Systemd` i
 
 ```bash
 wsl.exe --shutdown
-wsl.exe --uninstall Debian
+wsl.exe --unregister Debian
 ```
 
 <br/>
