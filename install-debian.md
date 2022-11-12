@@ -55,7 +55,7 @@ sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i 
 2. Install system utilities by running the following:
 
 ```sh
-sudo apt-get install -y aptitude autoconf bison build-essential checkinstall clang curl daemonize dbus gawk git gcc libc6 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config policykit-1 python3 python3-pip python3-psutil systemd systemd-container wget vim zlib1g-dev zsh
+sudo apt-get install -y aptitude autoconf bison build-essential checkinstall clang curl git gcc libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release make pkg-config wget vim zlib1g-dev zsh
 ```
 
 3. Install VIPS libraries (used by Rails to manage images):
@@ -74,9 +74,19 @@ sudo aptitude full-upgrade
 
 ## Setup Systemd
 
-This step is very important! We will install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). We will need to setup Debian to use Systemd by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
+This step is very important if you plan to install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install via Brew). We will need to setup Debian to use Systemd by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
 
-1. In the Debian console, run the following:
+*Initially I found that even with the native `systemd` support now available within WSL, that `systemd` and `systemctl` still didn't work as anticipated when enabled. I spent nearly 4 full days looking for the cause and happened upon the answer in an [obscure gihub repo](https://github.com/arkane-systems/bottle-imp#debian) for a utility named `bottle-imp`. The bottle-imp tool was used to provide systemd support for WSL prior to the summer-2022 WSL update, and the bottle-imp code required a list of utilities to be installed for systemd and systemctl to work properly.* 
+
+
+1. Install the tools that will make systemd and systemctl work as expected:
+
+```bash
+sudo apt-get install -y daemonize dbus gawk libc6 policykit-1 python3 python3-pip python3-psutil systemd systemd-container 
+```
+<br/>
+
+2. In the Debian console, run the following:
 
 ```bash
 sudo nano /etc/wsl.conf
@@ -84,7 +94,7 @@ sudo nano /etc/wsl.conf
 
 <br/>
 
-2. In the nano editor, copy the following:
+3. In the nano editor, copy the following:
 
 ```txt
 [boot]
@@ -93,7 +103,7 @@ systemd=true
 
 <br/>
 
-3. To save, use `ctrl+o` close the file. Then type `y` to save the file. Then hit `enter` to close the file.  
+3. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
 
 <br/>
 
@@ -117,6 +127,8 @@ You should see a table of info:
 
 <br/>
 
-You are ready to move to the [NEXT SETUP STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+If that doesn't work, I'm not sure what to tell you. WSL changes often and it requires vigilence to keep it working as expected.
+
+If everything looks like it works as expected, you're ready to move to the [NEXT STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 [PREVIOUS](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
