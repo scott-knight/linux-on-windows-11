@@ -68,7 +68,7 @@ brew install postgresql@15 libpq && echo 'export PATH="/home/linuxbrew/.linuxbre
 brew install vips
 ```
 
-9. Run docbook and postinstall install
+9. Run docbook and postinstall installs (I honestly don't recall why this is needed):
 
 ```sh
 brew postinstall docbook docbook-xsl
