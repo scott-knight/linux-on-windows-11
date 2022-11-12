@@ -6,31 +6,6 @@ This is the step-by-step guide for customizing Linux to use all the settings, al
 
 <br/>
 
-## [Enabling systemd Support](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl)
-
-Running services on Linux requires that `systemd` be enabled on boot. This isn't a default setting for the WSL/WSL2 subsystem. Additionally, as of `11/10/2022` only Ubuntu 22.x has this support, Debian does not (this means you wont be able to run BREW services in Debian). To enable it, you need WSL: Version 0.67.6 or above. To obtain the latest release, open Windows terminal and run the following:
-
-```bash
-wsl --update
-```
-
-Once updated, start a linux terminal instance and run the following:
-
-```bash 
-sudo nano /etc/wsl.conf
-```
-
-Add the following to the file:
-
-```txt
-[boot]
-systemd=true
-```
-
-Use `ctrl+o` to save the file and `ctrl+x` close the editor. With the above steps done, close your WSL distro Windows and run `wsl.exe --shutdown` from `PowerShell` to restart your WSL instances. When you relaunch Ubuntu or Debian you should have systemd running. You can check this with the command `systemctl list-unit-files --type=service` which should show your services’ status.
-
-<br/>
-
 ## Update Linux (Ubuntu)
 
 1. Close all open `Windows Terminal` instances. Open a new `Windows Termial` instance and select Ubuntu (if you didn't set it as the default).
