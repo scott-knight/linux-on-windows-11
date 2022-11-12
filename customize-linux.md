@@ -841,9 +841,57 @@ To install yarn, run the following:
 npm install --global yarn
 ```
 
+<br/>
+
+Once you have your project downloaded, and yarn libraries are installed, you can see which libraries are outdated by running the following:
+
+```zsh
+yarn outdated
+```
+
+To upgrade outdated libraries, run the following:
+
+```zsh
+yarn upgrade --latest
+```
+
+<br/>
+
 ## Notes for Rails Setups
 
-This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run.
+This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run. Make sure you have Postgres running before you attempt to install/bundle gems for your project.
+
+<br/>
+
+### Installing the PG Gem
+
+Once you have your Rails project pulled and you run bundler to get the gems installed, you may run into an error:
+
+> Unable to find PostgreSQL client library.
+> Please install libpq or postgresql client package like so:
+>   sudo apt install libpq-dev
+>   sudo yum install postgresql-devel
+>   sudo zypper in postgresql-devel
+>   sudo pacman -S postgresql-libs
+>
+> or try again with:
+>   gem install pg -- --with-pg-config=/path/to/pg_config
+
+<br/> 
+
+You find `pg_config` run the following:
+
+```zsh
+which pg_config
+
+=> /home/linuxbrew/.linuxbrew/opt/libpq/bin/pg_config
+```
+
+Note the result then run the following:
+
+```zsh
+gem install pg -- --with-pg-config=/home/linuxbrew/.linuxbrew/opt/libpq/bin/pg_config
+```
 
 <br/>
 
