@@ -89,7 +89,7 @@ To connect via ssh to external services you will need to generate a new private 
 Once your keys are created, run the following:
 
 ```sh
-touch ${HOME}/.ssh/config
+mkdir ${HOME}/.ssh && touch ${HOME}/.ssh/config
 ```
 
 Copy the following to the new `config` file:
