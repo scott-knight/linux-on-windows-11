@@ -80,7 +80,7 @@ This step is very important! We will install `Brew` which will run both `Postgre
 
 ```bash
 function setupTransdeb() {  
-  DEB_URL=deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+  DEB_URL="https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main"
 
   sudo apt install lsb-release
   sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
@@ -88,7 +88,8 @@ function setupTransdeb() {
   sudo touch /etc/apt/sources.list.d/wsl-transdebian.list
   echo "deb ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
   echo "deb-src ${DEB_URL}" | sudo tee -a /etc/apt/sources.list.d/wsl-transdebian.list
-  sudo apt update && sudo apt upgrade
+  sudo apt update -y && sudo apt upgrade -y
+  sudo apt install -y systemd-genie
 }
 
 setupTransdeb
