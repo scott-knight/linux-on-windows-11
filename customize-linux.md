@@ -2,7 +2,29 @@
 
 # Customize Debian 
 
-The first thing we need to do is create system files. To do this, run the following:
+This doc outlines the specifics for setting up the Debian environment for Ruby, Rails, Node, etc.
+
+<br/>
+
+## Connecting VSCode
+
+1. In the Linux console, type the following:
+
+```sh
+code .
+```
+
+This will load VSCode and connect to your Debian instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
+
+<br/>
+
+2. Close VSCode and the terminal 
+
+<br/>
+
+## Environment Setup
+
+Next, we need system files for the environment. Run the following:
 
 ```sh
 touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
