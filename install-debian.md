@@ -112,11 +112,11 @@ systemd=true
 
 <br/>
 
-3. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
+4. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
 
 <br/>
 
-4. Open Windows `Powershell` as an administrator. Type the following:
+5. Open Windows `Powershell` as an administrator. Type the following:
 
 ```powershell
 wsl.exe --shutdown
@@ -124,7 +124,7 @@ wsl.exe --shutdown
 
 <br/>
 
-5. After the Debian instance closes, reopen it and run the following:
+6. After the Debian instance closes, reopen it and run the following:
 
 ```sh
 systemctl list-unit-files --type=service
