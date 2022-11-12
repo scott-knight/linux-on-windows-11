@@ -26,6 +26,8 @@ wsl.exe --unregister Debian
 wsl.exe --install -d Debian
 ```
 
+<br/>
+
 2. Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
 
 ![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
@@ -52,17 +54,23 @@ wsl.exe --install -d Debian
 sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
 ```
 
+<br/>
+
 2. Install system utilities by running the following:
 
 ```sh
 sudo apt-get install -y aptitude autoconf bison build-essential checkinstall clang curl git gcc libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release make pkg-config wget vim zlib1g-dev zsh
 ```
 
+<br/>
+
 3. Install VIPS libraries (used by Rails to manage images):
 
 ```sh
 sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
 ```
+
+<br/>
 
 4. Once everything is installed, run the following:
 
