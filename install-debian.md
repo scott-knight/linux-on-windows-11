@@ -134,13 +134,13 @@ GENIE_DIR_PATH="/tmp/${GENIE_FILE}"
 
 function installDependencies() {
   sudo apt-get update && sudo apt-get install apt-transport-https
-  
+
   wget --content-disposition \
     "https://packages.microsoft.com/config/debian/${DEBIAN_VERSION}/packages-microsoft-prod.deb"
 
   sudo dpkg -i packages-microsoft-prod.deb
   rm packages-microsoft-prod.deb
-  
+
   sudo apt-get update
   sudo apt-get install -y \
     daemonize \
