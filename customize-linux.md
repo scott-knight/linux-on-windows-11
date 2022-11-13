@@ -74,7 +74,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install stuff
 
 ```sh
-ulimit -n 8192 && brew install gcc python ruby vips
+ulimit -n 8192 && brew install gcc git python ruby vips
 ```
 
 Then
