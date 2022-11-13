@@ -204,7 +204,7 @@ To connect via ssh to external services you will need to generate a new private 
 Once your keys are created, run the following:
 
 ```sh
-mkdir ${HOME}/.ssh && touch ${HOME}/.ssh/config && nano ${HOME}/.ssh/config
+mkdir $HOME/.ssh && touch $HOME/.ssh/config && nano $HOME/.ssh/config
 ```
 
 Copy the following to the new `config` file:
@@ -226,7 +226,7 @@ clip.exe < ${HOME}/.ssh/id_ed25519.pub
 If you copy contents from another `.ssh` to this setup, you will may need to change the file level permissions:
 
 ```sh
-chmod 400 $HOME/.ssh/id_ed25519
+sudo -S chmod 400 $HOME/.ssh/id_ed25519 &&  sudo -S chmod 400 $HOME/.ssh/id_ed25519.pub
 ```
 
 <br/>
