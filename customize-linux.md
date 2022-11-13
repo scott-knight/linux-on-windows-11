@@ -651,6 +651,9 @@ alias pgstart="brew services start postgresql@15"
 alias pgstop="brew services stop postgresql@15"
 alias pgupdate="brew postgresql-upgrade-database"
 
+#alias pstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
+#alias pstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
+
 alias python="$(brew --prefix python)"
 ```
 
