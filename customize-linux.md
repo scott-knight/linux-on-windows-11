@@ -968,4 +968,21 @@ To install the specific version needed (as outlined in the error), and to get th
 ```sh
 gem install ffi --version '1.15.5' -- --disable-system-libffi
 ```
+
+### Rails Issues
+
+When you pull your repo code, you may run into an issue where rails is not executable:
+
+> Permission denied - bin/rails (Errno::EACCES)
+
+<br/>
+
+To fix this, run the following:
+
+```zsh
+chmod u+x bin/rails
+```
+
+<br/>
+
 <br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
