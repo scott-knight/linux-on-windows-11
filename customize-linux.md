@@ -80,7 +80,7 @@ brew install gcc postinstall python ruby
 7. Install image compression libraries
 
 ```sh
-brew install vips
+ulimit -n 8192 && brew install vips
 ```
 
 8. Run docbook and postinstall installs to wrap up the VIPs install (if you get the warning about it):
