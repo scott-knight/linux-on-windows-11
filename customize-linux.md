@@ -74,7 +74,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a Node and Ruby
 
 ```sh
-brew install gcc node python ruby
+brew install gcc python ruby
 ```
 
 7. Install image compression libraries
