@@ -100,9 +100,28 @@ Install postgres by doing the following
 brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
+Then copy this in the console:
+
+```zsh
+echo '' >> $HOME/.zshrc
+echo "# create the postgresql temp file if it doesn't exit" >> $HOME/.zshrc
+echo 'function set_pg_dir() {' >> $HOME/.zshrc
+echo '  POSTGRESTEMP=/var/run/postgresql' >> $HOME/.zshrc
+echo '  if [ ! -d "$POSTGRESTEMP" ]; then' >> $HOME/.zshrc
+echo '    echo Creating $POSTGRESTEMP for PostgreSQL' >> $HOME/.zshrc
+echo "    echo '1' | sudo -S mkdir $POSTGRESTEMP && echo '1' | sudo -S chmod 0777 /var/run/postgresql" >> $HOME/.zshrc
+echo '  else' >> $HOME/.zshrc
+echo '    echo $POSTGRESTEMP exists!' >> $HOME/.zshrc
+echo '  fi' >> $HOME/.zshrc
+echo '}' >> $HOME/.zshrc
+echo 'alias setpgdir="set_pg_dir"' >> $HOME/.zshrc
+echo 'setpgdir' >> $HOME/.zshrc
+echo '' >> $HOME/.zshrc
+source .zshrc
+```
 <br/>
 
-### Edit the Config file
+### Edit postgresql.conf
 
 To find the config file run the following:
 
@@ -132,22 +151,21 @@ nano /home/linuxbrew/.linuxbrew/var/postgresql@15/postgresql.conf
 
 <br/> 
 
-In the file, you want to find `unix_socket_directories`. Uncomment it and change it to (then save it):
+In the file, find `unix_socket_directories`. Uncomment it and change it to:
 
 ```txt
 unix_socket_directories = '/var/run/postgresql,/tmp'
 ```
 
+Then save the file.
+
 <br/>
 
-You will need to create the `/var/run/postgresql` dir. 
+To create `/var/run/postgresql` (if it doesn't already exist) run the following:
 
 ```zsh
-echo '1' | sudo -S rm -rf /var/run/postgresql && echo '1' | sudo -S mkdir /var/run/postgresql && echo '1' | sudo -S chmod 0777 /var/run/postgresql
+setpgdir
 ```
-
-If you're running `systemd` this dir will be removed on boot. You will have to recreate it every time you boot up Debian. 
-
 <br/>
 
 ### Start the Postgres server
@@ -164,19 +182,19 @@ OR you can run this:
 pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 ```
 
-<br/>
+<br/> 
 
-Once the server starts it will create the PORT connection file in `/tmp/.s.PGSQL.5432`. However, the PG gem for Rails will be looking for the file in `/var/run/postgresql/.s.PGSQL.5432`. Therefore, we will need to create a symlink for it by running the following:
+Once it's running it will return something like this:
 
-```zsh
-sudo -S mkdir /var/run/postgresql
-```
-
-Then (if needed)
-
-```zsh
- sudo -S ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
- ```
+> waiting for server to start....2022-11-13 20:54:42.075 UTC [26837] LOG:  starting PostgreSQL 15.1 (Homebrew) on x86_64-pc-linux-gnu, compiled by gcc-11
+>   (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, 64-bit
+> 2022-11-13 20:54:42.075 UTC [26837] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+> 2022-11-13 20:54:42.079 UTC [26837] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+> 2022-11-13 20:54:42.085 UTC [26837] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+> 2022-11-13 20:54:42.090 UTC [26840] LOG:  database system was shut down at 2022-11-13 20:23:23 UTC
+> 2022-11-13 20:54:42.095 UTC [26837] LOG:  database system is ready to accept connections
+>   done
+> server started
 
 <br/>
 
