@@ -71,25 +71,13 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc &&
 brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew tap homebrew/cask-versions
 ```
 
-6. Install a Node and Ruby
+6. Install stuff
 
 ```sh
-brew install gcc python ruby
+ulimit -n 8192 && brew install gcc python ruby vips && brew postinstall docbook docbook-xsl
 ```
 
-7. Install image compression libraries
-
-```sh
-ulimit -n 8192 && brew install vips
-```
-
-8. Run docbook and postinstall installs to wrap up the VIPs install (if you get the warning about it):
-
-```sh
-brew postinstall docbook docbook-xsl
-```
-
-9. Install Elixir (if you need/want it)
+7. Install Elixir (if you need/want it)
 
 ```sh
 brew install erlang elixir
@@ -102,7 +90,7 @@ brew install erlang elixir
 Install postgres by doing the following 
 
 ```sh
-brew install postgresql@15 && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 <br/>
@@ -111,6 +99,12 @@ Start the Postgres server
 
 ```zsh
 brew services start postgresql@15
+```
+
+OR 
+
+```zsh
+pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 ```
 
 <br/>
