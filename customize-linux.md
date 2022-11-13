@@ -583,18 +583,18 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
-
 # create the postgresql temp file if it doesn't exit
 function set_pg_dir() {
   POSTGRESTEMP=/var/run/postgresql
   if [ ! -d "$POSTGRESTEMP" ]; then
     echo Creating $POSTGRESTEMP for PostgreSQL
-    echo '1' | sudo -S mkdir $POSTGRESTEMP
-  else 
+    echo '1' | sudo -S mkdir /var/run/postgresql && echo '1' | sudo -S chmod 0777 /var/run/postgresql
+  else
     echo $POSTGRESTEMP exists!
   fi
 }
-alias setpgdir='set_pg_dir'
+alias setpgdir="set_pg_dir"
+setpgdir
 
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
