@@ -102,7 +102,7 @@ brew install erlang elixir
 Install postgres by doing the following 
 
 ```sh
-brew install postgresql@15 && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+brew install postgresql@15 libpq && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 <br/>
