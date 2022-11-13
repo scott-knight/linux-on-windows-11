@@ -119,8 +119,14 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 Once the server starts it will create the PORT connection file in `/tmp/.s.PGSQL.5432`. However, the PG gem for Rails will be looking for the file in `/var/run/postgresql/.s.PGSQL.5432`. Therefore, we will need to create a symlink for it by running the following:
 
 ```zsh
-sudo mkdir /var/run/postgresql && sudo ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
+echo 1 | sudo -S mkdir /var/run/postgresql
 ```
+
+Then (if needed)
+
+```zsh
+ echo 1 | sudo -S ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
+ ```
 
 <br/>
 
