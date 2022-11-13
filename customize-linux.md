@@ -74,7 +74,7 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install a Node and Ruby
 
 ```sh
-brew install gcc python ruby
+brew install gcc postinstall python ruby
 ```
 
 7. Install image compression libraries
@@ -83,7 +83,7 @@ brew install gcc python ruby
 brew install vips
 ```
 
-8. Run docbook and postinstall installs (I honestly don't recall why this is needed):
+8. Run docbook and postinstall installs to wrap up the VIPs install (if you get the warning about it):
 
 ```sh
 brew postinstall docbook docbook-xsl
