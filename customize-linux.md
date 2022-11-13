@@ -127,6 +127,7 @@ It will return something like this:
 Edit the file.
 
 ```zsh
+nano /home/linuxbrew/.linuxbrew/var/postgresql@15/postgresql.conf
 ```
 
 <br/> 
