@@ -1,4 +1,4 @@
-[Prev](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
+[PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
 
 # Customize Debian 
 
