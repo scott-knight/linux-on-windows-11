@@ -47,6 +47,22 @@ Close all instances and start a new Linux instance.
 
 <br/>
 
+## [Setup Postgres](https://wiki.postgresql.org/wiki/Apt)
+
+[Simple doc](https://computingforgeeks.com/how-to-install-postgresql-db-on-debian/)
+
+
+```zsh
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+```
+
+```zsh
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+```
+
+```zsh
+sudo apt-get update
+```
 
 ## Install BREW for Linux
 
