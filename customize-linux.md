@@ -102,7 +102,7 @@ brew install erlang elixir
 Install postgres by doing the following 
 
 ```sh
-brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+brew install postgresql@15 && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 <br/>
@@ -439,8 +439,10 @@ SPACESHIP_PROMPT_ASYNC=false
 # BREW
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
-export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
+export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
+# export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
+# export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
+
 
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
