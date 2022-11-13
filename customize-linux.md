@@ -74,8 +74,15 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 6. Install stuff
 
 ```sh
-ulimit -n 8192 && brew install gcc python ruby vips && brew postinstall docbook docbook-xsl
+ulimit -n 8192 && brew install gcc python ruby vips
 ```
+
+Then
+
+```zsh
+brew postinstall docbook docbook-xsl
+```
+<br/>
 
 7. Install Elixir (if you need/want it)
 
