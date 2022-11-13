@@ -77,10 +77,16 @@ sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev
 ```sh
 sudo aptitude full-upgrade
 ```
+
+Then
+
+```sh
+mkdir .ssh
+```
    
 <br>
 
-## Setup Systemd
+## Setup Systemd (Only if Needed)
 
 This step is very important if you plan to install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install and run with Debian). We will need to setup Debian to use Systemd by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
 
