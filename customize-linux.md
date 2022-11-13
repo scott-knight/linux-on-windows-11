@@ -102,7 +102,7 @@ brew install erlang elixir
 Install postgres by doing the following 
 
 ```sh
-brew install postgresql@15 libpq && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+brew install postgresql@15 && echo 'export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
 ```
 
 <br/>
@@ -925,6 +925,31 @@ yarn upgrade --latest
 ## Notes for Rails Setups
 
 This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run. Make sure you have Postgres running before you attempt to install/bundle gems for your project.
+
+<br/>
+
+### Installing PG 
+
+Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
+
+```zsh
+sudo find / -name pg_config
+```
+
+<br/>
+
+You will see something like this 
+
+> /home/linuxbrew/.linuxbrew/Cellar/postgresql@15/15.1/bin/pg_config
+> /usr/bin/pg_config
+
+<br/>
+
+You want to use the system's `pg_config` and not the brew install
+
+```zsh
+gem install pg -- --with-pg-config=/usr/bin/pg_config
+```
 
 <br/>
 
