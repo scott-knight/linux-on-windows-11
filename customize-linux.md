@@ -941,6 +941,7 @@ sudo find / -name pg_config
 You will see something like this 
 
 > /home/linuxbrew/.linuxbrew/Cellar/postgresql@15/15.1/bin/pg_config
+
 > /usr/bin/pg_config
 
 <br/>
