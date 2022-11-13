@@ -77,28 +77,48 @@ brew tap Homebrew/homebrew-cask && brew tap Homebrew/homebrew-services && brew t
 brew install gcc node python ruby
 ```
 
-7. Install DBs
-
-```sh
-brew install postgresql@15 libpq && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
-```
-
-8. Install image compression libraries
+7. Install image compression libraries
 
 ```sh
 brew install vips
 ```
 
-9. Run docbook and postinstall installs (I honestly don't recall why this is needed):
+8. Run docbook and postinstall installs (I honestly don't recall why this is needed):
 
 ```sh
 brew postinstall docbook docbook-xsl
 ```
 
-10. Install Elixir (if you need/want it)
+9. Install Elixir (if you need/want it)
 
 ```sh
 brew install erlang elixir
+```
+
+<br/>
+
+## Install Postgres
+
+Install postgres by doing the following 
+
+```sh
+brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
+```
+
+<br/>
+
+Start the Postgres server
+
+```zsh
+brew services start postgres@15
+```
+
+<br/>
+
+Once the server starts it will create the PORT connection file in `/tmp/.s.PGSQL.5432`. However, the PG gem for Rails will be looking for the file in `/var/run/postgresql/.s.PGSQL.5432`. Therefore, we will need to create a symlink for it by running the following:
+
+```zsh
+sudo mkdir /var/run/postgresql && sudo ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
 ```
 
 <br/>
@@ -157,6 +177,12 @@ keychain
 
 Using VIM or Nano, copy this to the bottom of your .zshrc file:
 
+```zsh
+nano .zshrc
+```
+
+<br/>
+
 ```
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
 # you will see the hostname of your computer. Replace BIGBRAIN with that name  
@@ -177,6 +203,12 @@ git clone https://github.com/rbenv/rbenv.git ${HOME}/.rbenv
 ```
 
 Add the following to `.zshrc`:
+
+```zsh
+nano .zshrc
+```
+
+<br/>
 
 ```sh
 # RBENV
@@ -262,7 +294,13 @@ truncate -s 0 .zshrc
 
 <br/>
 
-Using VIM, replace the entire `.zshrc` file with this code:
+Using VIM or NANO, replace the entire `.zshrc` file with this code:
+
+```zsh
+nano .zshrc
+```
+
+<br/>
 
 ```zsh
 # If you come from bash you might have to change your $PATH.
@@ -453,14 +491,14 @@ else
   echo "not sure what happened with ${ZFUNCT}"
 fi
 
-# ZSAUCE=$HOME/.zsh_jobsauce
-# if [ -f "$ZSAUCE" ]
-# then
-#   source "$ZSAUCE"
-#   echo "using ${ZSAUCE}"
-# else
-#   echo "not sure what happened with ${ZSAUCE}"
-# fi
+ZSAUCE=$HOME/.zsh_jobsauce
+if [ -f "$ZSAUCE" ]
+then
+  source "$ZSAUCE"
+  echo "using ${ZSAUCE}"
+else
+  echo "not sure what happened with ${ZSAUCE}"
+fi
 
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
 # you will see the hostname of your computer. Replace BIGBRAIN with that name
@@ -471,13 +509,19 @@ source $HOME/.keychain/$HOSTNAME-sh
 
 ```
 
-Reload the Linux instance
+Reload the Debian instance
 
 <br/>
 
 ## Copy .zsh_alias_list Content
 
-Using VIM, replace the entire `.zsh_alias_list` file with this code:
+Using VIM or NANO, replace the entire `.zsh_alias_list` file with this code:
+
+```zsh
+nano .zsh_alias_list
+```
+
+<br/>
 
 ```zsh
 #! /bin/zsh
@@ -579,7 +623,13 @@ From now on, when you want to reload the shell, simply type `reload`
 
 ## Copy .zsh_functions
 
-Using VIM, replace the contents of `.zsh_functions` with the following:
+Using VIM or NANO, replace the contents of `.zsh_functions` with the following:
+
+```zsh
+nano .zsh_functions
+```
+
+<br/>
 
 ```zsh
 #! /bin/zsh
@@ -755,6 +805,12 @@ function gits () {
 
 Using VIM, replace the contents of `.gemrc` with the following:
 
+```zsh
+nano .gemrc
+```
+
+<br/>
+
 ```ruby
 ---
 :backtrace: false
@@ -771,7 +827,13 @@ update: --no-rdoc --no-ri --no-document
 
 ## Copy gitconfig
 
-Using VIM, replace the contents of `.gitconfig` with the following:
+Using VIM or Nano, replace the contents of `.gitconfig` with the following:
+
+```zsh
+nano .gitconfig
+```
+
+<br/>
 
 ```sh
 [user]
@@ -859,38 +921,6 @@ yarn upgrade --latest
 ## Notes for Rails Setups
 
 This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run. Make sure you have Postgres running before you attempt to install/bundle gems for your project.
-
-<br/>
-
-### Installing the PG Gem
-
-Once you have your Rails project pulled and you run bundler to get the gems installed, you may run into an error:
-
-> Unable to find PostgreSQL client library.
-> Please install libpq or postgresql client package like so:
->   sudo apt install libpq-dev
->   sudo yum install postgresql-devel
->   sudo zypper in postgresql-devel
->   sudo pacman -S postgresql-libs
->
-> or try again with:
->   gem install pg -- --with-pg-config=/path/to/pg_config
-
-<br/> 
-
-You find `pg_config` run the following:
-
-```zsh
-which pg_config
-
-=> /home/linuxbrew/.linuxbrew/opt/libpq/bin/pg_config
-```
-
-Note the result then run the following:
-
-```zsh
-gem install pg  --  --with-pg-lib=/usr/lib
-```
 
 <br/>
 
