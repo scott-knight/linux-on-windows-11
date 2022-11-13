@@ -906,6 +906,8 @@ npm install --global yarn
 
 <br/>
 
+### Clone Your Repo - Download Yarn Libraries
+
 Once you have your project downloaded, and yarn libraries are installed, you can see which libraries are outdated by running the following:
 
 ```zsh
