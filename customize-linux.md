@@ -186,8 +186,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 
 Once it's running it will return something like this:
 
-> waiting for server to start....2022-11-13 20:54:42.075 UTC [26837] LOG:  starting PostgreSQL 15.1 (Homebrew) on x86_64-pc-linux-gnu, compiled by gcc-11  
-  (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, 64-bit  
+> waiting for server to start....2022-11-13 20:54:42.075 UTC [26837] LOG:  starting PostgreSQL 15.1 (Homebrew) on x86_64-pc-linux-gnu, compiled by gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, 64-bit    
 2022-11-13 20:54:42.075 UTC [26837] LOG:  listening on IPv4 address "127.0.0.1", port 5432  
 2022-11-13 20:54:42.079 UTC [26837] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"  
 2022-11-13 20:54:42.085 UTC [26837] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"  
