@@ -203,8 +203,13 @@ To connect via ssh to external services you will need to generate a new private 
 
 Once your keys are created, run the following:
 
+(Run this if `.ssh` doesn't exist:
+```zsh
+mkdir -m a=rwx $HOME/.ssh
+```
+
 ```sh
-mkdir -m a=rwx $HOME/.ssh && touch $HOME/.ssh/config && nano $HOME/.ssh/config
+touch $HOME/.ssh/config && nano $HOME/.ssh/config
 ```
 
 Copy the following to the new `config` file:
