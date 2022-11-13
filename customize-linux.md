@@ -110,7 +110,7 @@ brew install postgresql@15 libpq && echo 'export PATH="${BREW_OPT_PATH}/postgres
 Start the Postgres server
 
 ```zsh
-brew services start postgres@15
+brew services start postgresql@15
 ```
 
 <br/>
