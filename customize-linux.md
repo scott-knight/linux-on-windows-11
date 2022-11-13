@@ -419,7 +419,7 @@ SPACESHIP_PROMPT_ASYNC=false
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
+export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
 
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
