@@ -194,6 +194,41 @@ source $HOME/.keychain/$HOSTNAME-sh
 
 <br/>
 
+## Copy gitconfig
+
+Using VIM or Nano, replace the contents of `.gitconfig` with the following:
+
+```zsh
+nano .gitconfig
+```
+
+<br/>
+
+```sh
+[user]
+  email = [your email]
+  name = [your-username]
+
+[pull]
+  rebase = false
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[pager]
+  branch = false
+```
+
+Replace the email and username with your values.
+
+<br/>
+
 ## INSTALL RBENV
 
 To install RBENV, run the following:
@@ -826,41 +861,6 @@ update: --no-rdoc --no-ri --no-document
 ```
 
 <br>
-
-## Copy gitconfig
-
-Using VIM or Nano, replace the contents of `.gitconfig` with the following:
-
-```zsh
-nano .gitconfig
-```
-
-<br/>
-
-```sh
-[user]
-  email = [your email]
-  name = [your-username]
-
-[pull]
-  rebase = false
-
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-
-[pager]
-  branch = false
-```
-
-Replace the email and username with your values.
-
-<br/>
 
 ## Reload
 
