@@ -102,13 +102,62 @@ brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/
 
 <br/>
 
-Start the Postgres server
+### Edit the Config file
+
+To find the config file run the following:
+
+```zsh
+psql -U [linux username] -d postgres -c 'SHOW config_file'
+```
+<br/>
+
+EX:
+
+```zsh
+psql -U sknight -d postgres -c 'SHOW config_file'
+```
+<br/>
+
+It will return something like this:
+
+> /home/linuxbrew/.linuxbrew/var/postgresql@15/postgresql.conf
+
+<br/>
+
+Edit the file.
+
+```zsh
+```
+
+<br/> 
+
+In the file, you want to find `unix_socket_directories`. Uncomment it and change it to (then save it):
+
+```txt
+unix_socket_directories = '/var/run/postgresql,/tmp'
+```
+
+<br/>
+
+You will need to create the `/var/run/postgresql` dir. 
+
+```zsh
+echo '1' | sudo -S rm -rf /var/run/postgresql && echo '1' | sudo -S mkdir /var/run/postgresql && echo '1' | sudo -S chmod 0777 /var/run/postgresql
+```
+
+If you're running `systemd` this dir will be removed on boot. You will have to recreate it every time you boot up Debian. 
+
+<br/>
+
+### Start the Postgres server
+
+If you have enabled `systemd`, run the following:
 
 ```zsh
 brew services start postgresql@15
 ```
 
-OR 
+OR you can run this:
 
 ```zsh
 pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
@@ -119,13 +168,13 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 Once the server starts it will create the PORT connection file in `/tmp/.s.PGSQL.5432`. However, the PG gem for Rails will be looking for the file in `/var/run/postgresql/.s.PGSQL.5432`. Therefore, we will need to create a symlink for it by running the following:
 
 ```zsh
-echo 1 | sudo -S mkdir /var/run/postgresql
+sudo -S mkdir /var/run/postgresql
 ```
 
 Then (if needed)
 
 ```zsh
- echo 1 | sudo -S ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
+ sudo -S ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
  ```
 
 <br/>
@@ -516,6 +565,15 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
+
+# create the postgresql temp file if it doesn't exit
+POSTGRESTEMP=/var/run/postgresql
+if [ ! -d "$POSTGRESTEMP" ]; then
+  echo Creating $POSTGRESTEMP for PostgreSQL
+  echo '1' | sudo -S mkdir $POSTGRESTEMP
+else 
+  echo $POSTGRESTEMP exists!
+fi
 
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
