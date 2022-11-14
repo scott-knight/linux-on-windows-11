@@ -117,6 +117,17 @@ echo '}' >> $HOME/.zshrc
 echo 'alias setpgdir="set_pg_dir"' >> $HOME/.zshrc
 echo 'setpgdir' >> $HOME/.zshrc
 echo '' >> $HOME/.zshrc
+echo '' >> $HOME/.zshrc
+echo 'function pgfix () {' >> $HOME/.zshrc
+echo '  PGFILE=/tmp/.s.PGSQL.5432' >> $HOME/.zshrc
+echo '  if [ -f "$PGFILE"]; then' >> $HOME/.zshrc
+echo "    echo '1' | sudo ln -s $PGFILE /var/run/postgresql/.s.PGSQL.5432" >> $HOME/.zshrc
+echo '    echo $PGFILE was linked in /var/run/postgresql/' >> $HOME/.zshrc
+echo '  else' >> $HOME/.zshrc
+echo '    echo $PGFILE is not available for the fix!' >> $HOME/.zshrc
+echo '  fi' >> $HOME/.zshrc
+echo '}' >> $HOME/.zshrc
+echo '' >> $HOME/.zshrc
 source .zshrc
 ```
 <br/>
@@ -600,6 +611,16 @@ function set_pg_dir() {
 }
 alias setpgdir="set_pg_dir"
 setpgdir
+
+function pgfix () {
+  PGFILE=/tmp/.s.PGSQL.5432
+  if [ -f "$PGFILE"]; then
+    echo '1' | sudo ln -s $PGFILE /var/run/postgresql/.s.PGSQL.5432
+    echo $PGFILE was linked in /var/run/postgresql/
+  else
+    echo $PGFILE is not available for the fix!
+  fi
+}
 
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
