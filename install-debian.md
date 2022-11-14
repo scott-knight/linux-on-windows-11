@@ -86,64 +86,6 @@ mkdir .ssh
    
 <br>
 
-## Setup Systemd (Only if Needed)
-
-This step is very important if you plan to install `Brew` which will run both `Postgres` and `Redis` instances (and any other service you choose to install and run with Debian). We will need to setup Debian to use Systemd by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
-
-*Initially I found that even with the native `systemd` support now available within WSL, that `systemd` and `systemctl` still didn't work as anticipated when enabled. I spent nearly 4 full days looking for the cause and happened upon the answer in an [obscure gihub repo](https://github.com/arkane-systems/bottle-imp#debian) for a utility named `bottle-imp`. The bottle-imp tool was used to provide systemd support for WSL prior to the summer-2022 WSL update, and the bottle-imp code required a list of utilities to be installed for systemd and systemctl to work properly.* 
-
-<br/>
-
-1. Install the tools that will make systemd and systemctl work as expected:
-
-```bash
-sudo apt-get install -y daemonize dbus gawk libc6 policykit-1 python3 python3-pip python3-psutil systemd systemd-container 
-```
-<br/>
-
-2. In the Debian console, run the following:
-
-```bash
-sudo nano /etc/wsl.conf
-```
-
-<br/>
-
-3. In the nano editor (or use vim, either way), copy the following:
-
-```txt
-[boot]
-systemd=true
-```
-
-<br/>
-
-4. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
-
-<br/>
-
-5. Open Windows `Powershell` as an administrator. Type the following:
-
-```powershell
-wsl.exe --shutdown
-```
-
-<br/>
-
-6. After the Debian instance closes, reopen it and run the following:
-
-```sh
-systemctl list-unit-files --type=service
-```
-
-You should see a table of info:
-
-![systemctl](https://user-images.githubusercontent.com/516548/201456791-a90c2475-c0e5-4dc8-a113-fc3637cb059e.png)
-
-<br/>
-
-If that doesn't work, I'm not sure what to tell you. WSL changes often and it requires vigilence to keep it working as expected.
-
-If everything looks like it works as expected, you're ready to move to the [NEXT STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+If everything looks good, you're ready to move to the [NEXT STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
 
 [PREVIOUS](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
