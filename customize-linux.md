@@ -1077,6 +1077,67 @@ To fix this, run the following:
 chmod u+x bin/rails
 ```
 
+<br/><br/>
+
+## Setup Systemd (Only if Needed)
+
+This step is onlu need if you plan to run services via Brew and any other service you choose to install and run with Debian. We will need to setup Debian to use `systemd` by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
+
+*Initially I found that even with the native `systemd` support now available within WSL, that `systemd` and `systemctl` still didn't work as anticipated when enabled. I spent nearly 4 full days looking for the cause and happened upon the answer in an [obscure gihub repo](https://github.com/arkane-systems/bottle-imp#debian) for a utility named `bottle-imp`. The bottle-imp tool was used to provide systemd support for WSL prior to the summer-2022 WSL update, and the bottle-imp code required a list of utilities to be installed for systemd and systemctl to work properly.* 
+
+Note: If you use this, systemd removes all content from the `/var/run/` directory when Bebian boots up. This means that the `/var/run/postgres` directory gets removed. However, we have a function in `.zshrc` that checks for this dir and creates it. Unfortunately, if the postgres server is running, you will need to restart it. Postges adds the temp file needed by the `PG` gem to connect the rails app to postgres. We also have a couple of functions for that. To stop the postgres server, in the console, call `pgstop`. To start the postgres server, call `pgstart`. This will load the temp file in the in dir. If you would rather just copy the file needed into the dir you can call the following: `pgfix` - this will create link to the tmp file.
+
+<br/>
+
+1. Install the tools that will make systemd and systemctl work as expected:
+
+```bash
+sudo apt-get install -y daemonize dbus gawk libc6 policykit-1 python3 python3-pip python3-psutil systemd systemd-container 
+```
+<br/>
+
+2. In the Debian console, run the following:
+
+```bash
+sudo nano /etc/wsl.conf
+```
+
+<br/>
+
+3. In the nano editor (or use vim, either way), copy the following:
+
+```txt
+[boot]
+systemd=true
+```
+
+<br/>
+
+4. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
+
+<br/>
+
+5. Open Windows `Powershell` as an administrator. Type the following:
+
+```powershell
+wsl.exe --shutdown
+```
+
+<br/>
+
+6. After the Debian instance closes, reopen it and run the following:
+
+```sh
+systemctl list-unit-files --type=service
+```
+
+You should see a table of info:
+
+![systemctl](https://user-images.githubusercontent.com/516548/201456791-a90c2475-c0e5-4dc8-a113-fc3637cb059e.png)
+
+<br/>
+
+If that doesn't work, I'm not sure what to tell you. WSL changes often and it requires vigilence to keep it working as expected.
 <br/>
 
 <br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
