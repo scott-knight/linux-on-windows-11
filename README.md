@@ -1,6 +1,6 @@
 # Installing Linux on Windows 11
 
-This content demonstrates how to setup Linux on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use). It demonstrates how to install Debian, which is a smaller install than Ubuntu (which comes with everything), and Ubuntu. There are a couple of differences when installing either distro. For example, you won't be able to use `wajig` to manage Debain updates, you'll have to use `apt` or `apt-get`. These differences are demonstrated throughout the doc.
+This content demonstrates how to setup Linux on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use). It demonstrates how to install Debian, which is a smaller install than Ubuntu (which comes with everything). 
 
 ### DISCLAMER
 
