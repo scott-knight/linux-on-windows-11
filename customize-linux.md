@@ -181,13 +181,13 @@ setpgdir
 
 ### Start the Postgres server
 
-If you have enabled `systemd`, run the following:
+If you have enabled `systemd`, you can run the following:
 
 ```zsh
 brew services start postgresql@15
 ```
 
-OR you can run this:
+OR to simply start it using the postgres command:
 
 ```zsh
 pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
@@ -880,13 +880,13 @@ function update_rbenv_aliases () {
 function update_brew() {
   echo ''
   echo "Updating BREW"
-  brew update &&
+  ulimit -n 8192 brew update &&
   echo ''
   echo "Upgrading BREW installs" &&
-  brew upgrade &&
+  ulimit -n 8192 brew upgrade &&
   echo ''
   echo "Cleaning up BREW" &&
-  brew cleanup &&
+  ulimit -n 8192 brew cleanup &&
   echo "Completed BREW updates!"
 }
 
