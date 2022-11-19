@@ -17,7 +17,7 @@ code .
 This will load VSCode and connect to your Debian instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
 
 <br/>
-
+e
 2. Close VSCode and the terminal 
 
 <br/>
@@ -880,13 +880,13 @@ function update_rbenv_aliases () {
 function update_brew() {
   echo ''
   echo "Updating BREW"
-  ulimit -n 8192 brew update &&
+  ulimit -n 8192 && brew update &&
   echo ''
   echo "Upgrading BREW installs" &&
-  ulimit -n 8192 brew upgrade &&
+  ulimit -n 8192 && brew upgrade &&
   echo ''
   echo "Cleaning up BREW" &&
-  ulimit -n 8192 brew cleanup &&
+  ulimit -n 8192 && brew cleanup &&
   echo "Completed BREW updates!"
 }
 
