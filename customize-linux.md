@@ -818,6 +818,19 @@ function upgrade_ohmyzsh(){
   echo "Completed upgrading oh-my-zsh!"
 }
 
+function findpg () {
+  echo "looking for system 'pg_config'"
+  sudo find / -name pg_config
+}
+
+function update_pg () {
+  echo 'updating the PG gem' &&
+  gem install pg -- --with-pg-config=/usr/bin/pg_config &&
+  echo 'done!'
+}
+alias updatepg="update_pg"
+alias upg="update_pg"
+
 function update_rbenv () {
   CURR_DIR="$PWD" &&
   echo ""
@@ -922,6 +935,19 @@ function update() {
 function cedit () {
   EDITOR="code --wait" bin/rails credentials:edit
 }
+
+function updatei () {
+  echo ''
+  echo '******  Update Commands  **************************************'
+  echo ''
+  echo "update = update_debian && update_omz && update_rbenv && update_brew && upgrade_npm"
+  echo ''
+  echo 'PG Gem ----------------------'
+  echo "findpg   = sudo find / -name pg_config   # finds the system pg_config"
+  echo "updatepg = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo "upg      = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+}
+alias updates="updatei"
 
 function ecreds () {
   echo ''
