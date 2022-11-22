@@ -983,7 +983,7 @@ function gits () {
 
 This is an example of a personal file you (might) have with specific content needed in console.
 
-Using VIM or NANO, replace the contents of `.zsh_functions` with the following:
+Using VIM or NANO, replace the contents of `.zsh_jobsauce` with the following:
 
 ```zsh
 #! /bin/zsh
