@@ -1175,13 +1175,21 @@ Rails uses bootsnap which uses libffi. We installed `libffi-dev` in a previous s
 > LoadError: libffi.so.8: cannot open shared object file: No such file or 
 > directory - /home/sknight/dev.projects/jobsauce-app/.gems/gems/ffi-1.15.5/lib/ffi_c.so
 
-This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1. 
+This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1). 
 
 To install the specific version needed (as outlined in the error), and to get the app to ignore the system version, you do the following:
 
 ```sh
 gem install ffi --version '1.15.5' -- --disable-system-libffi
 ```
+
+OR you can simply install `ffi`, disabling the system version
+
+```
+gem install ffi -- --disable-system-libffi
+```
+
+<br/>
 
 ### Rails Issues
 
