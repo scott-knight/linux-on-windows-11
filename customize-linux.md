@@ -471,7 +471,15 @@ Type `reload` to reload the shell.
 
 This is an example of personal/project content you may needed within console. (You can see how this file is called in [.zshrc](ZSHRC.md))
 
-Using VIM or NANO, replace the contents of `.zsh_jobsauce` with the [contents of .zsh_jobsauce](ZSH_JOBSAUCE.md) and save.
+Using VIM or NANO, replace the contents of `.zsh_jobsauce` with the following:
+
+```zsh
+nano .zsh_jobsauce
+```
+
+<br/>
+
+Copy the [contents of .zsh_jobsauce](ZSH_JOBSAUCE.md) and save.
 
 Type `reload` to reload the shell.
 
