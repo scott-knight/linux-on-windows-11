@@ -1,4 +1,4 @@
-[Return to Setup]()
+[Return to Setup](customize-linux.md#setup-for-ruby-and-rails)
 
 # Setting up Ruby and Rails
 
@@ -63,6 +63,16 @@ yarn upgrade --latest
 ## Setting up Rails
 
 This section covers issues I've run into while trying to setup Rails on WSL Linux installations. Make sure you have PostgreSQL running before you attempt to install/bundle gems for a Rails project.
+
+### Installing Gems
+
+Once you've navigated to your downloaded project code, you can install the project gems by running the following:
+
+```zsh
+bundle
+```
+
+If successful, the project should be ready to run. I ran into issues running `bundle`, for the `pg` and `ffi` gems. If you have the same issues, follow the instructions below to install those gems. Once installed, you can re-run `bundle` to complete the project setup.
 
 <br/>
 
@@ -164,3 +174,25 @@ To fix this, run the following:
 ```zsh
 chmod u+x bin/rails
 ```
+
+### Setup the DB locally
+
+Once you have all the gems installed and you can execute `rails`, you will be ready to setup the DBs. To setup the DB's run the following:
+
+```zsh
+rails db:create db:schema:load db:migrate
+```
+
+<br/>
+
+If you would like to completely reload the DBs, run the following:
+
+```zsh
+rails db:drop db:create db:schema:load db:migrate
+```
+
+<br/> 
+
+Once finished, you should be ready to run your local environment. 
+
+
