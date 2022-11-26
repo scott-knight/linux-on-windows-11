@@ -145,6 +145,7 @@ export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
 
 # .local/bin
 export PATH="${HOME}/.local/bin:$PATH"
+export BROWSER="wslopen"
 
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
