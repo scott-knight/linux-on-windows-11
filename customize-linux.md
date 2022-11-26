@@ -823,13 +823,31 @@ function findpg () {
   sudo find / -name pg_config
 }
 
-function update_pg () {
-  echo 'updating the PG gem' &&
+function pg_install () {
+  echo 'Updating the PG gem'
   gem install pg -- --with-pg-config=/usr/bin/pg_config &&
   echo 'done!'
 }
-alias updatepg="update_pg"
-alias upg="update_pg"
+alias pginstall="pg_install"
+alias pgi="pg_install"
+alias updatepg="pg_install"
+
+function ffi_install () {
+  gem install ffi -- --disable-system-libffi
+}
+alias ffii="ffi_install"
+
+function bundle_install () {
+  echo 'Installing gems, please wait...'
+  pg_install && ffi_install && bundle
+}
+alias bi="bundle_install"
+
+function bundle_update () {
+  echo 'Updating gems, please wait...'
+  pg_install && ffi_install && bundle update
+}
+alias bu="bundle_update"
 
 function update_rbenv () {
   CURR_DIR="$PWD" &&
@@ -936,16 +954,46 @@ function cedit () {
   EDITOR="code --wait" bin/rails credentials:edit
 }
 
+function bundlei () {
+  echo ''
+  echo '******  bundle Commands  **************************************'
+  echo ''
+  echo "pg_install     = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo "pgs            = shows pg commands"
+  echo ''
+  echo "ffi_install    = gem install ffi -- --disable-system-libffi"
+  echo "ffii           = ffi_install"
+  echo ''
+  echo "bundle_install = pg_install && ffi_install && bundle"
+  echo "bi             = bundle_install"
+  echo ''
+  echo "bundle_update  = pg_install && ffi_install && bundle update"
+  echo "bu             = bundle_update"
+}
+alias bundles="bundlei"
+
+function pgs () {
+  echo ''
+  echo '******  pg Commands  **************************************'
+  echo ''
+  echo "findpg    = sudo find / -name pg_config   # finds the system pg_config"
+  echo "updatepg  = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo "upg       = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo "pginstall = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo ''
+  echo "pgstart   = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
+  echo "pgstop    = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
+  echo "pgupdate  = brew postgresql-upgrade-database"  
+}
+
 function updatei () {
   echo ''
   echo '******  Update Commands  **************************************'
   echo ''
   echo "update = update_debian && update_omz && update_rbenv && update_brew && upgrade_npm"
   echo ''
-  echo 'PG Gem ----------------------'
-  echo "findpg   = sudo find / -name pg_config   # finds the system pg_config"
-  echo "updatepg = gem install pg -- --with-pg-config=/usr/bin/pg_config"
-  echo "upg      = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  pgs
+  bundles
 }
 alias updates="updatei"
 
