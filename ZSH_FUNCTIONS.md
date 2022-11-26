@@ -1,4 +1,4 @@
-(Back to Setup)[customize-linux.md#copy-zsh_functions]
+[Back to Setup](customize-linux.md#copy-zsh_functions)
 
 # .zsh_functions
 
