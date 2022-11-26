@@ -969,6 +969,7 @@ function bundlei () {
   echo ''
   echo "bundle_update  = pg_install && ffi_install && bundle update"
   echo "bu             = bundle_update"
+  echo ''
 }
 alias bundles="bundlei"
 
@@ -984,6 +985,7 @@ function pgs () {
   echo "pgstart   = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
   echo "pgstop    = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
   echo "pgupdate  = brew postgresql-upgrade-database"  
+  echo ''
 }
 
 function updatei () {
