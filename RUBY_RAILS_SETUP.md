@@ -175,6 +175,8 @@ To fix this, run the following:
 chmod u+x bin/rails
 ```
 
+<br/><br/>
+
 ### Setup the DB locally
 
 Once you have all the gems installed and you can execute `rails`, you will be ready to setup the DBs. To setup the DB's run the following:
