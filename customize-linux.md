@@ -27,7 +27,7 @@ e
 Next, we need system files for the environment. Run the following:
 
 ```sh
-mkdir $HOME/.local/bin && touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
+.zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
 ```
 <br/>
 
@@ -515,128 +515,9 @@ After you have completed the setup, close and reload the Linux instance.
 
 <br/>
 
-## Install Ruby via RBENV
+## Setup for Ruby and Rails
 
-Install the Ruby you want:
-
-```sh
-cd $HOME && rbenv install 3.1.2 --verbose
-```
-<br/>
-
-### Issues When Installing Ruby on Ubuntu
-
-If you run into issues installing Ruby because of SSL incompatibility, you will need to use Brew OpenSSL. Run the following:
-
-```sh
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.2 --verbose
-```
-
-<br/>
-
-### Update Rubygems
-
-```sh
-gem update --system
-```
-<br/>
-
-## Install Yarn
-
-NVM no longer honors global installs of yarn. You will need to install Yarn in the node version you are running. I also ran into an issue when using earlier versions of node while trying to run yarn. I ended up having use the current node to get yarn to work as expected.
-
-To install yarn, run the following:
-
-```sh
-npm install --global yarn
-```
-
-<br/>
-
-### Clone Your Repo - Download Yarn Libraries
-
-Once you have your project downloaded, and yarn libraries are installed, you can see which libraries are outdated by running the following:
-
-```zsh
-yarn outdated
-```
-
-To upgrade outdated libraries, run the following:
-
-```zsh
-yarn upgrade --latest
-```
-
-<br/>
-
-## Notes for Rails Setups
-
-This section is here, mainly for documentation purposes. I ran into a different issues while trying to run Rails in Debain vs Ubuntu. These are the notes I compiled while trying to get things to run. Make sure you have Postgres running before you attempt to install/bundle gems for your project.
-
-<br/>
-
-### Installing PG 
-
-Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
-
-```zsh
-sudo find / -name pg_config
-```
-
-<br/>
-
-You will see something like this 
-
-> /home/linuxbrew/.linuxbrew/Cellar/postgresql@15/15.1/bin/pg_config
-
-> /usr/bin/pg_config
-
-<br/>
-
-You want to use the system's `pg_config` and not the brew install
-
-```zsh
-gem install pg -- --with-pg-config=/usr/bin/pg_config
-```
-
-<br/>
-
-### Installing libffi for Bootsnap gem (Debian)
-
-Rails uses bootsnap which uses libffi. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, you may see this error that looks something like this:
-
-> LoadError: libffi.so.8: cannot open shared object file: No such file or 
-> directory - /home/sknight/dev.projects/jobsauce-app/.gems/gems/ffi-1.15.5/lib/ffi_c.so
-
-This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1). 
-
-To install the specific version needed (as outlined in the error), and to get the app to ignore the system version, you do the following:
-
-```sh
-gem install ffi --version '1.15.5' -- --disable-system-libffi
-```
-
-OR you can simply install `ffi`, disabling the system version
-
-```
-gem install ffi -- --disable-system-libffi
-```
-
-<br/>
-
-### Rails Issues
-
-When you pull your repo code, you may run into an issue where rails is not executable:
-
-> Permission denied - bin/rails (Errno::EACCES)
-
-<br/>
-
-To fix this, run the following:
-
-```zsh
-chmod u+x bin/rails
-```
+Setup instructions for Ruby and Rails can be [found here](RUBY_RAILS_SETUP.md)
 
 <br/><br/>
 
