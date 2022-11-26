@@ -1,4 +1,4 @@
-[Back to Debian Setup](customize-linux.md#copy-the-zshrc-content)
+[Back to Setup](customize-linux.md#copy-the-zshrc-content)
 
 # .zshrc
 
