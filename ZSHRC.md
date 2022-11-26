@@ -143,6 +143,8 @@ export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
 # export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
 # export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
 
+# .local/bin
+export PATH="${HOME}/.local/bin:$PATH"
 
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
