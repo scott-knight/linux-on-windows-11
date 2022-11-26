@@ -161,22 +161,6 @@ Then type `reload` to reload the shell.
 
 <br/>
 
-### Rails Issues
-
-When you pull your repo code, you may run into an issue where rails is not executable:
-
-> Permission denied - bin/rails (Errno::EACCES)
-
-<br/>
-
-To fix this, run the following:
-
-```zsh
-chmod u+x bin/rails
-```
-
-<br/><br/>
-
 ### Setup the DB locally
 
 Once you have all the gems installed and you can execute `rails`, you will be ready to setup the DBs. To setup the DB's run the following:
@@ -197,4 +181,19 @@ rails db:drop db:create db:schema:load db:migrate
 
 Once finished, you should be ready to run your local environment. 
 
+<br/><br/>
+
+### Rails Issues
+
+When you pull your repo code, you may run into an issue where rails is not executable:
+
+> Permission denied - bin/rails (Errno::EACCES)
+
+<br/>
+
+To fix this, run the following:
+
+```zsh
+chmod u+x bin/rails
+```
 
