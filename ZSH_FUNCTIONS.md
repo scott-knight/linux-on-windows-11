@@ -173,6 +173,12 @@ function cedit () {
   EDITOR="code --wait" bin/rails credentials:edit
 }
 
+function fixrails () {
+  chmod u+x bin/rails
+}
+alias railsfix="fixrails"
+alias fixr="fixrails"
+
 function bundlei () {
   echo ''
   echo '******  bundle Commands  **************************************'
