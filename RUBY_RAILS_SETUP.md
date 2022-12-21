@@ -197,3 +197,10 @@ To fix this, run the following:
 chmod u+x bin/rails
 ```
 
+OR, if you have aliases set up
+
+```
+alias fixr="chmod u+x bin/rails"
+alias rfix="fixr"
+``
+
