@@ -201,5 +201,5 @@ OR, if you have aliases set up
 
 ```
 alias rfix="chmod u+x bin/rails"
-``
+```
 
