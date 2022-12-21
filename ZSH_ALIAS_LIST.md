@@ -42,8 +42,7 @@ alias vedit='EDITOR=vi bin/rails credentials:edit'
 alias rslh="rails s -b 0.0.0.0 -p $1"
 alias rc='rails c'
 alias rg='rails g'
-alias fixr="chmod u+x bin/rails"
-alias rfix="fixr"
+alias rfix="chmod u+x bin/rails"
 
 
 # GIT commands
