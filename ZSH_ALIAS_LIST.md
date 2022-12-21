@@ -47,6 +47,9 @@ alias rg='rails g'
 alias gbr="git branch "
 alias gco="git checkout "
 alias gnew="git checkout -b "
+alias gadd="git add"
+alias gadd.="git add ."
+alias gcom="git commit -m"
 alias gstash="git stash"
 alias gpop="git stash pop"
 alias gdrop="git stash drop"
@@ -56,8 +59,9 @@ alias gfetch="git fetch"
 alias gmerge="git merge"
 alias gpull="git pull"
 alias gpush="git push"
-alias glog="git log"
 alias gstat="git status"
+alias glog="git log --pretty=full"
+alias glogm="git log --pretty=medium"
 
 
 # rbenv list
