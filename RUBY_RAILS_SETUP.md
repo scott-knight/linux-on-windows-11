@@ -76,7 +76,7 @@ If successful, the project should be ready to run. I ran into issues running `bu
 
 <br/>
 
-### Installing Nokogiri
+### Installing Nokogiri (ruby 3.2.x -- working on this one still)
 
 If you run into an issue with [installing Nokogiri](https://nokogiri.org/tutorials/installing_nokogiri.html#macos-error-use-of-undeclared-identifier-lzma_ok), you will need to run the following:
 
@@ -134,6 +134,8 @@ OR you can simply install `ffi`, disabling the system version
 ```
 gem install ffi -- --disable-system-libffi
 ```
+
+NOTE: With Ruby 3.2.0 -- after updating and installing, there is an issue that arises: `cannot find 'argon2_wrap' library`. This is an issue for which I could not find an answer (12/25/2022)
 
 <br/>
 
