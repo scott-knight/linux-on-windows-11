@@ -60,8 +60,6 @@ sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i 
 
 ```sh
 sudo apt-get install -y apt-transport-https aptitude autoconf bison build-essential checkinstall clang curl ca-certificates gcc git gpg gnupg2 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release libxml2-dev libxslt-dev make patch pkg-config software-properties-common wget vim zlib1g-dev liblzma-dev zsh
-
-pkg-config libxml2-dev libxslt-dev
 ```
 
 <br/>
