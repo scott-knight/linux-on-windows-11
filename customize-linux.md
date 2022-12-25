@@ -27,7 +27,7 @@ e
 Next, we need system files for the environment. Run the following:
 
 ```sh
-.zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
+touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api
 ```
 <br/>
 
