@@ -78,7 +78,7 @@ If successful, the project should be ready to run. I ran into issues running `bu
 
 ### Installing Nokogiri
 
-If you run into an issue with installing Nokogiri, you will need to run the following:
+If you run into an issue with [installing Nokogiri](https://nokogiri.org/tutorials/installing_nokogiri.html#macos-error-use-of-undeclared-identifier-lzma_ok), you will need to run the following:
 
 ```sh
 brew install libxml2
