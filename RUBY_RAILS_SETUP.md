@@ -76,6 +76,18 @@ If successful, the project should be ready to run. I ran into issues running `bu
 
 <br/>
 
+### Installing Nokogiri
+
+If you run into an issue with installing Nokogiri, you will need to run the following:
+
+```sh
+brew install libxml2
+gem install nokogiri -- --use-system-libraries \
+    --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
+```
+
+<br/>
+
 ### Installing PG 
 
 Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
