@@ -1,6 +1,6 @@
 [PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
 
-# Customize Debian 
+# Customize Linux 
 
 This doc outlines the specifics for setting up the Debian environment for Ruby, Rails, Node, etc.
 
