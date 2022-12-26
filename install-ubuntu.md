@@ -31,36 +31,6 @@ wsl --update
 2. Pick a version to install and click `Install` (this doc will assume you installed version `preview`)
 3. Once downloaded, click `Open`
 
-<br/>
-
-### Removing from WSL and Uninstalling
-
-NOTE: If you have trouble in the console when it opens (likely from reinstalling it several times like I did), run the following:
-
-```sh
-wsl --unregister Ubuntu-[version]
-```
-
-EX:
-
-```sh
-wsl --unregister Ubuntu-22.04
-```
-
-OR 
-
-```sh
-wsl --unregister Ubuntu-Preview
-```
-
-<br/>
-
-Then uninstall it by clicking the `Start Menu` button, then right-ckick `Ubuntu` and select `Uninstall`
-
-![Screenshot 2022-12-26 083931](https://user-images.githubusercontent.com/516548/209559792-ab468e4f-2c00-49ff-85c1-fb32e7f1a78d.png)
-
-<br/>
-
 Then click `Open` again. It should open the dialog as expected.
 
 <br/>
@@ -96,15 +66,6 @@ After you save the settings, when you click on the `Windows Terminal` icon in th
 
 <br/>
 
-## Installing Debian
-
-If you would like to use Debain instead of Ubuntu, the setup is easy. However, the majority of the remaining documentation assumes you will install Ubuntu (not Debian). If you choose to use Debian, it's noted where there are installation differences. Where it mentions setup steps for Ubuntu specifically, you can assume you would replace Ubuntu with Debian. However, with Debian, when setting up Rails, using Brew to install Postresql, I was unable to resolve an issue with the pg gem install (it says there are missing libraries which I was unable to resolve -- this doesn't happen with Ubuntu).
-
-1 . To install Debian, in the `Windows PowerShell` (running as administrator), run the following:
-
-```sh
-wsl --install -d Debian
-```
 
 2. Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
 
@@ -136,7 +97,7 @@ This will attempt to open VSCode and connect VSCode to your Linux instance. I'm 
 
 <br/>
 
-2. Close VSCode and the terminal 
+2. Close VSCode and the terminal
 
 <br/>
 
