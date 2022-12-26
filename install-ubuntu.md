@@ -161,18 +161,8 @@ You should use `wajig command to update Ubuntu from now on.
 
 1. Install system utilities by running the following:
 
-*CURRENT (USE THIS ONE UNLESS IT BLOWS THINGS UP):*
-
 ```sh
 wajig install -y apt-transport-https autoconf bison build-essential checkinstall clang curl gcc git gpg gnupg2 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release libxml2-dev libxslt-dev make patch pkg-config wget vim zlib1g-dev liblzma-dev zsh
-```
-
-<br/>
-
-SIMPLIFIED (if the other stack causes issues)
-
-```sh
-wajig install -y autoconf bison build-essential checkinstall clang git curl gcc libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev make pkg-config vim wget zlib1g-dev zsh
 ```
 
 <br/>
