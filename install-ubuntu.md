@@ -120,7 +120,7 @@ This should open VSCode and connect VSCode to your Ubuntu instance.
 
 <br/>
 
-Now you're ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md))
+Now you're ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md)
 
 <br/>
 
