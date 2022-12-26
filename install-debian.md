@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md) | [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-debian.md) | [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 
 # Install Debian
