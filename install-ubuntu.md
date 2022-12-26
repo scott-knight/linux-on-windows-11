@@ -36,6 +36,8 @@ A complete list of [WSL commands can be found here](https://learn.microsoft.com/
 
 ![Screenshot 2022-12-26 083036](https://user-images.githubusercontent.com/516548/209558996-6738c20f-d499-4721-a097-de07fa4d32e5.png)
 
+<br/>
+
 2. Pick a version to install and click `Install` (this doc will assume you installed version `preview`)
 3. Once downloaded, click `Open`. It will start the setup dialog.
 4. You will be prompted to select a default language, select `English`, then click continue.
