@@ -42,62 +42,75 @@ A complete list of [WSL commands can be found here](https://learn.microsoft.com/
 
 <br/>
 
-![language](https://user-images.githubusercontent.com/516548/192082523-3744a840-f70d-411a-aae7-f550754cce02.png)
-
-5. You will be prompted to create a UNIX user name. Type what you want
-6. You will be prompted to create a new password. Type something that you will remember. This will be your password needed to do Admin things in the console.
-
-![user-pass](https://user-images.githubusercontent.com/516548/192082563-30b260b3-4850-4a59-9f82-9274a4f88d1b.png)
-
-7. In the advanced setup, simply accept the defaults and click `Setup`
-
-![setup](https://user-images.githubusercontent.com/516548/192082591-11ddf920-81a6-4126-8735-75eaf9190088.png)
-
-8. Once it completes, click `Finish`
-9. Once it finishes, it will open a new terminal session. Click the down-arrow in the tab bar and click `Settings`.
-
-![new-settings](https://user-images.githubusercontent.com/516548/192082679-8cc094a2-e920-4b00-943e-91a3e75ccb4b.png)
-
-10. In the `Startup` section, in the `Default profile`, select `Ubutntu`, then click `Save`.
-
-![select-ubuntu](https://user-images.githubusercontent.com/516548/192082727-17a7da64-b6f4-43a6-8385-2a0d3c9358a1.png)
-
-11. On the left-nav, scroll down and click `Ubuntu`. On the right, select `Apperance`. Change the color scheme to `Campbell` and the font face to `Cascadia Code PL`. Then click `Save` and close the settings tab.
-
-![ubuntu-apperance](https://user-images.githubusercontent.com/516548/192082890-1540c8e6-0ac9-4d07-a328-40ba8b2baa2b.png)
-
-
-After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Ubuntu` shell.
+![language](https://user-images.githubusercontent.com/516548/209565740-a900ae4a-a9a8-410f-acf4-ca1bc2fa9671.png)
 
 <br/>
 
-2. Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
-
-![debian-setup](https://user-images.githubusercontent.com/516548/192112953-e95b93a0-5c68-407a-8ae3-ea0b15ad8fe4.png)
+5. You will be prompted to create a UNIX user account and password. The password will be needed to run `sudo` in the console.
 
 <br/>
 
-3. When finished, click the down-arrow in the tab bar and click `Settings`.
+![user-pass](https://user-images.githubusercontent.com/516548/209565908-853e9a19-9bf3-4534-b27e-3d366565e0c6.png)
+
+<br/>
+
+6. In the advanced setup, (use the default settings) click `Setup`
+
+<br/>
+
+![setup](https://user-images.githubusercontent.com/516548/209565963-356d74e8-d865-4b6d-8bf7-99330428c91b.png)
+
+<br/>
+
+7. Once it finishes, it will open a new terminal session. Click the down-arrow in the tab bar and click `Settings`.
+
+<br/>
 
 ![new-settings](https://user-images.githubusercontent.com/516548/192082679-8cc094a2-e920-4b00-943e-91a3e75ccb4b.png)
 
 <br/>
 
-4. On the left-nav, scroll down and click `Debian`. On the right, select `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono`. Then click `Save` and close the settings tab.
-
-![debian-font](https://user-images.githubusercontent.com/516548/193384119-47cb6b12-ffdb-468d-b65b-76b004b6b062.png)
+8. In the `Profile` section, click `+ Add a new profile`.
 
 <br/>
+
+![add-new-profile](https://user-images.githubusercontent.com/516548/209566418-b7493c4f-efe2-4b06-8d33-80b7389e59e7.png)
+
+<br/>
+
+9. Select Ubuntu, then Dupilcate
+
+<br/>
+
+![preview-dup](https://user-images.githubusercontent.com/516548/209566532-dc959837-453d-4f54-845f-bc24c4057a5c.png)
+
+<br/>
+
+10. Select the profile you created an rename it to the version of Ubuntu that is being used, then click `save`
+
+<br/>
+
+![rename](https://user-images.githubusercontent.com/516548/209566740-3bc99dbe-8336-4476-909f-6fd6558f0102.png)
+
+<br/>
+
+11. Once saved, scroll down to the `Additional settings` section and click `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono` (or any other Nerd font or Powerline font). Then click `Save` and close the settings tab.
+
+</br/>
 
 ## Connecting VSCode to your Linux instance
 
 1. In the Linux console, type the following:
 
+<br/>
+
 ```sh
 code .
 ```
 
-This will attempt to open VSCode and connect VSCode to your Linux instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
+<br/>
+
+This should open VSCode and connect VSCode to your Ubuntu instance.
 
 <br/>
 
@@ -105,8 +118,8 @@ This will attempt to open VSCode and connect VSCode to your Linux instance. I'm 
 
 <br/>
 
-Now you are ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md))
+Now you're ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md))
 
 <br/>
 
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
