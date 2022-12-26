@@ -12,6 +12,7 @@ Unregistering the distro will not uninstall it from your system. It simply delet
 Open Powershell and run the following:
 
 ```sh
+wsl.exe --shutdown
 wsl --unregister [distro]-[version]
 ```
 
@@ -20,12 +21,14 @@ wsl --unregister [distro]-[version]
 EX: With distro name and version (Ubuntu)
 
 ```sh
+wsl.exe --shutdown
 wsl --unregister Ubuntu-22.04
 ```
 
 OR
 
 ```sh
+wsl.exe --shutdown
 wsl --unregister Ubuntu-Preview
 ```
 
@@ -34,6 +37,7 @@ wsl --unregister Ubuntu-Preview
 EX: With distro name only (Debian)
 
 ```sh
+wsl.exe --shutdown
 wsl --unregister Debian
 ```
 

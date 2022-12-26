@@ -1,6 +1,7 @@
-[PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [NEXT](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md) | [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
-# Debian
+
+# Install Debian
 Debiain is a thinner install of Linux than Ubuntu *(Ubuntu is a wrapper or enhancement of Debain)*, and sets up a bit easier as well.
 
 *I find that Windows and WSL installs change often. If things don't work as described in this doc, they changed something. By the time you read this doc, it's possible that some of these steps may no longer be required. It's also possible that new steps will be required to get everything working. Either way, I do what I can to keep this document updated, but be prepared to troubleshoot issues as they arise.*
@@ -16,7 +17,29 @@ wsl.exe --shutdown
 wsl.exe --unregister Debian
 ```
 
+[Complete removal instructions](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
+
 <br/>
+
+## Update WSL
+
+To ensure you have the latest version of WSL, open the Windows PowerShell as an Administrator.
+
+<br/>
+
+![run-as-administrator](https://user-images.githubusercontent.com/516548/192077877-6748108f-fdd2-4c83-b0ba-3ac31224c9bf.png)
+
+<br/>
+
+Once open, run the following:
+
+```sh
+wsl --update
+```
+
+A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+
+<br/><br/>
 
 ## Installing Debian
 
@@ -44,7 +67,7 @@ wsl.exe --install -d Debian
 
 ![debian-font](https://user-images.githubusercontent.com/516548/193384119-47cb6b12-ffdb-468d-b65b-76b004b6b062.png)
 
-<br/>
+<br/><br/>
 
 ## Update Debian and Install System Utilities
 
@@ -83,9 +106,11 @@ Then
 ```sh
 mkdir .ssh
 ```
-   
-<br>
 
-If everything looks good, you're ready to move to the [NEXT STEP](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+<br/>
 
-[PREVIOUS](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+Now you're ready to [Customize Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-debian.md)
+
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)

@@ -1,6 +1,8 @@
-[PREV](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) | [Uninstall](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
 
-# Customize Debain 
+<br/>
+
+# Customize Debain
 
 This doc outlines the specifics for setting up the Debian environment for Ruby, Rails, Node, etc.
 
@@ -14,11 +16,11 @@ This doc outlines the specifics for setting up the Debian environment for Ruby, 
 code .
 ```
 
-This will load VSCode and connect to your Debian instance. I'm a little hazy on what happens after it connects, but you should be able to see the files of your home directory.
+This will load VSCode and connect to your Debian instance, and you will see the files of your home directory.
 
 <br/>
-e
-2. Close VSCode and the terminal 
+
+2. Close VSCode and the terminal
 
 <br/>
 
@@ -94,7 +96,7 @@ brew install erlang elixir
 
 ## Install Postgres
 
-Install postgres by doing the following 
+Install postgres by doing the following
 
 ```sh
 brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
@@ -160,7 +162,7 @@ Edit the file.
 nano /home/linuxbrew/.linuxbrew/var/postgresql@15/postgresql.conf
 ```
 
-<br/> 
+<br/>
 
 In the file, find `unix_socket_directories`. Uncomment it and change it to:
 
@@ -193,18 +195,18 @@ OR to simply start it using the postgres command:
 pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start
 ```
 
-<br/> 
+<br/>
 
 Once it's running it will return something like this:
 
-> waiting for server to start....2022-11-13 20:54:42.075 UTC [26837] LOG:  starting PostgreSQL 15.1 (Homebrew) on x86_64-pc-linux-gnu, compiled by gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, 64-bit    
-2022-11-13 20:54:42.075 UTC [26837] LOG:  listening on IPv4 address "127.0.0.1", port 5432  
-2022-11-13 20:54:42.079 UTC [26837] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"  
-2022-11-13 20:54:42.085 UTC [26837] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"  
-2022-11-13 20:54:42.090 UTC [26840] LOG:  database system was shut down at 2022-11-13 20:23:23 UTC  
-2022-11-13 20:54:42.095 UTC [26837] LOG:  database system is ready to accept connections  
-  done  
-server started  
+> waiting for server to start....2022-11-13 20:54:42.075 UTC [26837] LOG:  starting PostgreSQL 15.1 (Homebrew) on x86_64-pc-linux-gnu, compiled by gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, 64-bit
+2022-11-13 20:54:42.075 UTC [26837] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-11-13 20:54:42.079 UTC [26837] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-11-13 20:54:42.085 UTC [26837] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-11-13 20:54:42.090 UTC [26840] LOG:  database system was shut down at 2022-11-13 20:23:23 UTC
+2022-11-13 20:54:42.095 UTC [26837] LOG:  database system is ready to accept connections
+  done
+server started
 
 <br/>
 
@@ -275,8 +277,8 @@ nano .zshrc
 
 ```
 # BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-# you will see the hostname of your computer. Replace BIGBRAIN with that name  
-export HOSTNAME=BIGBRAIN 
+# you will see the hostname of your computer. Replace BIGBRAIN with that name
+export HOSTNAME=BIGBRAIN
 
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
@@ -392,7 +394,7 @@ Run the following:
 
 ```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions &&
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting && 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &&
 git clone https://github.com/gusaiani/elixir-oh-my-zsh.git $HOME/.oh-my-zsh/custom/plugins/elixir
 ```
 
@@ -522,7 +524,7 @@ Setup instructions for Ruby and Rails can be [found here](RUBY_RAILS_SETUP.md)
 
 This step is onlu need if you plan to run services via Brew and any other service you choose to install and run with Debian. We will need to setup Debian to use `systemd` by following a few simple steps. Info taken from [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
 
-*Initially I found that even with the native `systemd` support now available within WSL, that `systemd` and `systemctl` still didn't work as anticipated when enabled. I spent nearly 4 full days looking for the cause and happened upon the answer in an [obscure gihub repo](https://github.com/arkane-systems/bottle-imp#debian) for a utility named `bottle-imp`. The bottle-imp tool was used to provide systemd support for WSL prior to the summer-2022 WSL update, and the bottle-imp code required a list of utilities to be installed for systemd and systemctl to work properly.* 
+*Initially I found that even with the native `systemd` support now available within WSL, that `systemd` and `systemctl` still didn't work as anticipated when enabled. I spent nearly 4 full days looking for the cause and happened upon the answer in an [obscure gihub repo](https://github.com/arkane-systems/bottle-imp#debian) for a utility named `bottle-imp`. The bottle-imp tool was used to provide systemd support for WSL prior to the summer-2022 WSL update, and the bottle-imp code required a list of utilities to be installed for systemd and systemctl to work properly.*
 
 Note: If you use this, systemd removes all content from the `/var/run/` directory when Bebian boots up. This means that the `/var/run/postgres` directory gets removed. However, we have a function in `.zshrc` that checks for this dir and creates it. Unfortunately, if the postgres server is running, you will need to restart it. Postges adds the temp file needed by the `PG` gem to connect the rails app to postgres. We also have a couple of functions for that. To stop the postgres server, in the console, call `pgstop`. To start the postgres server, call `pgstart`. This will load the temp file in the in dir. If you would rather just copy the file needed into the dir you can call the following: `pgfix` - this will create link to the tmp file.
 
@@ -531,7 +533,7 @@ Note: If you use this, systemd removes all content from the `/var/run/` director
 1. Install the tools that will make systemd and systemctl work as expected:
 
 ```bash
-sudo apt-get install -y daemonize dbus gawk libc6 policykit-1 python3 python3-pip python3-psutil systemd systemd-container 
+sudo apt-get install -y daemonize dbus gawk libc6 policykit-1 python3 python3-pip python3-psutil systemd systemd-container
 ```
 <br/>
 
@@ -552,7 +554,7 @@ systemd=true
 
 <br/>
 
-4. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.  
+4. To save the changes, use `ctrl+o` close the file; then hit `y` to save the file; then hit `enter` to close the file.
 
 <br/>
 
@@ -577,6 +579,7 @@ You should see a table of info:
 <br/>
 
 If that doesn't work, I'm not sure what to tell you. WSL changes often and it requires vigilence to keep it working as expected.
-<br/>
 
-<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md)
+<br/><br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) |

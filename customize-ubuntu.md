@@ -1,27 +1,25 @@
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-ubuntu.md) | [Uninstall](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
+
+<br/>
+
 # Customize Ubuntu
 
-THIS DOC IS NOT UP TO DATE - IT'S STILL HERE, MAINLY AS A PLACEHOLDER, JUST IN CASE I DECIDED TO UPDATE IT LATER. [PREFER THE DEBIAN INSTALL](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) OVER UBUNTU
-
-This is the step-by-step guide for customizing Ubuntu to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Linux will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Linux instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md). It will be a completely clean install of Linux, no settings will carry over.
+This is the step-by-step guide for customizing Ubuntu.
 
 <br/>
 
-## Update Linux (Ubuntu)
+## Connecting VSCode
 
-1. Close all open `Windows Terminal` instances. Open a new `Windows Termial` instance and select Ubuntu (if you didn't set it as the default).
-2. You should update `Ubuntu` with the latest security patches and other default updates by running the following:
-
-```sh
-sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
-```
-
-Or run
+1. In the Linux console, type the following:
 
 ```sh
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
+code .
 ```
+
+This will load VSCode and connect to your Debian instance, and you will see the files of your home directory.
 
 <br/>
+
 
 ## Install Wajig
 
@@ -70,3 +68,5 @@ Or
 ```sh
 sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
 ```
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-ubuntu.md) | [Uninstall](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
