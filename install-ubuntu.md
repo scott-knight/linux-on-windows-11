@@ -1,6 +1,6 @@
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md)
 <br/>
-# Installing Linux (Ubuntu)
+# Install Ubuntu
 
 This document demonstrates how to install the current supported release of Linux (Ubuntu) on Windows 11. This document assumes WSL2 has been installed and is ready to use. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
@@ -138,5 +138,10 @@ This will attempt to open VSCode and connect VSCode to your Linux instance. I'm 
 
 2. Close VSCode and the terminal 
 
-Now you are ready to [Customize Linux](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md)
-<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+<br/>
+
+Now you are ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md))
+
+<br/>
+
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
