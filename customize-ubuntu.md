@@ -109,9 +109,15 @@ mkdir -m a=rwx $HOME/.ssh
 
 <br/>
 
+### If You Have Existing SSH Files
+
 If you already have ssh files created and stored somewhere, copy and paste them into you .ssh dir
 
+![ssh-files](https://user-images.githubusercontent.com/516548/209577940-c9db2c03-8820-45d0-8c7d-9493adb55405.png)
 
+<br/>
+
+### If You Need to Create SSH Files
 
 ```sh
 touch $HOME/.ssh/config && nano $HOME/.ssh/config
