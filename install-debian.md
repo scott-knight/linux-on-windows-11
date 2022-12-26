@@ -101,12 +101,6 @@ sudo apt-get install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev
 sudo aptitude full-upgrade
 ```
 
-Then
-
-```sh
-mkdir .ssh
-```
-
 <br/>
 
 Now you're ready to [Customize Debian](customize-debian.md)

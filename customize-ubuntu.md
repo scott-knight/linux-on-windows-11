@@ -94,6 +94,43 @@ Install postgres by doing the following:
 brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc && source $HOME/.zshrc
 ```
 
+<br/>
+
+## Setup SSH Key
+
+To connect via ssh to external services you will need to generate a new private and public key. Follow the instructions [found here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new set.
+
+Once your keys are created, run the following:
+
+(Run this if `.ssh` doesn't exist:
+```zsh
+mkdir -m a=rwx $HOME/.ssh
+```
+
+<br/>
+
+If you already have ssh files created and stored somewhere, copy and paste them into you .ssh dir
+
+
+
+```sh
+touch $HOME/.ssh/config && nano $HOME/.ssh/config
+```
+
+Copy the following to the new `config` file:
+
+```sh
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+You will need to add the new public key to your github account. You can copy the key by running the following:
+
+```sh
+clip.exe < ${HOME}/.ssh/id_ed25519.pub
+```
+
 
 
 

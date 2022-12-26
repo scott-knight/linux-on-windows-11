@@ -191,12 +191,6 @@ wajig install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvip
 wajig update && wajig upgrade -y && wajig autoremove && wajig autoclean
 ```
 
-Then
-
-```sh
-mkdir .ssh
-```
-
 <br/>
 
 Now you're ready to [Customize Ubuntu](customize-ubuntu.md)

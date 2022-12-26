@@ -136,7 +136,11 @@ source .zshrc
 
 ### Edit postgresql.conf
 
-To find the config file run the following:
+To get postgres to work on debian, you have to do the following:
+
+<br/>
+
+Find the config file:
 
 ```zsh
 psql -U [linux username] -d postgres -c 'SHOW config_file'
