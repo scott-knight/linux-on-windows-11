@@ -1,6 +1,6 @@
 # Installing Linux on Windows 11
 
-This content demonstrates how to setup Linux on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use). It demonstrates how to install Debian, which is a smaller install than Ubuntu (which comes with everything). 
+This content demonstrates how to setup Linux on Windows 11, to semi-replicate a Mac terminal setup for developing Ruby on Rails (or any other code you would want to use). It demonstrates how to install Debian, which is a smaller install than Ubuntu (which comes with everything).
 
 ### DISCLAMER
 
@@ -16,10 +16,11 @@ Below is the step-by-step guide describing how to install all the bits needed to
 5. [Configure Windows Terminal](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
 6. [Install Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) OR [Install Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-ubuntu.md)
 7. [Customize Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-linux.md) OR [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md)
+8. [Unregister (from WSL) and Uninstall](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
 
 ### IMPORTANT NOTES
 
-Steps 1-5 are Windows setup instructions. Once you have completed steps 1-5, you shouldn't have to do them again. You will be able to create and destroy Linux  installs without having to repeat steps 1-5. 
+Steps 1-5 are Windows setup instructions. Once you have completed steps 1-5, you shouldn't have to do them again. You will be able to create and destroy Linux  installs without having to repeat steps 1-5.
 
 Once Windows Terminal is setup, you should be good for the lifetime of your Windows install (pending needed updates if there are any).
 
