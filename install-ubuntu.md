@@ -26,9 +26,9 @@ wsl --update
 
 1. In the Windows Store, and search for Ubuntu:
 
-![ubuntu22](https://user-images.githubusercontent.com/516548/192082167-6b8ee768-0684-4851-af15-2d3f13c99c1b.png)
+![Screenshot 2022-12-26 083036](https://user-images.githubusercontent.com/516548/209558996-6738c20f-d499-4721-a097-de07fa4d32e5.png)
 
-2. We want to install the latest supproted version (in this example we see that 22.04 is the lastest. Click that tile and click `Install`.
+2. Pick a version to install and click `Install` (this doc will assume you installed version `preview`)
 3. Once downloaded, click `Open`
 
 <br/>
