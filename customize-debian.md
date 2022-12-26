@@ -31,6 +31,7 @@ Next, we need system files for the environment. Run the following:
 ```sh
 touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev.projects/sandbox-js dev.projects/sandbox-api && mkdir .local/bin && touch .local/bin/wslopen
 ```
+
 <br/>
 
 ## Setup `wslopen` for letter_opener
@@ -42,7 +43,7 @@ Brave is installed on the `C` drive in the following location: `C:\Program Files
 We need to create a couple of files to get everything to work:
 
 ```zsh
-mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
+mkdir $HOME/.local/bin
 ```
 
 <br/>
@@ -50,9 +51,7 @@ mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
 In the code snippet below, you can replace `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe` with the browser of your choice. Once you have the path to your chosen browser, run the following:
 
 ```zsh
-echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen
-echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen
-chmod +x $HOME/.local/bin/wslopen
+echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen && echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen && chmod +x $HOME/.local/bin/wslopen
 ```
 
 <br/>

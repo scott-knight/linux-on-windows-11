@@ -43,7 +43,7 @@ Brave is installed on the `C` drive in the following location: `C:\Program Files
 We need to create a couple of files to get everything to work:
 
 ```zsh
-mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
+mkdir $HOME/.local/bin
 ```
 
 <br/>
@@ -51,9 +51,7 @@ mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
 In the code snippet below, you can replace `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe` with the browser of your choice. Once you have the path to your chosen browser, run the following:
 
 ```zsh
-echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen
-echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen
-chmod +x $HOME/.local/bin/wslopen
+echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen && echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen && chmod +x $HOME/.local/bin/wslopen
 ```
 
 <br/>
@@ -76,7 +74,7 @@ Make zsh your default shell, run the following:
 chsh -s $(which zsh)
 ```
 
-Once changed, restart the Linux instance.
+Once changed, restart the terminal instance.
 
 You will be prompted to make a selection to create a `.zshrc` file. Select the option that simply adds the comment code and creates the file.
 
