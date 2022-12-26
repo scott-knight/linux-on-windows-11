@@ -143,8 +143,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
 
-# .local/bin
-# export PATH="${HOME}/.local/bin:$PATH"
+# .local/bin -- used with letter_opener
+export PATH="${HOME}/.local/bin:$PATH"
 export BROWSER="wslopen"
 
 # RBENV

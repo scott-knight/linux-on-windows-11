@@ -1,6 +1,8 @@
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
 
+<br/>
 
-
+# .zsh_functions
 
 ```zsh
 #! /bin/zsh
@@ -206,3 +208,7 @@ function gits () {
   echo ''
 }
 ```
+
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)

@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions)
 
 <br/>
 
@@ -13,17 +13,6 @@ function gitdel(){
   git branch -D $@
   git fetch --all --prune
 }
-
-# function update_ubuntu () {
-#   echo ''
-#   echo 'Updating Ubuntu files, please wait...'
-#   wajig update &&
-#   wajig upgrade -y &&
-#   wajig distupgrade -y &&
-#   wajig autoremove &&
-#   wajig autoclean &&
-#   echo 'Update of Ubuntu complete!'
-# }
 
 # function update_debian () {
 #   echo ''
@@ -142,6 +131,16 @@ function update_brew() {
   echo "Completed BREW updates!"
 }
 
+function update_nvm() {
+  echo "Updating NVM" &&
+  (
+    cd "$NVM_DIR"
+    git fetch --tags origin
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+  ) && \. "$NVM_DIR/nvm.sh" &&
+  echo "Completed updating NVM!"
+}
+
 function upgrade_npm() {
   echo '' &&
   echo "Updating NPM" &&
@@ -161,11 +160,11 @@ function update_omz() {
 
 function update() {
   echo "Upgrading ALL the things..."
-  # update_ubuntu &&
-  # update_debian &&
+  update_debian &&
   update_omz &&
   update_rbenv &&
   update_brew &&
+  update_nvm &&
   upgrade_npm &&
   echo ''
   echo "All updates complete!!"
@@ -260,4 +259,4 @@ function gits () {
 
 <br/><br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions)

@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_alias_list-content)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content)
 
 <br/>
 
@@ -97,14 +97,12 @@ alias yl="ylist"
 alias ylg="ylist | grep $1"
 alias ydev="yarn dev"
 
-# alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
-# alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
-# alias pgstart="brew services start postgresql@15"
-# alias pgstop="brew services stop postgresql@15"
+alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
+alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
 alias pgupdate="brew postgresql-upgrade-database"
 
 alias python="$(brew --prefix python)"
 ```
 <br/><br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_alias_list-content)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content)

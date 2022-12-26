@@ -64,6 +64,8 @@ yarn upgrade --latest
 
 This section covers issues I've run into while trying to setup Rails on WSL Linux installations. Make sure you have PostgreSQL running before you attempt to install/bundle gems for a Rails project.
 
+<br/>
+
 ### Installing Gems
 
 Once you've navigated to your downloaded project code, you can install the project gems by running the following:
@@ -72,23 +74,12 @@ Once you've navigated to your downloaded project code, you can install the proje
 bundle
 ```
 
-If successful, the project should be ready to run. I ran into issues running `bundle`, for the `pg` and `ffi` gems. If you have the same issues, follow the instructions below to install those gems. Once installed, you can re-run `bundle` to complete the project setup.
+If successful, the project should be ready to run. I ran into issues running `bundle`, for the `pg` and `ffi` gems with Debian. If you have the same issues, follow the instructions below to install those gems. Once installed, you can re-run `bundle` to complete the project setup.
 
 <br/>
 
-### Installing Nokogiri (ruby 3.2.x -- working on this one still)
 
-If you run into an issue with [installing Nokogiri](https://nokogiri.org/tutorials/installing_nokogiri.html#macos-error-use-of-undeclared-identifier-lzma_ok), you will need to run the following:
-
-```sh
-brew install libxml2
-gem install nokogiri -- --use-system-libraries \
-    --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
-```
-
-<br/>
-
-### Installing PG
+### Installing PG (Debian)
 
 Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
 
@@ -136,42 +127,6 @@ gem install ffi -- --disable-system-libffi
 ```
 
 NOTE: With Ruby 3.2.0 -- after updating and installing, there is an issue that arises: `cannot find 'argon2_wrap' library`. This is an issue for which I could not find an answer (12/25/2022)
-
-<br/>
-
-### Setup for letter_opener
-
-In my rails projects, I use the [letter_opener gem](https://github.com/ryanb/letter_opener) for posting email in the dev environment. The letter_opener gem uses the launchy gem to launch/post generated email to a browser tab. On a Mac (or possibly a native Linux setup) the browser is set by the system and launchy just works. However, with WSL we have to make the browser connection for launchy. In this example, we will point to location on the Windows drive for [Brave Browser](https://brave.com)
-
-Brave is installed on the `C` drive in the following location: `C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe`. This needs to be translated to a WSL2/Debian path: `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe`.
-
-We need to create a couple of files to get everything to work:
-
-```zsh
-mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
-```
-
-<br/>
-
-In the code snippet below, you can replace `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe` with the browser of your choice. Once you have the path to your chosen browser, run the following:
-
-```zsh
-echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen
-echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen
-chmod +x $HOME/.local/bin/wslopen
-```
-
-<br/>
-
-If you haven't already (it's already in [.zshrc](ZSHRC.md)), copy the following to `.zshrc`:
-
-```zsh
-# .local/bin
-export PATH="${HOME}/.local/bin:$PATH"
-export BROWSER="wslopen"
-```
-
-Then type `reload` to reload the shell.
 
 <br/>
 
