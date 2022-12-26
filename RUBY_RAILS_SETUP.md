@@ -20,7 +20,7 @@ cd $HOME && rbenv install 3.1.3 --verbose
 If chose to install Ubuntu instead of Debian, you may run into issues installing Ruby because of SSL incompatibility, and you'll need to use Brew OpenSSL. Run the following:
 
 ```sh
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install 3.1.3 --verbose
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install 3.1.3 --verbose
 ```
 
 <br/>
