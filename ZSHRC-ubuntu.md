@@ -6,7 +6,7 @@
 
 ```zsh
 # If you come from bash you might have to change your $PATH.
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -18,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME="spaceship"
+# Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
@@ -39,7 +39,7 @@ HYPHEN_INSENSITIVE="true"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -54,7 +54,7 @@ HYPHEN_INSENSITIVE="true"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -120,8 +120,8 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="code ${HOME}/.zshrc"
-alias ohmyzsh="code ${HOME}/.oh-my-zsh"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
 # SPACESHIP_USER_SHOW=always
@@ -142,11 +142,9 @@ SPACESHIP_PROMPT_ASYNC=false
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
-# export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-# export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
 
 # .local/bin
-export PATH="${HOME}/.local/bin:$PATH"
+# export PATH="${HOME}/.local/bin:$PATH"
 export BROWSER="wslopen"
 
 # RBENV
@@ -179,29 +177,8 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
-# create the postgresql temp file if it doesn't exit
-function set_pg_dir() {
-  POSTGRESTEMP=/var/run/postgresql
-  if [ ! -d "$POSTGRESTEMP" ]; then
-    echo Creating $POSTGRESTEMP for PostgreSQL
-    echo '1' | sudo -S mkdir /var/run/postgresql && echo '1' | sudo -S chmod 0777 /var/run/postgresql
-  else
-    echo $POSTGRESTEMP exists!
-  fi
-}
-alias setpgdir="set_pg_dir"
-setpgdir
 
-function pgfix () {
-  PGFILE=/tmp/.s.PGSQL.5432
-  if [ -f "$PGFILE"]; then
-    echo '1' | sudo ln -s $PGFILE /var/run/postgresql/.s.PGSQL.5432
-    echo $PGFILE was linked in /var/run/postgresql/
-  else
-    echo $PGFILE is not available for the fix!
-  fi
-}
-
+# load files
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
 then
@@ -229,10 +206,8 @@ else
   echo "not sure what happened with ${ZSAUCE}"
 fi
 
-# BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-# you will see the hostname of your computer. Replace BIGBRAIN with that name
+# Keychain
 export HOSTNAME=BIGBRAIN
-
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```

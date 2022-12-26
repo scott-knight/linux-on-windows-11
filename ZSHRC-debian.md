@@ -142,8 +142,6 @@ SPACESHIP_PROMPT_ASYNC=false
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
 export PATH="${BREW_OPT_PATH}/postgresql@15/bin:$PATH"
-# export PATH="${BREW_OPT_PATH}/node/bin:$PATH"
-# export PATH="${BREW_OPT_PATH}/libpq/bin:$PATH"
 
 # .local/bin
 export PATH="${HOME}/.local/bin:$PATH"
@@ -202,6 +200,7 @@ function pgfix () {
   fi
 }
 
+# Load Files
 ZASYS=$HOME/.zsh_alias_list
 if [ -f "$ZASYS" ]
 then
@@ -229,10 +228,8 @@ else
   echo "not sure what happened with ${ZSAUCE}"
 fi
 
-# BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-# you will see the hostname of your computer. Replace BIGBRAIN with that name
+# Keychain
 export HOSTNAME=BIGBRAIN
-
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```

@@ -225,6 +225,18 @@ Once your keys are created, run the following:
 mkdir -m a=rwx $HOME/.ssh
 ```
 
+<br/>
+
+### If You Have Existing SSH Files
+
+If you already have ssh files created and stored somewhere, copy and paste them into you .ssh dir
+
+![ssh-files](https://user-images.githubusercontent.com/516548/209577940-c9db2c03-8820-45d0-8c7d-9493adb55405.png)
+
+<br/>
+
+### If You Need to Create SSH Files
+
 ```sh
 touch $HOME/.ssh/config && nano $HOME/.ssh/config
 ```
@@ -279,11 +291,12 @@ nano .zshrc
 
 <br/>
 
-```
-# BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-# you will see the hostname of your computer. Replace BIGBRAIN with that name
-export HOSTNAME=BIGBRAIN
+BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
+you will see the hostname of your computer. Replace BIGBRAIN with that name
 
+```
+# Keychain
+export HOSTNAME=BIGBRAIN
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
@@ -345,7 +358,7 @@ export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 ```
 
-Close and reload the Linux instance
+Close and reload the terminal instance
 
 <br/>
 
@@ -370,10 +383,18 @@ rbenv alias --auto
 NVM documenation is [found here](https://github.com/nvm-sh/nvm#installing-and-updating). To install NVM, run the following:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
 Once installed, reload the shell; then run the following:
+
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+Then
 
 ```sh
 nvm install --lts && npm install npm@latest -g
@@ -390,9 +411,10 @@ To install oh-my-zsh, run the following:
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
 <br/>
 
-### Install Plugins
+### Install Oh-My-ZSH Plugins
 
 Run the following:
 
@@ -401,6 +423,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/cust
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &&
 git clone https://github.com/gusaiani/elixir-oh-my-zsh.git $HOME/.oh-my-zsh/custom/plugins/elixir
 ```
+
+<br/>
 
 ### Install Spaceship-prompt
 
@@ -430,9 +454,9 @@ nano .zshrc
 
 <br/>
 
-Copy the [contents of .zshrc](ZSHRC.md) and save.
+Copy the [contents of .zshrc](ZSHRC-debian.md) and save.
 
-Reload the Debian instance.
+Reload the terminal instance.
 
 <br/>
 
@@ -448,7 +472,7 @@ nano .zsh_alias_list
 
 Copy the [contents of .zsh_alias_list](ZSH_ALIAS_LIST.md) and save.
 
-Reload the Debian instance.
+Reload the terminal instance.
 
 From now on, when you want to reload the shell, simply type `reload`
 
@@ -514,7 +538,7 @@ update: --no-rdoc --no-ri --no-document
 
 ## Reload
 
-After you have completed the setup, close and reload the Linux instance.
+After you have completed the setup, close and reload the terminal instance.
 
 <br/>
 
