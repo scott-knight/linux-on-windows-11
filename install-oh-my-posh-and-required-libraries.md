@@ -1,10 +1,12 @@
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md) ,,, [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-windows-terminal.md) | [Next Step](configure-windows-terminal.md)
+
 <br/>
+
 # Install oh-my-posh and Required Libraries
 
 This document contains information on how to install oh-my-posh and various libraies used for powershell and zsh themes which use Powerline Icons in the console.
 
-[Oh-my-posh](https://ohmyposh.dev/) is similar to [oh-my-zsh](https://ohmyz.sh/). It works in Windows PowerShell which is used in the Windows Terminal. There's minimal setup needed for running (my personal preference) zsh instances. YOU DO NOT HAVE TO DO THIS STEP if you don't plan on using a powershell or zsh theme which requires Powerline icons. 
+[Oh-my-posh](https://ohmyposh.dev/) is similar to [oh-my-zsh](https://ohmyz.sh/). It works in Windows PowerShell which is used in the Windows Terminal. There's minimal setup needed for running (my personal preference) zsh instances. YOU DO NOT HAVE TO DO THIS STEP if you don't plan on using a powershell or zsh theme which requires Powerline icons.
 
 Sources: [Powerline Setup](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup), [Custom Prompt Setup](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup), [Cascadia Code](https://github.com/microsoft/cascadia-code)
 
@@ -14,7 +16,7 @@ Sources: [Powerline Setup](https://docs.microsoft.com/en-us/windows/terminal/tut
 
 These are the steps to install the `Windows PowerShell`. Documentation can be [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows).
 
-1. [Download the MSI installer](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-window) for Windows PowerShell. 
+1. [Download the MSI installer](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-window) for Windows PowerShell.
 2. Once down loaded, install Windows PowerShell
 3. It will prompt you to select (with a checkbox) to update using Windows Update. Make sure you select this option.
 4. Once installed, it will be selectable in the Windows Terminal as an option.
@@ -65,5 +67,8 @@ You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You
 
 <br/>
 
-Now you're ready to [Configure Windows Terminal](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md).
-<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-windows-terminal.md)
+Now you're ready to [Configure Windows Terminal](configure-windows-terminal.md).
+
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-windows-terminal.md)

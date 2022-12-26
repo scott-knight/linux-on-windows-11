@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md) |  [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md) | [Next Step](customize-ubuntu.md) |  [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 <br/>
 
@@ -164,7 +164,7 @@ You should use `wajig command to update Ubuntu from now on.
 *CURRENT (USE THIS ONE UNLESS IT BLOWS THINGS UP):*
 
 ```sh
-wajig install -y apt-transport-https autoconf bison build-essential checkinstall clang curl ca-certificates gcc git gpg gnupg2 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release libxml2-dev libxslt-dev make patch pkg-config wget vim zlib1g-dev liblzma-dev zsh
+wajig install -y apt-transport-https autoconf bison build-essential checkinstall clang curl gcc git gpg gnupg2 libssl-dev libpq-dev libyaml-dev libreadline-dev libncurses-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev lsb-release libxml2-dev libxslt-dev make patch pkg-config wget vim zlib1g-dev liblzma-dev zsh
 ```
 
 <br/>
@@ -199,8 +199,8 @@ mkdir .ssh
 
 <br/>
 
-Now you're ready to [Customize Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md)
+Now you're ready to [Customize Ubuntu](customize-ubuntu.md)
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md)

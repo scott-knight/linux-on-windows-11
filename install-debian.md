@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-debian.md) | [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md) | [Next Step](customize-debian.md) | [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 
 # Install Debian
@@ -109,8 +109,8 @@ mkdir .ssh
 
 <br/>
 
-Now you're ready to [Customize Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-debian.md)
+Now you're ready to [Customize Debian](customize-debian.md)
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md)

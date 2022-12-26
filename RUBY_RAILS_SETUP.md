@@ -1,4 +1,4 @@
-[Return to Setup](customize-linux.md#setup-for-ruby-and-rails)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#setup-for-ruby-and-rails) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
 
 # Setting up Ruby and Rails
 
@@ -88,7 +88,7 @@ gem install nokogiri -- --use-system-libraries \
 
 <br/>
 
-### Installing PG 
+### Installing PG
 
 Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
 
@@ -98,7 +98,7 @@ sudo find / -name pg_config
 
 <br/>
 
-You will see something like this 
+You will see something like this
 
 > /home/linuxbrew/.linuxbrew/Cellar/postgresql@15/15.1/bin/pg_config
 
@@ -118,10 +118,10 @@ gem install pg -- --with-pg-config=/usr/bin/pg_config
 
 Rails uses bootsnap which uses libffi. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, you may see this error that looks something like this:
 
-> LoadError: libffi.so.8: cannot open shared object file: No such file or 
+> LoadError: libffi.so.8: cannot open shared object file: No such file or
 > directory - /home/sknight/dev.projects/jobsauce-app/.gems/gems/ffi-1.15.5/lib/ffi_c.so
 
-This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1). 
+This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1).
 
 To install the specific version needed (as outlined in the error), and to get the app to ignore the system version, you do the following:
 
@@ -148,7 +148,7 @@ Brave is installed on the `C` drive in the following location: `C:\Program Files
 We need to create a couple of files to get everything to work:
 
 ```zsh
-mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen 
+mkdir $HOME/.local/bin && touch $HOME/.local/bin/wslopen
 ```
 
 <br/>
@@ -191,9 +191,9 @@ If you would like to completely reload the DBs, run the following:
 rails db:drop db:create db:schema:load db:migrate
 ```
 
-<br/> 
+<br/>
 
-Once finished, you should be ready to run your local environment. 
+Once finished, you should be ready to run your local environment.
 
 <br/><br/>
 
@@ -217,3 +217,6 @@ OR, if you have aliases set up
 alias rfix="chmod u+x bin/rails"
 ```
 
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#setup-for-ruby-and-rails) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)

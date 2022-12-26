@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md) | [Install Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) | [Install Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-ubuntu.md) | [Update PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Debian](install-debian.md) | [Install Ubuntu](install-ubuntu.md) | [Update PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
 
 <br/>
 
@@ -52,4 +52,4 @@ To update Windows PowerShell (when needed), follow the instructions [found here]
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md) | [Install Debian](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) | [Install Ubuntu](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-ubuntu.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Debian](install-debian.md) | [Install Ubuntu](install-ubuntu.md)

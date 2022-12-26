@@ -1,8 +1,10 @@
-[Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Next Step](install-vscode.md)
+
 <br/>
+
 # Install Windows 11 WSL 2
 
-This document explains how to install Windows 11 WSL 2. 
+This document explains how to install Windows 11 WSL 2.
 
 ## Installation Steps
 
@@ -17,12 +19,15 @@ This document explains how to install Windows 11 WSL 2.
 ![windows selection](https://user-images.githubusercontent.com/516548/191402641-3bd76611-842b-4f7c-836e-d163b8527f0c.png)
 
 5. Reboot (if prompted)
-6. After the reboot, open PowerShell as Administrator (repeat step 2) 
+6. After the reboot, open PowerShell as Administrator (repeat step 2)
 7. Run the following commands in the console::
 
 ```sh
 wsl --set-default-version 2
 ```
 
-WSL2 will be installed and ready to go. Now you can move on to the next step, [install VSCode](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md).
+WSL2 will be installed and ready to go. Now you can move on to the next step, [install VSCode](install-vscode.md).
 
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11)

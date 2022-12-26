@@ -1,4 +1,6 @@
-[Back to Setup](customize-linux.md#copy-zsh_alias_list-content)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_alias_list-content)
+
+<br/>
 
 # .zsh_alias_list
 
@@ -103,3 +105,6 @@ alias pgupdate="brew postgresql-upgrade-database"
 
 alias python="$(brew --prefix python)"
 ```
+<br/><br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_alias_list-content) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_alias_list-content)

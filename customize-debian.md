@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) | [Uninstall](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-debian.md) | [Uninstall](unregister-and-uninstall.md)
 
 <br/>
 
@@ -66,7 +66,7 @@ Reference found [here](https://docs.brew.sh/Homebrew-on-Linux)
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
-4. Reload the Linux shell.
+4. Reload the shell.
 5. Add BREW taps
 
 ```sh
@@ -96,7 +96,7 @@ brew install erlang elixir
 
 ## Install Postgres
 
-Install postgres by doing the following
+Install postgres by doing the following:
 
 ```sh
 brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> $HOME/.zshrc && source $HOME/.zshrc
@@ -582,4 +582,4 @@ If that doesn't work, I'm not sure what to tell you. WSL changes often and it re
 
 <br/><br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) |
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-debian.md)

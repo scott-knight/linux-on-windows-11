@@ -1,4 +1,6 @@
-[Back to Setup](customize-linux.md#copy-the-zshrc-content)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
+
+<br/>
 
 # .zshrc
 
@@ -234,3 +236,7 @@ export HOSTNAME=BIGBRAIN
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ```
+
+<br/><br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)

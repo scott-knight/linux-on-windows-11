@@ -1,4 +1,6 @@
-[Back to Setup](customize-linux.md#copy-zsh_functions)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
+
+<br/>
 
 # .zsh_functions
 
@@ -23,12 +25,12 @@ function gitdel(){
 #   echo 'Update of Ubuntu complete!'
 # }
 
-function update_debian () {
-  echo ''
-  echo 'Updating Debian files, please wait...'
-  sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
-  echo 'Update of Debian complete!'
-}
+# function update_debian () {
+#   echo ''
+#   echo 'Updating Debian files, please wait...'
+#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
+#   echo 'Update of Debian complete!'
+# }
 
 function upgrade_ohmyzsh(){
   echo ''
@@ -160,7 +162,7 @@ function update_omz() {
 function update() {
   echo "Upgrading ALL the things..."
   # update_ubuntu &&
-  update_debian &&
+  # update_debian &&
   update_omz &&
   update_rbenv &&
   update_brew &&
@@ -209,7 +211,7 @@ function pgs () {
   echo ''
   echo "pgstart   = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
   echo "pgstop    = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
-  echo "pgupdate  = brew postgresql-upgrade-database"  
+  echo "pgupdate  = brew postgresql-upgrade-database"
   echo ''
 }
 
@@ -255,3 +257,7 @@ function gits () {
   echo ''
 }
 ```
+
+<br/><br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)

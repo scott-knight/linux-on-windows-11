@@ -1,5 +1,7 @@
- [Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
+
 <br/>
+
 # Install Windows Terminal
 
 To get everything working correctly, you will need to install the new Windows Terminal as it IS NOT installed in Windows by default. Source, [Microsoft Overview](https://docs.microsoft.com/en-us/windows/terminal/).
@@ -8,7 +10,7 @@ To get everything working correctly, you will need to install the new Windows Te
 
 ## Installation
 
-1. To install Windows Terminal, open Microsoft Store. 
+1. To install Windows Terminal, open Microsoft Store.
 2. In the search bar type `Windows Terminal`.
 3. Select `Windows Terminal` app.
 
@@ -36,9 +38,12 @@ Click on the `Terminal` icon in the `Start Menu`. Once it opens, click the down 
 
 ![term-settings](https://user-images.githubusercontent.com/516548/191406723-a7aac225-6a78-4981-9f29-f65ebf4e2117.png)
 
-After clicking settings you will see a selection for Default Profile. Here you can select Linux (Ubuntu), once it's installed.
+After clicking settings you will see a selection for Default Profile. Here you can select (Ubuntu or Debian), once installed.
 
 <br/>
 
-Now you are ready to [Install Oh-my-Posh and Required Libraries](https://github.com/scott-knight/linux-on-windows-11/blob/main/Install%20oh-my-posh-and-required-libraries.md).
-<br/>[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-vscode.md)
+Now you are ready to [Install Oh-my-Posh and Required Libraries](install-oh-my-posh-and-required-libraries.md)
+
+<br/>
+
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-vscode.md)
