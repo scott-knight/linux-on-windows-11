@@ -1,6 +1,6 @@
-# Customize Ubuntu (RETIRED)
+# Customize Ubuntu
 
-THIS DOC IS NOT UP TO DATE - IT'S STILL HERE, MAINLY AS A PLACEHOLDER, JUST IN CASE I DECIDED TO UPDATE IT LATER. [PREFER THE DEBIAN INSTALL](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) OVER UBUNTU 
+THIS DOC IS NOT UP TO DATE - IT'S STILL HERE, MAINLY AS A PLACEHOLDER, JUST IN CASE I DECIDED TO UPDATE IT LATER. [PREFER THE DEBIAN INSTALL](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-debian.md) OVER UBUNTU
 
 This is the step-by-step guide for customizing Ubuntu to use all the settings, aliases, functions, etc., that I use every day. You don't have to do this step either. Linux will run without this customization. Also, if you go through the step-by-step guide and don't like the setup, you can simply [uninstall the Linux instance](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution) and [reinstall it](https://github.com/scott-knight/linux-on-windows-11/blob/main/install-linux.md). It will be a completely clean install of Linux, no settings will carry over.
 
@@ -25,7 +25,7 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y &
 
 ## Install Wajig
 
-[`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface. 
+[`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface.
 
 To install wajig, run the following:
 
