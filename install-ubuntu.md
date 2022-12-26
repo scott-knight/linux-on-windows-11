@@ -33,11 +33,33 @@ wsl --update
 
 <br/>
 
+### Removing from WSL and Uninstalling
+
 NOTE: If you have trouble in the console when it opens (likely from reinstalling it several times like I did), run the following:
+
+```sh
+wsl --unregister Ubuntu-[version]
+```
+
+EX:
 
 ```sh
 wsl --unregister Ubuntu-22.04
 ```
+
+OR 
+
+```sh
+wsl --unregister Ubuntu-Preview
+```
+
+<br/>
+
+Then uninstall it by clicking the `Start Menu` button, then right-ckick `Ubuntu` and select `Uninstall`
+
+![Screenshot 2022-12-26 083931](https://user-images.githubusercontent.com/516548/209559792-ab468e4f-2c00-49ff-85c1-fb32e7f1a78d.png)
+
+<br/>
 
 Then click `Open` again. It should open the dialog as expected.
 
