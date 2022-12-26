@@ -98,7 +98,7 @@ A complete list of [WSL commands can be found here](https://learn.microsoft.com/
 
 11. Once saved, scroll down to the `Additional settings` section and click `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono` (or any other Nerd font or Powerline font). Then click `Save` and close the settings tab.
 
-</br/>
+<br/><br/>
 
 ## Connecting VSCode to your Linux instance
 
