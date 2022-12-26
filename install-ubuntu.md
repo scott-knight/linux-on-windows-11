@@ -1,14 +1,18 @@
-[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) ... [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md)
+[Previous Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/configure-windows-terminal.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-ubuntu.md) |  [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+
 <br/>
+
 # Install Ubuntu
 
-This document demonstrates how to install the current supported release of Linux (Ubuntu) on Windows 11. This document assumes WSL2 has been installed and is ready to use. A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+This document describes how to install the Ubuntu on Windows 11. This document assumes WSL2 has been installed and is ready to use.
 
 <br/>
 
 ## Update WSL
 
-To ensure you have the latest version of WSL, open the Windows PowerShell as an Administrator
+To ensure you have the latest version of WSL, open the Windows PowerShell as an Administrator.
+
+<br/>
 
 ![run-as-administrator](https://user-images.githubusercontent.com/516548/192077877-6748108f-fdd2-4c83-b0ba-3ac31224c9bf.png)
 
@@ -20,22 +24,23 @@ Once open, run the following:
 wsl --update
 ```
 
-<br/>
+A complete list of [WSL commands can be found here](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+
+<br/><br/>
 
 ## Install Ubuntu
 
 1. In the Windows Store, and search for Ubuntu:
 
+<br/>
+
 ![Screenshot 2022-12-26 083036](https://user-images.githubusercontent.com/516548/209558996-6738c20f-d499-4721-a097-de07fa4d32e5.png)
 
 2. Pick a version to install and click `Install` (this doc will assume you installed version `preview`)
-3. Once downloaded, click `Open`
-
-Then click `Open` again. It should open the dialog as expected.
+3. Once downloaded, click `Open`. It will start the setup dialog.
+4. You will be prompted to select a default language, select `English`, then click continue.
 
 <br/>
-
-4. You will be prompted to select a default language, select `English`, then click continue.
 
 ![language](https://user-images.githubusercontent.com/516548/192082523-3744a840-f70d-411a-aae7-f550754cce02.png)
 
@@ -65,7 +70,6 @@ Then click `Open` again. It should open the dialog as expected.
 After you save the settings, when you click on the `Windows Terminal` icon in the `Start Menu`, it will automatically open the `Ubuntu` shell.
 
 <br/>
-
 
 2. Once downloaded and installed, it will open a new terminal instance. You will be promted to create a username and password. Once entered, the setup will complete.
 
