@@ -43,3 +43,14 @@ STEPS:
 
 6. [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
 7. [Customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md)
+
+<br/>
+
+## Available Distros
+
+To see the available list of downloadable Linux distros via `Windows PowerShell`, run the following:
+
+```sh
+wsl.exe --list --online
+```
+
