@@ -40,5 +40,6 @@ You will need to repeat steps 6-7 if you decide to delete your current install o
 I have created a set of Debian installation notes. I'm not sure how long I will maintain them. It takes more effort to maintain a Debian instance (which I'm not a fan of). If you want to use Debian, [here you go](https://github.com/scott-knight/debian-on-windows-11):
 
 STEPS:
+
 6. [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
 7. [Customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md)
