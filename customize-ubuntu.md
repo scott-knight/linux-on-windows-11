@@ -355,7 +355,7 @@ nano .zshrc
 
 <br/>
 
-Copy the [contents of .zshrc](ZSHRC-ubuntu.md) and save.
+Copy the [contents of .zshrc](ZSHRC.md) and save.
 
 Reload the terminal instance.
 
@@ -371,7 +371,7 @@ nano .zsh_alias_list
 
 <br/>
 
-Copy the [contents of .zsh_alias_list](ZSH_ALIAS_LIST-ubuntu.md) and save.
+Copy the [contents of .zsh_alias_list](ZSH_ALIAS_LIST.md) and save.
 
 Reload the terminal instance.
 
@@ -389,7 +389,7 @@ nano .zsh_functions
 
 <br/>
 
-Copy the [contents of .zsh_functions](ZSH_FUNCTIONS-ubuntu.md) and save.
+Copy the [contents of .zsh_functions](ZSH_FUNCTIONS.md) and save.
 
 Type `reload` to reload the shell.
 
@@ -397,7 +397,7 @@ Type `reload` to reload the shell.
 
 ## Copy .zsh_jobsauce
 
-This is an example of personal/project content you may needed within console. (You can see how this file is called in [.zshrc](ZSHRC-ubuntu.md))
+This is an example of personal/project content you may needed within console. (You can see how this file is called in [.zshrc](ZSHRC.md))
 
 Using VIM or NANO, replace the contents of `.zsh_jobsauce` with the following:
 
