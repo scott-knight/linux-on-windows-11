@@ -14,8 +14,8 @@ Below is the step-by-step guide describing how to install all the bits needed to
 3. [Install Windows Terminal](install-windows-terminal.md)
 4. [Install oh-my-posh and required libraries](install-oh-my-posh-and-required-libraries.md)
 5. [Configure Windows Terminal](configure-windows-terminal.md)
-6. [Install Debian](install-debian.md) OR [Install Ubuntu](install-ubuntu.md)
-7. [Customize Debian](customize-debian.md) OR [Customize Ubuntu](customize-ubuntu.md)
+6. [Install Ubuntu](install-ubuntu.md)
+7. [Customize Ubuntu](customize-ubuntu.md)
 8. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
 ### IMPORTANT NOTES
@@ -25,3 +25,19 @@ Steps 1-5 are Windows setup instructions. Once you have completed steps 1-5, you
 Once Windows Terminal is setup, you should be good for the lifetime of your Windows install (pending needed updates if there are any).
 
 You will need to repeat steps 6-7 if you decide to delete your current install of Linux and reinstall it.
+
+<br/>
+
+## Ubuntu vs Debian
+
+* Ubuntu had its issues over the summer, but they have the bugs worked out. The current version (23.x) seems to have a lot less bloat and runs really well. It's now my prefered Linux install within WSL.
+* Debian doesn't have the bloat that Ubuntu has. This means you have install and configure everything. If something goes wrong, it takes a while to figure out what failed and how to fix it. It seemed like more things broke under Debian the more I had to work with it. It was painful.
+
+ <br/>
+
+ ### Debian Notes
+
+ I have separated Debian content from Ubuntu content. I don't like keeping useless info (I don't know that I will use Debian again), but I also hate losing hours of work if I need to revert back to it. Therefore, my Debain install and customization notes will remain for a while, at least until I feel confident that I wont ever need them again. Steps for Debian:
+
+5. [Install Debian](install-debian.md)
+6. [Customize Debian](customize-debian.md)
