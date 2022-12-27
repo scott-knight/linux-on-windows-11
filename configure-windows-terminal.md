@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Ubuntu](install-ubuntu.md) | [Install Debian]([install-debian.md](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md) | [Update PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md) | [Update PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
 
 <br/>
 
