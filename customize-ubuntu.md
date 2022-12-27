@@ -62,7 +62,7 @@ Run the following in the console:
 echo '# .local/bin -- used with letter_opener' >> .zshrc && echo 'export PATH="${HOME}/.local/bin:$PATH"' >> .zshrc && echo 'export BROWSER="wslopen"' >> .zshrc
 ```
 
-Then type `reload` to reload the shell.
+Then reload the shell.
 
 <br/>
 
