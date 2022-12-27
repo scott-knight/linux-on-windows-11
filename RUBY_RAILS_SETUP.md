@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#setup-for-ruby-and-rails) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
 
 # Setting up Ruby and Rails
 
@@ -11,21 +11,14 @@ This doc explains how to setup Ruby via RBENV, and Yarn (assuming you are using 
 Install the Ruby you want:
 
 ```sh
-cd $HOME && rbenv install 3.1.3 --verbose
-```
-<br/>
-
-### Issues When Installing Ruby on Ubuntu
-
-If chose to install Ubuntu instead of Debian, you may run into issues installing Ruby because of SSL incompatibility, and you'll need to use Brew OpenSSL. Run the following:
-
-```sh
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install 3.1.3 --verbose
 ```
 
 <br/>
 
-Once Ruby installs, you will want to update `ruby-gems` and bundler:
+## Updating rubygems-update
+
+Once Ruby installs, you will want to update `rubygems-update` and bundler:
 
 ```sh
 gem update --system && gem install bundler
@@ -78,58 +71,6 @@ If successful, the project should be ready to run. I ran into issues running `bu
 
 <br/>
 
-
-### Installing PG (Debian)
-
-Brew will install Postgres, but it doesn't supply the system compiler that gem pg needs to install. To find the sytem `pg_config` run the following:
-
-```zsh
-sudo find / -name pg_config
-```
-
-<br/>
-
-You will see something like this
-
-> /home/linuxbrew/.linuxbrew/Cellar/postgresql@15/15.1/bin/pg_config
-
-> /usr/bin/pg_config
-
-<br/>
-
-You want to use the system's `pg_config` and not the brew install
-
-```zsh
-gem install pg -- --with-pg-config=/usr/bin/pg_config
-```
-
-<br/>
-
-### Installing libffi for Bootsnap gem (Debian)
-
-Rails uses bootsnap which uses libffi. We installed `libffi-dev` in a previous step. However, Bootsnap may have an issue running when we spin up Rails. If that happens, you may see this error that looks something like this:
-
-> LoadError: libffi.so.8: cannot open shared object file: No such file or
-> directory - /home/sknight/dev.projects/jobsauce-app/.gems/gems/ffi-1.15.5/lib/ffi_c.so
-
-This means that the system library is unable to use the system ffi installed by default, and we need to install a specific version for our Rails app (in our example, we need version 1.15.1).
-
-To install the specific version needed (as outlined in the error), and to get the app to ignore the system version, you do the following:
-
-```sh
-gem install ffi --version '1.15.5' -- --disable-system-libffi
-```
-
-OR you can simply install `ffi`, disabling the system version
-
-```
-gem install ffi -- --disable-system-libffi
-```
-
-NOTE: With Ruby 3.2.0 -- after updating and installing, there is an issue that arises: `cannot find 'argon2_wrap' library`. This is an issue for which I could not find an answer (12/25/2022)
-
-<br/>
-
 ### Setup the DB locally
 
 Once you have all the gems installed and you can execute `rails`, you will be ready to setup the DBs. To setup the DB's run the following:
@@ -174,4 +115,4 @@ alias rfix="chmod u+x bin/rails"
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#setup-for-ruby-and-rails) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
+[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
