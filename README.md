@@ -31,7 +31,7 @@ You will need to repeat steps 6-7 if you decide to delete your current install o
 ## Ubuntu vs Debian
 
 * Ubuntu had its issues over the summer, but they have the bugs worked out. The current version (23.x) seems to have a lot less bloat and runs really well. It's now my prefered Linux install within WSL.
-* Debian doesn't have the bloat that Ubuntu has. This means you have install and configure everything. If something goes wrong, it takes a while to figure out what failed and how to fix it. It seemed like more things broke under Debian the more I had to work with it. It was painful.
+* Debian doesn't have the bloat that Ubuntu has. This means you have install and configure everything. If something goes wrong, it takes a while to figure out what failed and how to fix it. The more I used it and tried the customize it the less reliable and stable it became.
 
  <br/>
 
