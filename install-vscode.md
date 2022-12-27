@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-wsl2.md) | [Next Step](install-windows-terminal.md)
+[Home](README.md) | [Previous Step](install-wsl2.md) | [Next Step](install-windows-terminal.md)
 
 <br/>
 
@@ -124,4 +124,4 @@ Now you are ready to [Install Windows Termial](install-windows-terminal.md).
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-wsl2.md)
+[Home](README.md) | [Previous Step](install-wsl2.md)

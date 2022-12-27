@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-windows-terminal.md) | [Next Step](configure-windows-terminal.md)
+[Home](README.md) | [Previous Step](install-windows-terminal.md) | [Next Step](configure-windows-terminal.md)
 
 <br/>
 
@@ -71,4 +71,4 @@ Now you're ready to [Configure Windows Terminal](configure-windows-terminal.md).
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-windows-terminal.md)
+[Home](README.md) | [Previous Step](install-windows-terminal.md)

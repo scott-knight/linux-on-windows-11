@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
+[Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
 
 <br/>
 
@@ -471,4 +471,4 @@ You should see a table of info:
 
 <br/><br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
+[Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)

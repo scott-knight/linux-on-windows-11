@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Next Step](install-vscode.md)
+[Home](README.md) | [Next Step](install-vscode.md)
 
 <br/>
 
@@ -30,4 +30,4 @@ WSL2 will be installed and ready to go. Now you can move on to the next step, [i
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11)
+[Home](README.md)

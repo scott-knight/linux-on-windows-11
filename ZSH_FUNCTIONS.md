@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
 
 <br/>
 
@@ -14,12 +14,16 @@ function gitdel(){
   git fetch --all --prune
 }
 
-# function update_debian () {
-#   echo ''
-#   echo 'Updating Debian files, please wait...'
-#   sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done' &&
-#   echo 'Update of Debian complete!'
-# }
+function update_ubuntu () {
+  echo ''
+  echo 'Updating Ubuntu files, please wait...'
+  wajig update &&
+  wajig upgrade -y &&
+  wajig distupgrade -y &&
+  wajig autoremove &&
+  wajig autoclean &&
+  echo 'Update of Ubuntu complete!'
+}
 
 function upgrade_ohmyzsh(){
   echo ''
@@ -27,37 +31,6 @@ function upgrade_ohmyzsh(){
   omz update &&
   echo "Completed upgrading oh-my-zsh!"
 }
-
-function findpg () {
-  echo "looking for system 'pg_config'"
-  sudo find / -name pg_config
-}
-
-function pg_install () {
-  echo 'Updating the PG gem'
-  gem install pg -- --with-pg-config=/usr/bin/pg_config &&
-  echo 'done!'
-}
-alias pginstall="pg_install"
-alias pgi="pg_install"
-alias updatepg="pg_install"
-
-function ffi_install () {
-  gem install ffi -- --disable-system-libffi
-}
-alias ffii="ffi_install"
-
-function bundle_install () {
-  echo 'Installing gems, please wait...'
-  pg_install && ffi_install && bundle
-}
-alias bi="bundle_install"
-
-function bundle_update () {
-  echo 'Updating gems, please wait...'
-  pg_install && ffi_install && bundle update
-}
-alias bu="bundle_update"
 
 function update_rbenv () {
   CURR_DIR="$PWD" &&
@@ -160,7 +133,7 @@ function update_omz() {
 
 function update() {
   echo "Upgrading ALL the things..."
-  update_debian &&
+  update_ubuntu &&
   update_omz &&
   update_rbenv &&
   update_brew &&
@@ -180,37 +153,16 @@ function fixrails () {
 alias railsfix="fixrails"
 alias fixr="fixrails"
 
-function bundlei () {
-  echo ''
-  echo '******  bundle Commands  **************************************'
-  echo ''
-  echo "pg_install     = gem install pg -- --with-pg-config=/usr/bin/pg_config"
-  echo "pgs            = shows pg commands"
-  echo ''
-  echo "ffi_install    = gem install ffi -- --disable-system-libffi"
-  echo "ffii           = ffi_install"
-  echo ''
-  echo "bundle_install = pg_install && ffi_install && bundle"
-  echo "bi             = bundle_install"
-  echo ''
-  echo "bundle_update  = pg_install && ffi_install && bundle update"
-  echo "bu             = bundle_update"
-  echo ''
-}
-alias bundles="bundlei"
-
 function pgs () {
   echo ''
   echo '******  pg Commands  **************************************'
   echo ''
-  echo "findpg    = sudo find / -name pg_config   # finds the system pg_config"
-  echo "updatepg  = gem install pg -- --with-pg-config=/usr/bin/pg_config"
-  echo "upg       = gem install pg -- --with-pg-config=/usr/bin/pg_config"
-  echo "pginstall = gem install pg -- --with-pg-config=/usr/bin/pg_config"
+  echo '# alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"'
+  echo '# alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"'
   echo ''
-  echo "pgstart   = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
-  echo "pgstop    = pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
-  echo "pgupdate  = brew postgresql-upgrade-database"
+  echo "pgstart  = brew services start postgresql@15"
+  echo "pgstop   = brew services stop postgresql@15"
+  echo "pgupdate = brew postgresql-upgrade-database"
   echo ''
 }
 
@@ -218,7 +170,7 @@ function updatei () {
   echo ''
   echo '******  Update Commands  **************************************'
   echo ''
-  echo "update = update_debian && update_omz && update_rbenv && update_brew && upgrade_npm"
+  echo "update = update_ubuntu && update_omz && update_rbenv && update_brew && update_nvm && upgrade_npm"
   echo ''
   pgs
   bundles
@@ -257,6 +209,6 @@ function gits () {
 }
 ```
 
-<br/><br/>
+<br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_functions)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)

@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md) | [Next Step](customize-ubuntu.md) |  [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+[Home](README.md) | [Previous Step](configure-windows-terminal.md) | [Next Step](customize-ubuntu.md) |  [WSL Basic Commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 <br/>
 
@@ -187,4 +187,4 @@ Now you're ready to [Customize Ubuntu](customize-ubuntu.md)
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](configure-windows-terminal.md)
+[Home](README.md) | [Previous Step](configure-windows-terminal.md)

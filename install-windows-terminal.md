@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
+[Home](README.md) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
 
 <br/>
 
@@ -46,4 +46,4 @@ Now you are ready to [Install Oh-my-Posh and Required Libraries](install-oh-my-p
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Previous Step](install-vscode.md)
+[Home](README.md) | [Previous Step](install-vscode.md)

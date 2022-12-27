@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
+[Home](README.md) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
 
 
 # Remove and Uninstall Linux Distros
@@ -51,4 +51,4 @@ Once it's unregistered, you can uninstall it. To uninstall it, click the `Start 
 
 <br/><br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
+[Home](README.md) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)

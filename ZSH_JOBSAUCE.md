@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_jobsauce) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_jobsauce)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_jobsauce) | [Customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md#copy-zsh_jobsauce)
 
 # .zsh_jobsauce
 
@@ -67,6 +67,6 @@ function jsinfo () {
 alias jsi="jsinfo"
 ```
 
-<br/><br/>
+<br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Debian](customize-debian.md#copy-zsh_jobsauce) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_jobsauce)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_jobsauce) | [Customize Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/customize-debian.md#copy-zsh_jobsauce)

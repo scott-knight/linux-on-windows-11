@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
 
 <br/>
 
@@ -212,6 +212,6 @@ export HOSTNAME=BIGBRAIN
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
-<br/><br/>
+<br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)

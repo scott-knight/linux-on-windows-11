@@ -1,4 +1,4 @@
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
 
 # Setting up Ruby and Rails
 
@@ -115,4 +115,4 @@ alias rfix="chmod u+x bin/rails"
 
 <br/>
 
-[Home](https://github.com/scott-knight/linux-on-windows-11) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
+[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#setup-for-ruby-and-rails)
