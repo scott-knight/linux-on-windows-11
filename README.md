@@ -54,3 +54,6 @@ To see the available list of downloadable Linux distros via `Windows PowerShell`
 wsl.exe --list --online
 ```
 
+<br/> 
+
+There may be more options availalbe within `Microsoft Store`.
