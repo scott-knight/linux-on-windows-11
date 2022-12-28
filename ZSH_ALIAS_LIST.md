@@ -41,6 +41,8 @@ alias rollback="echo Performing rollback... ; bundle exec rake db:rollback"
 alias rnew="echo rails new <app_name> --webpack --skip-turbolinks --skip-spring --skip-coffee -T -B -d postgresql"
 alias mkenvs="touch .ruby-version ; touch .ruby-gemset"
 alias vedit='EDITOR=vi bin/rails credentials:edit'
+alias vpedit='EDITOR=vi bin/rails credentials:edit --environment production'
+alias vsedit='EDITOR=vi bin/rails credentials:edit --environment staging'
 alias rslh="rails s -b 0.0.0.0 -p $1"
 alias rc='rails c'
 alias rg='rails g'
