@@ -147,6 +147,14 @@ function cedit () {
   EDITOR="code --wait" bin/rails credentials:edit
 }
 
+function cpedit () {
+  EDITOR="code --wait" bin/rails credentials:edit --environment production
+}
+
+function csedit () {
+  EDITOR="code --wait" bin/rails credentials:edit --environment staging
+}
+
 function fixrails () {
   chmod u+x bin/rails
 }
@@ -177,12 +185,21 @@ function updatei () {
 }
 alias updates="updatei"
 
-function ecreds () {
+function editi () {
   echo ''
-  echo '******  Editing Rails Credentials  **************************************'
-  echo 'cedit = EDITOR="code --wait" bin/rails credentials:edit'
-  echo 'vedit = EDITOR=vi bin/rails credentials:edit'
+  echo '******  Editing Rails Credentials in VSCODE **************************************'
+  echo 'cedit  = EDITOR="code --wait" bin/rails credentials:edit'
+  echo 'cpedit = EDITOR="code --wait" bin/rails credentials:edit --environment production'
+  echo 'csedit = EDITOR="code --wait" bin/rails credentials:edit --environment staging'
+  echo
+  echo ''
+  echo '******  Editing Rails Credentials in VIM **************************************'
+  echo 'vedit  = EDITOR=vi bin/rails credentials:edit'
+  echo 'vedit  = EDITOR=vi bin/rails credentials:edit --environment production'
+  echo 'vedit  = EDITOR=vi bin/rails credentials:edit --environment production'
 }
+alias edits="editi"
+alias ecreds="editi"
 
 function gits () {
   echo ''
