@@ -47,6 +47,8 @@ alias rslh="rails s -b 0.0.0.0 -p $1"
 alias rc='rails c'
 alias rg='rails g'
 alias rfix="chmod u+x bin/rails"
+alias rpid="lsof -wni tcp:3000"
+alias rstop="kill -9 "
 
 
 # GIT commands
