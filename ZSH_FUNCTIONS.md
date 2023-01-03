@@ -224,6 +224,20 @@ function gits () {
   echo 'glogm  = git log --pretty=medium'
   echo ''
 }
+
+function railsi () {
+  echo ''
+  echo '****** rails commands  **************************************'
+  echo "rollback = bundle exec rake db:rollback"
+  echo "vedit    = EDITOR=vi bin/rails credentials:edit"
+  echo 'rslh     = rails s -b 0.0.0.0 -p $1'
+  echo "rc       = rails c"
+  echo "rg       = rails g"
+  echo "rfix     = chmod u+x bin/rails"
+  echo "rpid     = lsof -wni tcp:3000"
+  echo "rstop    = kill -9 [need the pid form running rpid]"
+}
+alias railss="railsi"
 ```
 
 <br/>
