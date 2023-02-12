@@ -210,6 +210,8 @@ fi
 export HOSTNAME=BIGBRAIN
 /usr/bin/keychain --clear $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
+
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 <br/>
