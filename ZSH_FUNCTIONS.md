@@ -14,6 +14,30 @@ function gitdel(){
   git fetch --all --prune
 }
 
+function install_rbenv () {
+  cd $HOME && git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
+}
+
+function install_rbenv_plugins () {
+cd $HOME && git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv && mkdir $HOME/.rbenv/plugins &&
+git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build &&
+git clone https://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset &&
+git clone https://github.com/rkh/rbenv-whatis.git $HOME/.rbenv/plugins/rbenv-whatis &&
+git clone https://github.com/rkh/rbenv-use.git $HOME/.rbenv/plugins/rbenv-use &&
+git clone https://github.com/tpope/rbenv-aliases.git $HOME/.rbenv/plugins/rbenv-aliases &&
+cd $HOME/.rbenv && cd $HOME
+}
+
+function reload_rbenv () {
+  echo 'Deleteing and reinstalling RBENV. Please wait...'
+  echo ''
+  cd $HOME &&
+  rm -rf $HOME/.rbenv &&
+  install_rbenv &&
+  install_rbenv_plugins &&
+  echo 'Done!'
+}
+
 function update_ubuntu () {
   echo ''
   echo 'Updating Ubuntu files, please wait...'
