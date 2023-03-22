@@ -19,13 +19,10 @@ function install_rbenv () {
 }
 
 function install_rbenv_plugins () {
-cd $HOME && git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv && mkdir $HOME/.rbenv/plugins &&
-git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build &&
-git clone https://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset &&
-git clone https://github.com/rkh/rbenv-whatis.git $HOME/.rbenv/plugins/rbenv-whatis &&
-git clone https://github.com/rkh/rbenv-use.git $HOME/.rbenv/plugins/rbenv-use &&
-git clone https://github.com/tpope/rbenv-aliases.git $HOME/.rbenv/plugins/rbenv-aliases &&
-cd $HOME/.rbenv && cd $HOME
+  cd $HOME && mkdir $HOME/.rbenv/plugins &&
+  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build &&
+  git clone https://github.com/jf/rbenv-gemset.git "$(rbenv root)"/plugins/rbenv-gemset &&
+  cd $HOME/.rbenv && cd $HOME
 }
 
 function reload_rbenv () {
@@ -38,24 +35,6 @@ function reload_rbenv () {
   echo 'Done!'
 }
 
-function update_ubuntu () {
-  echo ''
-  echo 'Updating Ubuntu files, please wait...'
-  wajig update &&
-  wajig upgrade -y &&
-  wajig distupgrade -y &&
-  wajig autoremove &&
-  wajig autoclean &&
-  echo 'Update of Ubuntu complete!'
-}
-
-function upgrade_ohmyzsh(){
-  echo ''
-  echo 'Updating oh-my-zsh, please wait...'
-  omz update &&
-  echo "Completed upgrading oh-my-zsh!"
-}
-
 function update_rbenv () {
   CURR_DIR="$PWD" &&
   echo ""
@@ -64,10 +43,7 @@ function update_rbenv () {
   cd "$CURR_DIR"
   echo "Done updating RBENV!" &&
   update_ruby_build &&
-  update_rbenv_gemset &&
-  update_rbenv_whatis &&
-  update_rbenv_use &&
-  update_rbenv_aliases
+  update_rbenv_gemset
 }
 
 function update_ruby_build () {
@@ -88,31 +64,22 @@ function update_rbenv_gemset () {
   echo "Done updating rbenv-gemset!"
 }
 
-function update_rbenv_whatis () {
-  CURR_DIR="$PWD" &&
-  echo ""
-  echo 'Updating rbenv-whatis, please wait...'
-  cd "$(rbenv root)"/plugins/rbenv-whatis && git pull &&
-  cd "$CURR_DIR"
-  echo "Done updating rbenv-whatis!"
+function update_ubuntu () {
+  echo ''
+  echo 'Updating Ubuntu files, please wait...'
+  wajig update &&
+  wajig upgrade -y &&
+  wajig distupgrade -y &&
+  wajig autoremove &&
+  wajig autoclean &&
+  echo 'Update of Ubuntu complete!'
 }
 
-function update_rbenv_use () {
-  CURR_DIR="$PWD" &&
-  echo ""
-  echo 'Updating rbenv-use, please wait...'
-  cd "$(rbenv root)"/plugins/rbenv-use && git pull &&
-  cd "$CURR_DIR"
-  echo "Done updating rbenv-use!"
-}
-
-function update_rbenv_aliases () {
-  CURR_DIR="$PWD" &&
-  echo ""
-  echo 'Updating rbenv-aliases, please wait...'
-  cd "$(rbenv root)"/plugins/rbenv-aliases && git pull &&
-  cd "$CURR_DIR"
-  echo "Done updating rbenv-aliases!"
+function upgrade_ohmyzsh(){
+  echo ''
+  echo 'Updating oh-my-zsh, please wait...'
+  omz update &&
+  echo "Completed upgrading oh-my-zsh!"
 }
 
 function update_brew() {
