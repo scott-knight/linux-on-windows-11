@@ -272,7 +272,7 @@ nano .zshrc
 # RBENV
 export RBENV_ROOT="${HOME}/.rbenv"
 export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+if which rbenv > /dev/null; then eval "$(${RBENV_ROOT}/bin/rbenv init - zsh)"; fi
 ```
 
 Close and reload the terminal instance
