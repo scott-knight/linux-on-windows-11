@@ -105,6 +105,13 @@ function update_nvm() {
   echo "Completed updating NVM!"
 }
 
+function upgrade_node_lts() {
+  echo '' &&
+  echo 'Updating Node LTS' &&
+  nvm install --lts &&
+  echo 'Completed updating Node!'
+}
+
 function upgrade_npm() {
   echo '' &&
   echo "Updating NPM" &&
@@ -129,6 +136,7 @@ function update() {
   update_rbenv &&
   update_brew &&
   update_nvm &&
+  upgrade_node_lts &&
   upgrade_npm &&
   echo ''
   echo "All updates complete!!"
