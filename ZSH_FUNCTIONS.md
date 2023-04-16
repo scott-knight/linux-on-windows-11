@@ -96,6 +96,7 @@ function update_brew() {
 }
 
 function update_nvm() {
+  echo '' &&
   echo "Updating NVM" &&
   (
     cd "$NVM_DIR"
