@@ -110,7 +110,18 @@ function upgrade_node_lts() {
   echo '' &&
   echo 'Updating Node LTS' &&
   nvm install --lts &&
-  echo 'Completed updating Node!'
+  # nvm use --lts &&
+  echo 'Completed updating Node!' &&
+  upgrade_npm
+}
+
+function upgrade_node() {
+  echo '' &&
+  echo 'Updating Node' &&
+  nvm install node &&
+  # nvm use node
+  echo 'Completed updating Node!' &&
+  upgrade_npm
 }
 
 function upgrade_npm() {
@@ -133,12 +144,12 @@ function update_omz() {
 function update() {
   echo "Upgrading ALL the things..."
   update_ubuntu &&
-  update_omz &&
+  update_omz ;
   update_rbenv &&
-  update_brew &&
-  update_nvm &&
-  upgrade_node_lts &&
-  upgrade_npm &&
+  upgrade_brew &&
+  updateNVM &&
+  # upgrade_node_lts &&
+  upgrade_node &&
   echo ''
   echo "All updates complete!!"
 }
