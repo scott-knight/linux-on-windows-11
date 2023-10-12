@@ -147,7 +147,7 @@ function update() {
   update_omz ;
   update_rbenv &&
   update_brew &&
-  updateNVM &&
+  update_nvm &&
   # upgrade_node_lts &&
   upgrade_node &&
   echo ''
