@@ -146,7 +146,7 @@ function update() {
   update_ubuntu &&
   update_omz ;
   update_rbenv &&
-  upgrade_brew &&
+  update_brew &&
   updateNVM &&
   # upgrade_node_lts &&
   upgrade_node &&
