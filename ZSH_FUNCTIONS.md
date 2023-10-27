@@ -249,6 +249,19 @@ function railsi () {
   echo "rstop    = kill -9 [need the pid form running rpid]"
 }
 alias railss="railsi"
+
+function rbenvi () {
+  echo ''
+  echo '****** RBENV ALIASES **************************************'
+  echo 'rbv     = rbenv version             # shows the current ruby version'
+  echo 'rbvs    = rbenv versions            # shows installed ruby versions'
+  echo 'rbvlist = rbenv install --list-all  # show all availabe ruby versions'
+  echo 'rehash  = rbenv rehash              # refreshes rbenv'
+  echo 'active  = rbenv gemset active       # shows the active gemset'
+  echo ''
+}
+alias rbvi='rbenvi'
+alias rbenvs='rbenvi'
 ```
 
 <br/>
