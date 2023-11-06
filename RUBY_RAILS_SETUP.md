@@ -17,7 +17,7 @@ reload_rbenv
 Install the Ruby you want:
 
 ```sh
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install 3.1.3 --verbose
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install 3.2.2 --verbose
 ```
 
 <br/>
