@@ -4,6 +4,12 @@
 
 This doc explains how to setup Ruby via RBENV, and Yarn (assuming you are using Yarn in your project). It also contains notes for resolving issues found while setting up a Rails project.
 
+You will need to make sure that RBENV is installed with plugins. At the console, run the following:
+
+```zsh
+reload_rbenv
+```
+
 <br/>
 
 ## Install Ruby via RBENV
