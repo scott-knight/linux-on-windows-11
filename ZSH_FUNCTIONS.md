@@ -172,6 +172,73 @@ function fixrails () {
 alias railsfix="fixrails"
 alias fixr="fixrails"
 
+# ##### REDIS SERVER #####
+function rediscom() {
+  echo ''
+  echo "'redstat' - checks the status of Redis; to see if it is running."
+  echo "'redstart' - starts Redis"
+  echo "'redstop' - stops Redis"
+  echo "'redrestart' - stops Redis and then starts it again"
+  echo "'rediscom' - shows the available aliases created for manipulating the Redis-CLI"
+  echo ''
+}
+
+alias bredstart="brew services start redis"
+alias bredstop="brew services stop redis"
+
+function start_redis() {
+  # nohup redis-server /usr/local/etc/redis.conf > /dev/null 2>&1 &
+
+  redis-cli time
+  if [ $? = 0 ]; then
+    echo "Redis already is running."
+  else
+    echo "Starting redis server..."
+    # redis-server --port 6379
+    bredstart
+  fi
+}
+
+function stop_redis() {
+  # redis-cli shutdown
+  bredstop
+}
+
+function redis_status () {
+  redis-cli time
+  if [ $? = 0 ]; then
+    echo "Redis is running."
+  else
+    echo "Redis is NOT running."
+  fi
+}
+
+alias redstart='start_redis'
+alias redstop='stop_redis'
+alias redrestart='stop_redis ; start_redis'
+alias redstat='redis_status'
+
+
+# ##### memcache SERVER #####
+function memcachedstart() {
+  brew services start memcached
+}
+alias memstart="memcachedstart"
+alias memcstart="memcachedstart"
+
+function memcachedrestart() {
+  brew services restart memcached
+}
+alias memrestart="memcachedrestart"
+alias memcrestart="memcachedrestart"
+alias memres="memcachedrestart"
+
+function memcachedstop() {
+  brew services stop memcached
+}
+alias memstop="memcachedstop"
+alias memcstop="memcachedstop"
+
 function pgs () {
   echo ''
   echo '******  pg Commands  **************************************'
