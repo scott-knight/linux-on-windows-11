@@ -33,12 +33,10 @@ gem update --system && gem install bundler
 
 ## Install Yarn
 
-NVM no longer honors global installs of yarn (because of some Node issue). You'll need to install Yarn in the node version you are running. I also ran into an issue when using earlier versions of node while trying to run yarn. I ended up having use the current node to get yarn to work as expected.
-
-To install yarn, run the following:
+[Yarn docs](https://yarnpkg.com/getting-started/install) To install yarn, run the following:
 
 ```sh
-npm install --global yarn
+corepack enable
 ```
 
 <br/>
@@ -48,13 +46,7 @@ npm install --global yarn
 Once you have your project downloaded, and yarn libraries are installed, you can see which libraries are outdated by running the following:
 
 ```zsh
-yarn outdated
-```
-
-To upgrade outdated libraries, run the following:
-
-```zsh
-yarn upgrade --latest
+yarn upgrade-interactive
 ```
 
 <br/>
