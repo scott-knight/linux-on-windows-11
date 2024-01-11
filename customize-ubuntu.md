@@ -363,6 +363,35 @@ Copy the [contents of .zshrc](ZSHRC.md) and save.
 
 Reload the terminal instance.
 
+After reloading, you may see a weird error about setting locale. I found [this doc](https://gist.github.com/shrekuu/cfecfcb1cd8adba53133b47926ea63a1) which contains info to fix the error. You have to do the following:
+
+step 1
+
+ensure this line in `/etc/default/locale` file and `/etc/environment` file
+
+```sh
+LANG="en_US.UTF-8"
+```
+
+Run the following:
+
+```sh
+sudo echo '\nLANG="en_US.UTF-8"' >> /etc/default/locale && /etc/environment
+```
+
+It may not let you, which means you will have to manually add the line to those files.
+
+
+step 2
+
+Run the following: 
+
+```sh
+sudo locale-gen en_US en_US.UTF-8 && sudo dpkg-reconfigure locales
+```
+
+It will ask you to select the locales you want to build. Select the en_US files, then tab to OK. Then save and you should be good to go.
+
 <br/>
 
 ## Copy .zsh_alias_list Content
