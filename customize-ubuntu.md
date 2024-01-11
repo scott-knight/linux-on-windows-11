@@ -313,7 +313,7 @@ Source found [here](https://ohmyz.sh/)
 To install oh-my-zsh, run the following:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 <br/>
