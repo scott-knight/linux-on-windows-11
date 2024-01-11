@@ -123,7 +123,7 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
+source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 # SPACESHIP_USER_SHOW=always
 # SPACESHIP_DIR_TRUNC_PREFIX=../
 SPACESHIP_TIME_COLOR=blue
