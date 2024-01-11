@@ -112,11 +112,6 @@ brew tap Homebrew/homebrew-services && brew tap homebrew/cask-versions && brew t
 ulimit -n 8192 && brew install git vips
 ```
 
-Then
-
-```zsh
-brew postinstall docbook docbook-xsl
-```
 <br/>
 
 ## Install Postgres
