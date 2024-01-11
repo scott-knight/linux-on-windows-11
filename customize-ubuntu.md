@@ -257,9 +257,9 @@ Close the terminal, then open a new terminal instance.
 To install RBENV, run the following:
 
 ```sh
-cd $HOME && mkdir $HOME/.rbenv/plugins &&
-  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build &&
-  git clone https://github.com/jf/rbenv-gemset.git "$(rbenv root)"/plugins/rbenv-gemset &&
+cd $HOME && mkdir $HOME/.rbenv && mkdir $HOME/.rbenv/plugins &&
+  git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build &&
+  git clone https://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset &&
   cd $HOME/.rbenv && cd $HOME
 ```
 
