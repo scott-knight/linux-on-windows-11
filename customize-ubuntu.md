@@ -43,7 +43,7 @@ Brave is installed on the `C` drive in the following location: `C:\Program Files
 We need to create a couple of files to get everything to work:
 
 ```zsh
-mkdir $HOME/.local/bin
+mkdir $HOME/.local && mkdir $HOME/.local/bin
 ```
 
 <br/>
