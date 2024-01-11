@@ -93,8 +93,8 @@ Reference found [here](https://docs.brew.sh/Homebrew-on-Linux)
 ```
 
 2. You should be prompted about default settings and installation. Simply accept the defaults.
-3. Once finished, add the following to your `.zshrc` file
-
+3. Once finished, run the following in the console:
+   
 ```sh
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
@@ -257,7 +257,7 @@ Close the terminal, then open a new terminal instance.
 To install RBENV, run the following:
 
 ```sh
-cd $HOME && mkdir $HOME/.rbenv && mkdir $HOME/.rbenv/plugins &&
+cd $HOME && git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv && cd $HOME && mkdir $HOME/.rbenv/plugins &&
   git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build &&
   git clone https://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset &&
   cd $HOME/.rbenv && cd $HOME
@@ -287,7 +287,7 @@ Close and reload the terminal instance
 NVM documenation is [found here](https://github.com/nvm-sh/nvm#installing-and-updating). To install NVM, run the following:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
 Once installed, reload the shell; then run the following:
