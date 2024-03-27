@@ -154,6 +154,28 @@ function update() {
   echo "All updates complete!!"
 }
 
+function upgrade_yarn() {
+  yarn set version stable
+}
+alias yarn_upgrade="upgrade_yarn"
+alias yarn_upg="upgrade_yarn"
+
+function yarnup() {
+  yarn upgrade-interactive
+}
+alias yarnui="yarnup"
+
+function yarns () {
+  echo ''
+  echo "******  Yarn commands  **************************************"
+  echo 'upgrade_yarn = yarn set version stable'
+  echo 'yarn_upgrade = upgrade_yarn'
+  echo 'yarnupg      = upgrade_yarn'
+  echo 'yarnup       = yarn upgrade-interactive'
+  echo 'yarnui       = yarn upgrade-interactive'
+  echo ''
+}
+
 function cedit () {
   EDITOR="code --wait" bin/rails credentials:edit
 }
