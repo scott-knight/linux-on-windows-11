@@ -24,7 +24,6 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
 3. [Setup SSH](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-ssh.md)
 4. [Setup RBENV / NVM](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-rbenv-nvm.md)
 5. [Custmize the Ubuntu Environment](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-the-ubuntu-environment.md)
-6. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
 <br/>
 
@@ -40,6 +39,12 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
 - [.zsh_alist_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md)
 - [.zsh_projects](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_PROJECTS.md)
 - [.zshrc](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSHRC.md)
+
+<br>
+
+## Deleting Ubuntu
+
+- [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
 <br>
 
