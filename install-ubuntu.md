@@ -88,8 +88,4 @@ Going forward, you can select the desired server instance from this list. In the
 
 <br>
 
-Now you're ready to [Customize Ubuntu](customize-ubuntu.md)
-
-<br/>
-
-[Home](README.md) | [Previous Step](configure-windows-terminal.md)
+[Home](README.md) | [Previous Step](configure-windows-terminal.md) | [Customize Ubuntu](customize-ubuntu.md)
