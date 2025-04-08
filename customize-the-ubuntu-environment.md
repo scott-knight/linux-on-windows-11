@@ -106,12 +106,12 @@ Type `reload` to reload the shell.
 
 ## Copy [.zsh_projects](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_PROJECTS.md)
 
-Open `.zsh_riskonnect`
+Open `.zsh_projects`
 
 <br/>
 
 ```zsh
-nano .zsh_riskonnect
+nano .zsh_projects
 ```
 
 <br/>
