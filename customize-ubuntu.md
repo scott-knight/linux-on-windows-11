@@ -1,38 +1,96 @@
 [Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
 
+This document describes how to customize your installation of Ubuntu.
+
+<br>
+
+## Set Ubuntu as the Default
+
+1. Open Windows Terminal. Click the down-arrow and select `Settings`
+
+![terminal-select-settings](https://github.com/user-attachments/assets/dfd2dce4-527d-42b2-82c0-0dab4105718d)
+
+<br>
+
+2. In the default terminal setting, select the Ubuntu instance and click `Save`
+
+![select-setting](https://github.com/user-attachments/assets/be9b70bf-681b-4f67-8c64-fc248d069fda)
+
+<br>
+
+3. Close and re-open Windows Terminal
+
+<br>
+
+## Update Ubuntu
+
+1. To update Ubuntu, run the following:
+
+```sh
+sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
+```
+
+<br><br>
+
+## Install Wajig
+
+[`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface.
+
+To install wajig, run the following:
+
+```sh
+sudo apt install wajig aptitude -y && wajig update && wajig upgrade -y && wajig distupgrade -y && wajig autoremove && wajig autoclean
+```
+
+You should use the `wajig` command to update Ubuntu from now on.
+
+<br><br>
+
+## Install System Utilities
+
+1. Install system utilities by running the following:
+
+```sh
+wajig install -y apt-transport-https  autoconf  bison  build-essential  checkinstall  clang  curl  gcc giflib-tools  git  gpg  gnupg2  libncurses-dev libdb-dev libexpat1-dev libffi-dev libfftw3-dev libheif-dev libgdbm-dev libgdbm6 libglib2.0-0 libglib2.0-dev libgsf-1-dev libheif-dev liblzma-dev libjpeg-dev liblcms2-dev libpoppler-glib8 libpoppler-glib-dev libpng-dev libpq-dev libreadline-dev librsvg2-dev libtiff5-dev libssl-dev libwebp-dev libxml2-dev libxslt-dev libyaml-dev lsb-release make  patch  pkg-config  wget  vim  zlib1g-dev  zsh
+```
+
 <br/>
 
-# Customize Ubuntu
+2. Once everything is installed, run the following:
 
-This doc outlines the specifics for setting up the Ubunu environment for Ruby, Rails, Node, etc.
+```sh
+wajig update && wajig upgrade -y && wajig autoremove && wajig autoclean
+```
 
-<br/>
+<br>
 
 ## Connecting VSCode
 
-1. In the Linux console, type the following:
+1. If you've installed VSCode, in the Ubuntu console, type the following:
 
 ```sh
 code .
 ```
 
-This will load VSCode and connect to your Debian instance, and you will see the files of your home directory.
+2. This will load VSCode and connect to your Ubuntu instance, and you will see the files of your home directory. Click the checkbox `Trust the authors...` and the button `YES, I trust the authors` 
 
-<br/>
+![code-trust](https://github.com/user-attachments/assets/1be841c2-9ec9-4df9-80b5-5b9b77c38b65)
 
-2. Close VSCode and the terminal
+<br>
 
-<br/>
+2. Close VSCode and the restart the terminal
+
+<br>
 
 ## Environment Setup
 
 Next, we need system files for the environment. Run the following:
 
 ```sh
-touch .zsh_functions .zsh_alias_list .zsh_projects .gemrc .gitconfig && mkdir dev.projects
+touch .zsh_functions .zsh_alias_list .zsh_riskonnect .gemrc .gitconfig && mkdir riskonnect.projects
 ```
 
-<br/>
+<br>
 
 ## Setup Zsh
 
@@ -44,7 +102,7 @@ chsh -s $(which zsh)
 
 Once changed, restart the terminal instance.
 
-You will be prompted to make a selection to create a `.zshrc` file. Select the option that simply adds the comment code and creates the file.
+You will be prompted to make a selection to create a `.zshrc` file. Select the option (0) that simply adds the comment code and creates the file.
 
 Close all instances and start a new Linux instance.
 
@@ -71,400 +129,49 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc &&
 5. Add BREW taps
 
 ```sh
-brew tap Homebrew/homebrew-services && brew tap homebrew/cask-versions && brew tap homebrew/cask-fonts
+brew tap homebrew/linux-fonts
 ```
 
 6. Install stuff
 
 ```sh
-ulimit -n 8192 && brew install git vips
+ulimit -n 8192 && brew install git font-caskaydia-cove-nerd-font font-caskaydia-mono-nerd-font
 ```
 
-<br/>
-
-## Install Postgres
-
-Install postgres by doing the following:
-
-```sh
-brew install postgresql@15 && echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc && source $HOME/.zshrc
-```
-
-<br/>
-
-## Setup SSH Key
-
-To connect via ssh to external services you will need to generate a new private and public key. Follow the instructions [found here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new set.
-
-Once your keys are created, run the following:
-
-(Run this if `.ssh` doesn't exist:
-```zsh
-mkdir -m a=rwx $HOME/.ssh
-```
-
-<br/>
-
-### If You Have Existing SSH Files
-
-If you already have ssh files created and stored somewhere, copy and paste them into you .ssh dir
-
-![ssh-files](https://user-images.githubusercontent.com/516548/209577940-c9db2c03-8820-45d0-8c7d-9493adb55405.png)
-
-<br/>
-
-### If You Need to Create SSH Files
-
-```sh
-touch $HOME/.ssh/config && nano $HOME/.ssh/config
-```
-
-Copy the following to the new `config` file:
-
-```sh
-Host *
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
-```
-
-You will need to add the new public key to your github account. You can copy the key by running the following:
-
-```sh
-clip.exe < ${HOME}/.ssh/id_ed25519.pub
-```
-
-<br/>
-
-If you copy contents from another `.ssh` to this setup, you will may need to change the file level permissions:
-
-```sh
-chmod 400 $HOME/.ssh/id_ed25519
-```
-
-<br/>
-
-## INSTALL KEYCHAIN
-
-Run the following:
-
-```sh
-wajig install -y keychain
-```
-
-<br/>
-
-Once installed, start `keychain` to create the `$HOME\.keychain` directory and start the `ssh-agent`:
-
-```sh
-keychain
-```
-
-<br/>
-
-Using VIM or Nano, copy this to the bottom of your .zshrc file:
-
-```zsh
-nano .zshrc
-```
-
-<br/>
-
-BIGBRAIN is the hostname of my computer. If you run `ls -FlaG $HOME/.keychain` in the console,
-you will see the hostname of your computer. Replace BIGBRAIN with that name
-
-```
-# Keychain
-export HOSTNAME=BIGBRAIN
-/usr/bin/keychain --clear $HOME/.ssh/id_ed25519
-source $HOME/.keychain/$HOSTNAME-sh
-```
-
-<br/>
-
-## Copy .gitconfig
-
-Using VIM or Nano, replace the contents of `.gitconfig` with the following:
-
-```zsh
-nano .gitconfig
-```
-
-<br/>
-
-```sh
-[user]
-  email = [your email]
-  name = [your-username]
-
-[pull]
-  rebase = false
-
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-
-[pager]
-  branch = false
-```
-
-Replace the email and username with your values.
-
-Close the terminal, then open a new terminal instance.
+Once it completes installing, close and reopen the Windows Terminal
 
 <br>
 
-## INSTALL RBENV
+## Setting the Look and Feel of the Console
 
-To install RBENV, run the following:
+You don't have to do this step, however, if you prefer a dark console vs the default purple background of Ubuntu, you can customize it by doing the following steps.
 
-```sh
-cd $HOME && git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv && cd $HOME && mkdir $HOME/.rbenv/plugins &&
-  git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build &&
-  git clone https://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset &&
-  cd $HOME/.rbenv && cd $HOME
-```
+1. Open Windows Terminal. Click the down-arrow and click `Settings`
 
-Add the following to `.zshrc`:
-
-```zsh
-nano .zshrc
-```
-
-<br/>
-
-```sh
-# RBENV
-export RBENV_ROOT="${HOME}/.rbenv"
-export PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
-if which rbenv > /dev/null; then eval "$(${RBENV_ROOT}/bin/rbenv init - zsh)"; fi
-```
-
-Close and reload the terminal instance
-
-<br/>
-
-## Install NVM
-
-NVM documenation is [found here](https://github.com/nvm-sh/nvm#installing-and-updating). To install NVM, run the following:
-
-```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
-
-Once installed, reload the shell; then run the following:
-
-```sh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-```
-
-Then
-
-```sh
-nvm install --lts && npm install npm@latest -g
-```
-
-<br/>
-
-## Install oh-my-zsh
-
-Source found [here](https://ohmyz.sh/)
-
-To install oh-my-zsh, run the following:
-
-```sh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-```
-
-<br/>
-
-### Install Oh-My-ZSH Plugins
-
-Run the following:
-
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
-echo "source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc &&
-git clone https://github.com/gusaiani/elixir-oh-my-zsh.git $HOME/.oh-my-zsh/custom/plugins/elixir
-```
-
-<br/>
-
-### Install Spaceship-prompt
-
-The [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt) is a clean .oh-my-zsh theme. To install it, run the following:
-
-```sh
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1 && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
-```
-
-<br/>
-
-## Copy the .zshrc Content
-
-Run the following to clear out .zshrc:
-
-```sh
-truncate -s 0 .zshrc
-```
-
-<br/>
-
-Using VIM or NANO, replace the entire `.zshrc` file with this code:
-
-```zsh
-nano .zshrc
-```
-
-<br/>
-
-Copy the [contents of .zshrc](ZSHRC.md) and save.
-
-Reload the terminal instance.
-
-After reloading, you may see a weird error about setting locale. I found [this doc](https://gist.github.com/shrekuu/cfecfcb1cd8adba53133b47926ea63a1) which contains info to fix the error. You have to do the following:
-
-step 1
-
-ensure this line in `/etc/default/locale` file and `/etc/environment` file
-
-```sh
-LANG="en_US.UTF-8"
-```
-
-Run the following:
-
-```sh
-sudo echo '\nLANG="en_US.UTF-8"' >> /etc/default/locale && /etc/environment
-```
-
-It may not let you, which means you will have to manually add the line to those files.
-
-
-step 2
-
-Run the following: 
-
-```sh
-sudo locale-gen en_US en_US.UTF-8 && sudo dpkg-reconfigure locales
-```
-
-It will ask you to select the locales you want to build. Select the en_US files, then tab to OK. Then save and you should be good to go.
-
-<br/>
-
-## Copy .zsh_alias_list Content
-
-Using VIM or NANO, replace the entire `.zsh_alias_list` file with this code:
-
-```zsh
-nano .zsh_alias_list
-```
-
-<br/>
-
-Copy the [contents of .zsh_alias_list](ZSH_ALIAS_LIST.md) and save.
-
-Reload the terminal instance.
-
-From now on, when you want to reload the shell, simply type `reload`
-
-<br/>
-
-## Copy .zsh_functions
-
-Using VIM or NANO, replace the contents of `.zsh_functions` with the following:
-
-```zsh
-nano .zsh_functions
-```
-
-<br/>
-
-Copy the [contents of .zsh_functions](ZSH_FUNCTIONS.md) and save.
-
-Type `reload` to reload the shell.
-
-<br/>
-
-## Copy .zsh_jobsauce
-
-This is an example of personal/project content you may needed within console. (You can see how this file is called in [.zshrc](ZSHRC.md))
-
-Using VIM or NANO, replace the contents of `.zsh_jobsauce` with the following:
-
-```zsh
-nano .zsh_jobsauce
-```
-
-<br/>
-
-Copy the [contents of .zsh_jobsauce](ZSH_JOBSAUCE.md) and save.
-
-Type `reload` to reload the shell.
-
-<br/>
-
-## Copy .gemrc
-
-Using VIM, replace the contents of `.gemrc` with the following:
-
-```zsh
-nano .gemrc
-```
-
-<br/>
-
-```ruby
----
-:backtrace: false
-:bulk_threshold: 1000
-:sources:
-- https://rubygems.org/
-:update_sources: true
-:verbose: true
-install: --no-rdoc --no-ri --no-document
-update: --no-rdoc --no-ri --no-document
-```
+![terminal-select-settings](https://github.com/user-attachments/assets/318c96d7-9520-4a68-9fd2-8a7decadab8d)
 
 <br>
 
-## Reload
+2. In the lower left corner of the settings, scroll until you see the instance of Ubuntu and click it
 
-After you have completed the setup, close and reload the terminal instance.
+![select-ubuntu](https://github.com/user-attachments/assets/8c9a5771-9cc9-42b7-890f-4a03eefbd16b)
 
-<br/>
+<br>
 
-## Setup for Ruby and Rails
+3. Once selected, on the right side of settings windows, scroll to the bottom and select `Appearance`
 
-Setup instructions for Ruby and Rails can be [found here](RUBY_RAILS_SETUP.md)
+![select-apperance](https://github.com/user-attachments/assets/79cc661f-d9c0-4beb-9c0c-9b2961e12c17)
 
-<br/>
+<br>
 
-## Setup Systemd
+4. In the `Text` section, select `Campbell` in `Color scheme`. and select `CaskaydiaCove Nerd Font` in `Font Face`. Then click the `Save` button at the bottom
 
-This is enabled by default with the current distros of Ubuntu. Settings can be view by running the following:
+![select-console-options](https://github.com/user-attachments/assets/ba46ec45-0396-4549-bf7f-559b485aa1f9)
 
-```zsh
-sudo nano /etc/wsl.conf
-```
+<br>
 
-<br/>
+5. Close and re-open the Windows Terminal
 
-You can view a list of running services by calling the following:
-
-```zsh
-systemctl list-unit-files --type=service
-```
-
-You should see a table of info:
-
-![systemctl](https://user-images.githubusercontent.com/516548/201456791-a90c2475-c0e5-4dc8-a113-fc3637cb059e.png)
-
-<br/><br/>
+<br>
 
 [Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
