@@ -34,38 +34,6 @@ touch .zsh_functions .zsh_alias_list .gemrc .gitconfig && mkdir dev.projects dev
 
 <br/>
 
-## Setup `wslopen` for letter_opener
-
-In a rails project, it's possible to use the [letter_opener gem](https://github.com/ryanb/letter_opener) for posting email in the dev environment. The letter_opener gem uses the launchy gem to launch/post generated email to a browser tab. On a Mac (or possibly a native Linux setup) the browser is set by the system and launchy just works. However, with WSL we have to make the browser connection for launchy. In this example, we will point to location on the Windows drive for [Brave Browser](https://brave.com)
-
-Brave is installed on the `C` drive in the following location: `C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe`. This needs to be translated to a WSL2 path: `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe`.
-
-We need to create a couple of files to get everything to work:
-
-```zsh
-mkdir $HOME/.local && mkdir $HOME/.local/bin
-```
-
-<br/>
-
-In the code snippet below, you can replace `/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe` with the browser of your choice. Once you have the path to your chosen browser, run the following:
-
-```zsh
-echo '#!/usr/bin/zsh' >> $HOME/.local/bin/wslopen && echo '/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "file://$(wslpath -m ${1/"file://"/})"' >> $HOME/.local/bin/wslopen && chmod +x $HOME/.local/bin/wslopen
-```
-
-<br/>
-
-Run the following in the console:
-
-```zsh
-echo '# .local/bin -- used with letter_opener' >> .zshrc && echo 'export PATH="${HOME}/.local/bin:$PATH"' >> .zshrc && echo 'export BROWSER="wslopen"' >> .zshrc
-```
-
-Then reload the shell.
-
-<br/>
-
 ## Setup Zsh
 
 Make zsh your default shell, run the following:
