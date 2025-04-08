@@ -52,4 +52,4 @@ To update Windows PowerShell (when needed), follow the instructions [found here]
 
 <br/>
 
-[Home](README.md) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Ubuntu](install-ubuntu.md) | [Install Debian](https://github.com/scott-knight/debian-on-windows-11/blob/main/install-debian.md)
+[Home](README.md) | [Previous Step](install-oh-my-posh-and-required-libraries.md) | [Install Ubuntu](install-ubuntu.md)
