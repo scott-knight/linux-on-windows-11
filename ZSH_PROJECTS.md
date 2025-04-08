@@ -2,8 +2,7 @@
 
 <br/>
 
-# .zsh_alias_list
-
+# .zsh_projects
 ```zsh
 #! /bin/zsh
 
