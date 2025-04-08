@@ -63,12 +63,8 @@ A lot has changed since the early Windows 10 days of installing `Oh-my-Posh`. It
 
 ## Notes for oh-my-posh
 
-You can actually use `oh-my-posh` with Linux. However, I prefer `oh-my-zsh`. You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-ubuntu)
+You can read more about using `oh-my-posh` [here](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#set-up-powerline-in-wsl-ubuntu)
 
 <br/>
 
-Now you're ready to [Configure Windows Terminal](configure-windows-terminal.md).
-
-<br/>
-
-[Home](README.md) | [Previous Step](install-windows-terminal.md)
+[Home](README.md) | [Previous Step](install-windows-terminal.md) | [Next Step](configure-windows-terminal.md)
