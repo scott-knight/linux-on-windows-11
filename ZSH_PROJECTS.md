@@ -7,7 +7,7 @@
 ```zsh
 #! /bin/zsh
 
-PROJDIR=$HOME/projects
+PROJDIR=$HOME/dev.projects
 alias devprj="cd $PROJDIR"
 alias dev="devprj && ll"
 
@@ -19,6 +19,22 @@ function projinfo () {
   echo "alias dev    = devprj && ll"
 }
 alias proji=projinfo
+
+####### LLM Engineering #######
+LLME=$PROJDIR/llm_engineering
+alias llme="cd $LLME"
+alias llmeact="llme && conda activate llms"
+alias llmej="llmeact && jupyter lab"
+
+function llmeinfo () {
+  echo ''
+  echo '******  Riskonnect Aliases **************************************'
+  echo "LLME          = $PROJDIR/llm_engineering"
+  echo "alias llme    = cd $LLME"
+  echo "alias llmeact = llme && conda activate llms"
+  echo "alias llmej   = llmeact && jupyter lab"
+}
+alias llmei=llmeinfo
 ```
 
 <br>
