@@ -4,6 +4,8 @@
 
 This process is the same for Windows versions 10 and 11. It's possible this has already be done for you. However, if it hasn't, do the following:
 
+<br>
+
 ### STEP 1
 
 Open PowerShell as Administrator (Start menu > PowerShell > right-click > Run as Administrator) and enter this command:
