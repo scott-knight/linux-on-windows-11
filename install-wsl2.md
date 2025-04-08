@@ -2,32 +2,50 @@
 
 <br/>
 
-# Install Windows 11 WSL 2
+This document describes how to install WSL2 on Windows. 
 
-This document explains how to install Windows 11 WSL 2.
+<br>
 
-## Installation Steps
+## Install WSL
 
-1. Enter your computers BIOS and make sure (Hyper-V) virtualization is enabled (if it isn't already). Save the settings and reboot.
-2. After rebooting, click the Windows Icon and the Settings icon
-3. Once settings is open, click Apps, then Optional Features, then scroll to see the More Windows Features selection. Click, More Windows features:
+This process is the same for Windows versions 10 and 11. It's possible this has already be done for you. However, if it hasn't, do the following:
 
-![apps-optional-features](https://user-images.githubusercontent.com/516548/191402388-f7504f4a-1ae3-49f1-8efc-2c653b2787bd.png)
+### STEP 1
 
-4. Select, Virtual Machine Platform and Windows Subsystem for Linux.
+Open PowerShell as Administrator (Start menu > PowerShell > right-click > Run as Administrator) and enter this command:
 
-![windows selection](https://user-images.githubusercontent.com/516548/191402641-3bd76611-842b-4f7c-836e-d163b8527f0c.png)
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
-5. Reboot (if prompted)
-6. After the reboot, open PowerShell as Administrator (repeat step 2)
-7. Run the following commands in the console::
+<br>
 
-```sh
+### STEP 2
+
+Before installing WSL 2, you must enable the Virtual Machine Platform optional feature.
+
+Open PowerShell as Administrator and run:
+
+```powershell
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+<br>
+
+### STEP 3
+
+You'll need to set WSL 2 as your default version. To do this, open PowerShell and run this command to set WSL 2 as the default version:
+
+```powershell
 wsl --set-default-version 2
 ```
 
-WSL2 will be installed and ready to go. Now you can move on to the next step, [install VSCode](install-vscode.md).
+<br>
 
-<br/>
+## WSL Commands
+
+For more information about how to use WSL, please visit the [WSL homepage](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+
+<br>
 
 [Home](README.md)
