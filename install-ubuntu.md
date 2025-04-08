@@ -16,7 +16,6 @@ This document describes how to install the Ubuntu on Windows 11. This document a
 
 ```bash
 wsl.exe --shutdown
-wsl.exe --unregister Ubuntu-Preview
 ```
 
 [Complete removal instructions](https://github.com/scott-knight/linux-on-windows-11/blob/main/unregister-and-uninstall.md)
