@@ -7,11 +7,46 @@
 ```zsh
 #! /bin/zsh
 
-# function to delete source and local git branch
-function gitdel(){
-  git push origin --delete $@
-  git branch -D $@
-  git fetch --all --prune
+function reload_zsh_tools () {
+  echo 'Deleteing and reinstalling ZSH tools. Please wait...'
+  echo ''
+  cd $HOME &&
+  rm -rf $HOME/.zsh &&
+  install_zsh_tools &&
+  echo 'Done!'
+  echo ''
+}
+
+function install_zsh_tools () {
+  cd $HOME && mkdir $HOME/.zsh &&
+  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosuggestions &&
+  echo "" &&
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/zsh-syntax-highlighting &&
+  cd $HOME
+}
+
+function update_zsh_autosuggestions () {
+  CURR_DIR="$PWD" &&
+  echo ""
+  echo 'Updating zsh-autosuggestions, please wait...'
+  cd $HOME/.zsh/zsh-autosuggestions && git pull &&
+  cd "$CURR_DIR"
+  echo "Done updating zsh-autosuggestions!"
+}
+
+function update_zsh_syntax_highlighting () {
+  CURR_DIR="$PWD" &&
+  echo ""
+  echo 'Updating zsh-syntax-highlighting, please wait...'
+  cd $HOME/.zsh/zsh-syntax-highlighting && git pull &&
+  cd "$CURR_DIR"
+  echo "Done updating zsh-syntax-highlighting!"
+}
+
+function update_zsh_tools () {
+  CURR_DIR="$PWD" &&
+  update_zsh_autosuggestions &&
+  update_zsh_syntax_highlighting
 }
 
 function install_rbenv () {
@@ -64,34 +99,16 @@ function update_rbenv_gemset () {
   echo "Done updating rbenv-gemset!"
 }
 
-function update_ubuntu () {
-  echo ''
-  echo 'Updating Ubuntu files, please wait...'
-  wajig update &&
-  wajig upgrade -y &&
-  wajig distupgrade -y &&
-  wajig autoremove &&
-  wajig autoclean &&
-  echo 'Update of Ubuntu complete!'
-}
-
-function upgrade_ohmyzsh(){
-  echo ''
-  echo 'Updating oh-my-zsh, please wait...'
-  omz update &&
-  echo "Completed upgrading oh-my-zsh!"
-}
-
-function update_brew() {
+function upgrade_brew() {
   echo ''
   echo "Updating BREW"
-  ulimit -n 8192 && brew update &&
+  brew update &&
   echo ''
-  echo "Upgrading BREW installs" &&
-  ulimit -n 8192 && brew upgrade &&
+  echo "Upgrading BREW installs"
+  brew upgrade --greedy &&
   echo ''
-  echo "Cleaning up BREW" &&
-  ulimit -n 8192 && brew cleanup &&
+  echo "Cleaning up BREW"
+  brew cleanup &&
   echo "Completed BREW updates!"
 }
 
@@ -135,25 +152,6 @@ alias npmu="upgrade_npm"
 alias npm_update="upgrade_npm"
 alias npmupdate="upgrade_npm"
 
-function update_omz() {
-  echo ''
-  # $ZSH/tools/upgrade.sh
-  omz update
-}
-
-function update() {
-  echo "Upgrading ALL the things..."
-  update_ubuntu &&
-  update_omz ;
-  update_rbenv &&
-  update_brew &&
-  update_nvm &&
-  # upgrade_node_lts &&
-  upgrade_node &&
-  echo ''
-  echo "All updates complete!!"
-}
-
 function upgrade_yarn() {
   yarn set version stable
 }
@@ -165,34 +163,55 @@ function yarnup() {
 }
 alias yarnui="yarnup"
 
-function yarns () {
+function update() {
+  echo "Upgrading ALL the things..."
+  update_rbenv &&
+  upgrade_brew &&
+  updateNVM &&
+  upgrade_node_lts &&
+  # upgrade_node &&
   echo ''
-  echo "******  Yarn commands  **************************************"
-  echo 'upgrade_yarn = yarn set version stable'
-  echo 'yarn_upgrade = upgrade_yarn'
-  echo 'yarnupg      = upgrade_yarn'
-  echo 'yarnup       = yarn upgrade-interactive'
-  echo 'yarnui       = yarn upgrade-interactive'
-  echo ''
+  echo "All updates complete!!"
 }
 
-function cedit () {
-  EDITOR="code --wait" bin/rails credentials:edit
+function fixchrome () {
+  echo 'Running command sudo xattr -r -d com.apple.quarantine $(which chromedriver)'
+  echo 'You might be assed to provide your system password'
+  sudo xattr -r -d com.apple.quarantine $(which chromedriver)
+  echo 'Done!'
+}
+alias fixcd="fixchrome"
+alias chromefix="fixchrome"
+
+function install_nvm () {
+  echo '' &&
+  echo "Installing NVM (Node Version Manager)" &&  (
+    git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+  ) && \. "$NVM_DIR/nvm.sh"
 }
 
-function cpedit () {
-  EDITOR="code --wait" bin/rails credentials:edit --environment production
+function updateNVM() {
+  echo '' &&
+  echo "Updating NVM (Node Version Manager)" && (
+    cd "$NVM_DIR" &&
+    git fetch --tags origin &&
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+  ) && \. "$NVM_DIR/nvm.sh" && echo "NVM update complete."
 }
+alias unvm="updateNVM"
+alias nvmu="updateNVM"
+alias nvmupdate="updateNVM"
+alias nvm_update="updateNVM"
+alias nvmlist="nvm ls-remote"
 
-function csedit () {
-  EDITOR="code --wait" bin/rails credentials:edit --environment staging
+function reload_nvm () {
+  cd $HOME && echo '' && echo 'Deleting and reinstalling NVM. Please wait...'
+  rm -rf $HOME/.nvm &&
+  install_nvm &&
+  echo 'Done!'
 }
-
-function fixrails () {
-  chmod u+x bin/rails
-}
-alias railsfix="fixrails"
-alias fixr="fixrails"
 
 # ##### REDIS SERVER #####
 function rediscom() {
@@ -239,118 +258,6 @@ alias redstart='start_redis'
 alias redstop='stop_redis'
 alias redrestart='stop_redis ; start_redis'
 alias redstat='redis_status'
-
-
-# ##### memcache SERVER #####
-function memcachedstart() {
-  brew services start memcached
-}
-alias memstart="memcachedstart"
-alias memcstart="memcachedstart"
-
-function memcachedrestart() {
-  brew services restart memcached
-}
-alias memrestart="memcachedrestart"
-alias memcrestart="memcachedrestart"
-alias memres="memcachedrestart"
-
-function memcachedstop() {
-  brew services stop memcached
-}
-alias memstop="memcachedstop"
-alias memcstop="memcachedstop"
-
-function pgs () {
-  echo ''
-  echo '******  pg Commands  **************************************'
-  echo ''
-  echo '# alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"'
-  echo '# alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"'
-  echo ''
-  echo "pgstart  = brew services start postgresql@15"
-  echo "pgstop   = brew services stop postgresql@15"
-  echo "pgupdate = brew postgresql-upgrade-database"
-  echo ''
-}
-
-function updatei () {
-  echo ''
-  echo '******  Update Commands  **************************************'
-  echo ''
-  echo "update = update_ubuntu && update_omz && update_rbenv && update_brew && update_nvm && upgrade_npm"
-  echo ''
-  pgs
-  bundles
-}
-alias updates="updatei"
-
-function editi () {
-  echo ''
-  echo '******  Editing Rails Credentials in VSCODE **************************************'
-  echo 'cedit  = EDITOR="code --wait" bin/rails credentials:edit'
-  echo 'cpedit = EDITOR="code --wait" bin/rails credentials:edit --environment production'
-  echo 'csedit = EDITOR="code --wait" bin/rails credentials:edit --environment staging'
-  echo
-  echo ''
-  echo '******  Editing Rails Credentials in VIM **************************************'
-  echo 'vedit  = EDITOR=vi bin/rails credentials:edit'
-  echo 'vedit  = EDITOR=vi bin/rails credentials:edit --environment production'
-  echo 'vedit  = EDITOR=vi bin/rails credentials:edit --environment production'
-}
-alias edits="editi"
-alias ecreds="editi"
-
-function gits () {
-  echo ''
-  echo '****** GIT commands  **************************************'
-  echo 'gbr    = git branch'
-  echo 'gco    = git checkout'
-  echo 'gnew   = git checkout -b'
-  echo 'gadd   = git add'
-  echo 'gadd.  = git add .'
-  echo 'gcom   = git commit -m'
-  echo 'gstash = git stash'
-  echo 'gpop   = git stash pop'
-  echo 'gdrop  = git stash drop'
-  echo 'gdel   = git branch -D'
-  echo 'godel  = git push origin --delete $1'
-  echo 'gfetch = git fetch'
-  echo 'gmerge = git merge'
-  echo 'gpull  = git pull'
-  echo 'gpush  = git push'
-  echo 'gstat  = git status'
-  echo 'glog   = git log --pretty=full'
-  echo 'glogm  = git log --pretty=medium'
-  echo ''
-}
-
-function railsi () {
-  echo ''
-  echo '****** rails commands  **************************************'
-  echo "rollback = bundle exec rake db:rollback"
-  echo "vedit    = EDITOR=vi bin/rails credentials:edit"
-  echo 'rslh     = rails s -b 0.0.0.0 -p $1'
-  echo "rc       = rails c"
-  echo "rg       = rails g"
-  echo "rfix     = chmod u+x bin/rails"
-  echo "rpid     = lsof -wni tcp:3000"
-  echo "rstop    = kill -9 [need the pid form running rpid]"
-}
-alias railss="railsi"
-
-function rbenvi () {
-  echo ''
-  echo '****** RBENV ALIASES **************************************'
-  echo 'rbv     = rbenv version             # shows the current ruby version'
-  echo 'rbvs    = rbenv versions            # shows installed ruby versions'
-  echo 'rbvlist = rbenv install --list-all  # show all availabe ruby versions'
-  echo 'rehash  = rbenv rehash              # refreshes rbenv'
-  echo 'active  = rbenv gemset active       # shows the active gemset'
-  echo ''
-}
-alias rbvi='rbenvi'
-alias rbenvs='rbenvi'
 ```
 
 <br/>
