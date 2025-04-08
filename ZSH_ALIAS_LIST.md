@@ -9,11 +9,9 @@
 
 # SYSTEM
 alias ll='ls -FlaG'
-alias reload='omz reload'
+alias reload='source ~/.zshrc'
 alias home='cd ~'
-alias dls="cd ~/Downloads"
 alias myip="curl https://ipecho.net/plain; echo"
-alias ehosts="sudo vim /private/etc/hosts"
 alias pbcopy="clip.exe"
 alias pbpaste="powershell.exe -command 'Get-Clipboard' | head -n -1"
 alias c="code"
@@ -68,13 +66,12 @@ alias active="rbenv gemset active"               # shows the active gemset
 alias gemsloc="gem env home"                     # shows the current rubygems environment
 alias gemloc="gem env home"                      # shows the current rubygems environment
 alias gemenv="gem env home"                      # shows the current rubygems environment
-alias gsi="rbenv gemset init \$1"                # allows you to create and set a gemset, ex: gsi rails5x
-alias gsc="rbenv gemset create \$(ruby_ver) \$1" # allows you to create a gemset, ex: gsc rails5x
-alias gsd="rbenv gemset delete \$(ruby_ver) \$1" # allows you to delete a gemset, ex: gsd rails5x
+alias gsi="rbenv gemset init \$1"                # allows you to create and set a gemset, ex: gsi .gems
+alias gsc="rbenv gemset create \$(ruby_ver) \$1" # allows you to create a gemset, ex: gsc .gems
+alias gsd="rbenv gemset delete \$(ruby_ver) \$1" # allows you to delete a gemset, ex: gsd .gems
 alias gsadd="echo -e > .ruby-gemset"             # creates a generic gemset file
-alias rubyadd="echo \$1 > .ruby-version"         # allows you to set the desired ruby version, ex: rubyadd 2.3.1
+alias rubyadd="echo \$1 > .ruby-version"         # allows you to set the desired ruby version, ex: rubyadd 3.4.2
 alias rmgems='echo Removing .rbenv-gemsets ; rm -rf .rbenv-gemsets'
-alias rbvdoc='curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash'
 
 # nvm
 alias nvms="nvm list"
@@ -82,11 +79,28 @@ alias nvmlist="nvm ls-remote"
 
 # alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
 # alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
-alias pgstart="brew services start postgresql@15"
-alias pgstop="brew services stop postgresql@15"
+alias pgstart="brew services start postgresql"
+alias pgstop="brew services stop postgresql"
 alias pgupdate="brew postgresql-upgrade-database"
 
 alias python="$(brew --prefix python)"
+
+function fixgit () {
+  git gc --prune=now && git remote prune origin
+}
+alias gprune="fixgit"
+# https://stackoverflow.com/questions/10068640/git-error-on-git-pull-unable-to-update-local-ref
+
+# rbenv list
+alias rbv="rbenv version"                        # shows the current ruby version
+alias rbvs="rbenv versions"                      # shows installed ruby versions
+alias rbvlist="rbenv install --list-all"         # show all availabe ruby versions
+alias rehash="rbenv rehash"                      # refreshes rbenv
+alias active="rbenv gemset active"               # shows the active gemset
+alias gemsloc="gem env home"                     # shows the current rubygems environment
+alias gemloc="gem env home"                      # shows the current rubygems environment
+alias gemenv="gem env home"                      # shows the current rubygems environment
+
 ```
 <br/>
 
