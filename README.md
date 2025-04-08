@@ -27,7 +27,7 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
 
 ## Setup Development
 
-- Setup wslopen for (ruby) letter_opener gem
+- [Setup wslopen for (ruby) letter_opener gem](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-wslopen-for-letter-opener.md)
 
 <br>
 
