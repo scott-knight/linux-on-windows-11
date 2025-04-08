@@ -82,8 +82,12 @@ alias nvmlist="nvm ls-remote"
 alias pgstart="brew services start postgresql"
 alias pgstop="brew services stop postgresql"
 alias pgupdate="brew postgresql-upgrade-database"
-
 alias python="$(brew --prefix python)"
+
+# Ollama
+alias ostart="brew services start ollama"
+alias ostop="brew services stop ollama"
+alias orestart="brew services restart ollama"
 
 function fixgit () {
   git gc --prune=now && git remote prune origin
