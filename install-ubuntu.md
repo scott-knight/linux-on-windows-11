@@ -89,56 +89,6 @@ Going forward, you can select the desired server instance from this list. In the
 
 <br>
 
-## Update Ubuntu
-
-1. To update Ubuntu, run the following:
-
-```sh
-sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done'
-```
-
-<br/><br/>
-
-## Install Wajig
-
-[`Wajig`](https://wiki.debian.org/Wajig) is a simplifed and more unified command line interface for package management. It adds a more intuitive quality to the user interface.
-
-To install wajig, run the following:
-
-```sh
-sudo apt install wajig aptitude -y && wajig update && wajig upgrade -y && wajig distupgrade -y && wajig autoremove && wajig autoclean
-```
-
-You should use `wajig command to update Ubuntu from now on.
-
-<br/><br/>
-
-## Install System Utilities
-
-1. Install system utilities by running the following:
-
-```sh
-wajig install -y apt-transport-https  autoconf  bison  build-essential  checkinstall  clang  curl  gcc giflib-tools  git  gpg  gnupg2  libncurses-dev libdb-dev libexpat1-dev libffi-dev libfftw3-dev libheif-dev libgdbm-dev libgdbm6 libglib2.0-0 libglib2.0-dev libgsf-1-dev libheif-dev liblzma-dev libjpeg-dev liblcms2-dev libpoppler-glib8 libpoppler-glib-dev libpng-dev libpq-dev libreadline-dev librsvg2-dev libtiff5-dev libvips-dev libvips libvips-tools libssl-dev libwebp-dev libxml2-dev libxslt-dev libyaml-dev lsb-release make  patch  pkg-config  wget  vim  zlib1g-dev  zsh
-```
-
-<br/>
-
-2. Install VIPS libraries (used by Rails to manage images):
-
-```sh
-wajig install -y libglib2.0-0 libglib2.0-dev libpoppler-glib8 libheif-dev libvips-dev libvips
-```
-
-<br/>
-
-3. Once everything is installed, run the following:
-
-```sh
-wajig update && wajig upgrade -y && wajig autoremove && wajig autoclean
-```
-
-<br/>
-
 Now you're ready to [Customize Ubuntu](customize-ubuntu.md)
 
 <br/>
