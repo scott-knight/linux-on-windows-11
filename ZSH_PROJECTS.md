@@ -25,7 +25,7 @@ alias llme="cd $LLME"
 alias llms="llme && conda activate llms"
 alias llmj="llms && jupyter lab"
 
-function llmeinfo () {
+function llminfo () {
   echo ''
   echo '******  LLM Engineering Aliases **************************************'
   echo "LLME       = $PROJDIR/llm_engineering"
@@ -33,7 +33,7 @@ function llmeinfo () {
   echo "alias llms = llme && conda activate llms"
   echo "alias llmj = llms && jupyter lab"
 }
-alias llmei=llmeinfo
+alias llmi=llminfo
 ```
 
 <br>
