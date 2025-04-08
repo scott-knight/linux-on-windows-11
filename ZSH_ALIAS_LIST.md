@@ -19,12 +19,9 @@ alias pbpaste="powershell.exe -command 'Get-Clipboard' | head -n -1"
 
 
 # Projects code
-PROJCS=$HOME/dev.projects
+PROJCS=$HOME/projects
 alias dev="cd $PROJCS && ll"
 alias sdev="dev"
-alias sui="cd $PROJCS/sandbox-js"
-alias sjs="sui"
-alias sapi="cd $PROJCS/sandbox-api"
 alias c="code"
 
 
@@ -92,14 +89,6 @@ alias rbvdoc='curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin
 # nvm
 alias nvms="nvm list"
 alias nvmlist="nvm ls-remote"
-
-# Yarn
-alias yup="yarn upgrade --latest"
-alias yupdate="yup"
-alias ylist="yarn list"
-alias yl="ylist"
-alias ylg="ylist | grep $1"
-alias ydev="yarn dev"
 
 # alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 start"
 # alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgresql@15 stop"
