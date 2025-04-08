@@ -12,7 +12,7 @@ alias dev="devprj && ll"
 
 function projinfo () {
   echo ''
-  echo '******  Riskonnect Aliases **************************************'
+  echo '******  PROJECT Aliases **************************************'
   echo "PROJDIR    = $PROJDIR"
   echo "alias devprj = cd $PROJDIR"
   echo "alias dev    = devprj && ll"
@@ -22,16 +22,16 @@ alias proji=projinfo
 ####### LLM Engineering #######
 LLME=$PROJDIR/llm_engineering
 alias llme="cd $LLME"
-alias llmeact="llme && conda activate llms"
-alias llmej="llmeact && jupyter lab"
+alias llms="llme && conda activate llms"
+alias llmj="llms && jupyter lab"
 
 function llmeinfo () {
   echo ''
-  echo '******  Riskonnect Aliases **************************************'
-  echo "LLME          = $PROJDIR/llm_engineering"
-  echo "alias llme    = cd $LLME"
-  echo "alias llmeact = llme && conda activate llms"
-  echo "alias llmej   = llmeact && jupyter lab"
+  echo '******  LLM Engineering Aliases **************************************'
+  echo "LLME       = $PROJDIR/llm_engineering"
+  echo "alias llme = cd $LLME"
+  echo "alias llms = llme && conda activate llms"
+  echo "alias llmj = llms && jupyter lab"
 }
 alias llmei=llmeinfo
 ```
