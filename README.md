@@ -22,7 +22,7 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
 1. [Install Ubuntu](install-ubuntu.md)
 2. [Customize Ubuntu](customize-ubuntu.md)
 3. [Setup SSH](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-ssh.md)
-4. [Setup RBENV / NVM]()
+4. [Setup RBENV / NVM](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-rbenv-nvm.md)
 5. [Custmize the Ubuntu Environment]()
 6. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
