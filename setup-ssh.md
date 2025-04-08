@@ -1,4 +1,4 @@
-[Home](README.md) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
+[Home](README.md) | [Previous Step](customize-ubuntu.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-rbenv-nvm.m)
 
 This document describes how to customize your installation of ssh keys and the ssh-agent.
 
@@ -149,4 +149,4 @@ Save and close the file. Close the terminal, then re-open the terminal instance.
 
 <br>
 
-[Home](README.md) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
+[Home](README.md) | [Previous Step](customize-ubuntu.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-rbenv-nvm.m)
