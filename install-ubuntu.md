@@ -45,93 +45,49 @@ A complete list of [WSL commands can be found here](https://learn.microsoft.com/
 
 ## Installing Ubuntu
 
-There are 2 ways to install Ubuntu. 1) Download it from the PowerShell command-line, 2) Download it from Microsoft Store.
+1. Open the Windows Store, and search for `Ubuntu`:
 
-<br/>
+2. Select the current LTS version listed
 
-### Download with PowerShell (LTS version)
 
-*Note:* This will download and install the latest LTS version of Ubuntu. If you want to install the `Preview` version, you have to use the `Microsoft Store` download.
 
-To install Ubutnu, in the `Windows PowerShell` (running as administrator), run the following:
+![select-ubuntu](https://github.com/user-attachments/assets/ad860e13-522f-4d9a-ab2b-4a22663f4bf2)
 
-```sh
-wsl.exe --install -d Ubuntu
-```
+<br>
 
-<br/>
+3. Once selected, click `Get`
 
-### Download with Windows Store
+![get-ubuntu](https://github.com/user-attachments/assets/7e6fe860-77de-4ea0-b6d6-b829c263b99a)
 
-1. In the Windows Store, and search for Ubuntu:
+<br>
 
-<br/>
+4. Once downloaded, click `Open`
 
-![Screenshot 2022-12-26 083036](https://user-images.githubusercontent.com/516548/209558996-6738c20f-d499-4721-a097-de07fa4d32e5.png)
+![open-ubuntu](https://github.com/user-attachments/assets/0c4d0224-2839-4cf2-aadf-c4b6e02822c5)
 
-<br/>
+<br>
 
-2. Pick a version to install and click `Install` (this doc will assume you installed version `preview`)
-3. Once downloaded, click `Open`. It will start the setup dialog.
-4. You will be prompted to select a default language, select `English`, then click continue.
+5. Once prompted, enter a username and password:
 
-<br/>
+![enter-username](https://github.com/user-attachments/assets/672969f4-2f8c-484d-b605-d8dab02f6061)
 
-![language](https://user-images.githubusercontent.com/516548/209565740-a900ae4a-a9a8-410f-acf4-ca1bc2fa9671.png)
+<br>
 
-<br/>
+6. After you enter your password a second time, your install will be complete:
 
-5. You will be prompted to create a UNIX user account and password. The password will be needed to run `sudo` in the console.
+![ubuntu-install-complete](https://github.com/user-attachments/assets/95769a12-ec11-4f3b-bdd9-4cad99e466c8)
 
-<br/>
+<br>
 
-![user-pass](https://user-images.githubusercontent.com/516548/209565908-853e9a19-9bf3-4534-b27e-3d366565e0c6.png)
+7. Close and re-open the Windows Terminal. Next to the terminal tab, you'll notice a down-arrow caret `V`. Click the down-arrow to open the selection list:
 
-<br/>
+![terminal-select](https://github.com/user-attachments/assets/7e4ceb50-4706-4b51-ba04-e3a78e38747f)
 
-6. In the advanced setup, (use the default settings) click `Setup`
+<br>
 
-<br/>
+Going forward, you can select the desired server instance from this list. In the next step, it demonstrates how to set the new Ubuntu instance as the default terminal instance. 
 
-![setup](https://user-images.githubusercontent.com/516548/209565963-356d74e8-d865-4b6d-8bf7-99330428c91b.png)
-
-<br/>
-
-7. Once it finishes, it will open a new terminal session. Click the down-arrow in the tab bar and click `Settings`.
-
-<br/>
-
-![new-settings](https://user-images.githubusercontent.com/516548/192082679-8cc094a2-e920-4b00-943e-91a3e75ccb4b.png)
-
-<br/>
-
-8. In the `Profile` section, click `+ Add a new profile`.
-
-<br/>
-
-![add-new-profile](https://user-images.githubusercontent.com/516548/209566418-b7493c4f-efe2-4b06-8d33-80b7389e59e7.png)
-
-<br/>
-
-9. Select Ubuntu, then Dupilcate
-
-<br/>
-
-![preview-dup](https://user-images.githubusercontent.com/516548/209566532-dc959837-453d-4f54-845f-bc24c4057a5c.png)
-
-<br/>
-
-10. Select the profile you created an rename it to the version of Ubuntu that is being used, then click `save`
-
-<br/>
-
-![rename](https://user-images.githubusercontent.com/516548/209566740-3bc99dbe-8336-4476-909f-6fd6558f0102.png)
-
-<br/>
-
-11. Once saved, scroll down to the `Additional settings` section and click `Apperance`. Change the color scheme to `Campbell` and the font face to `CaskaydiaCove Nerd Font Mono` (or any other Nerd font or Powerline font). Then click `Save` and close the settings tab.
-
-<br/><br/>
+<br>
 
 ## Update Ubuntu
 
