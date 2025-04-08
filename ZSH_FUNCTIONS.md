@@ -1,4 +1,4 @@
-[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
+[Home](README.md) | [Custmize the Ubuntu Environment](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-the-ubuntu-environment.md)
 
 <br/>
 
@@ -355,4 +355,4 @@ alias rbenvs='rbenvi'
 
 <br/>
 
-[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-zsh_functions)
+[Home](README.md) | [Custmize the Ubuntu Environment](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-the-ubuntu-environment.md)
