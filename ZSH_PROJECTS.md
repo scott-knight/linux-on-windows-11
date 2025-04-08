@@ -13,7 +13,7 @@ alias dev="devprj && ll"
 function projinfo () {
   echo ''
   echo '******  PROJECT Aliases **************************************'
-  echo "PROJDIR    = $PROJDIR"
+  echo "PROJDIR      = $PROJDIR"
   echo "alias devprj = cd $PROJDIR"
   echo "alias dev    = devprj && ll"
 }
