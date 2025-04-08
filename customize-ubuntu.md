@@ -1,5 +1,4 @@
-[Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
-
+[Home](README.md) | [Previous Step](install-ubuntu.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-ssh.md)
 This document describes how to customize your installation of Ubuntu.
 
 <br>
@@ -174,4 +173,4 @@ You don't have to do this step, however, if you prefer a dark console vs the def
 
 <br>
 
-[Home](README.md) | [Previous Step](install-ubuntu.md) | [Uninstall](unregister-and-uninstall.md)
+[Home](README.md) | [Previous Step](install-ubuntu.md) | [Next Step](https://github.com/scott-knight/linux-on-windows-11/blob/main/setup-ssh.md)
