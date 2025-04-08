@@ -56,7 +56,7 @@ nano .zshrc
 
 <br/>
 
-Copy the [content of .zshrc](https://github.com/RK-BCR/BCR-Web/wiki/.zshrc) and save.
+Copy the [content of .zshrc](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSHRC.md) and save.
 
 <br>
 
@@ -66,7 +66,7 @@ Close the terminal and re-open the terminal. You should see something similar to
 
 <br>
 
-## Copy [.zsh_alias_list](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_alias_list)
+## Copy [.zsh_alias_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md}
 
 Open `.zsh_alias_list`
 
@@ -78,7 +78,7 @@ nano .zsh_alias_list
 
 <br/>
 
-Copy the [content of .zsh_alias_list](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_alias_list) and save.
+Copy the [content of .zsh_alias_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md) and save.
 
 Reload the terminal instance.
 
@@ -86,7 +86,7 @@ From now on, when you want to reload the shell, simply type `reload`
 
 <br/>
 
-## Copy [.zsh_functions](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_functions)
+## Copy [.zsh_functions](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_FUNCTIONS.md)
 
 Open `.zsh_functions`
 
@@ -98,13 +98,13 @@ nano .zsh_functions
 
 <br/>
 
-Copy the [contents of .zsh_functions](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_functions) and save.
+Copy the [contents of .zsh_functions](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_FUNCTIONS.md) and save.
 
 Type `reload` to reload the shell.
 
 <br/>
 
-## Copy [.zsh_riskonnect](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_riskonnect)
+## Copy [.zsh_projects](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_PROJECTS.md)
 
 Open `.zsh_riskonnect`
 
@@ -116,7 +116,7 @@ nano .zsh_riskonnect
 
 <br/>
 
-Copy the [contents of .zsh_riskonnect](https://github.com/RK-BCR/BCR-Web/wiki/.zsh_riskonnect) and save.
+Copy the [contents of .zsh_projects](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_PROJECTS.md) and save.
 
 Type `reload` to reload the shell.
 
