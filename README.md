@@ -38,6 +38,7 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
 
 - [.zsh_functions](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_FUNCTIONS.md)
 - [.zsh_alist_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md)
+- [.zsh_projects](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_PROJECTS.md)
 - [.zshrc](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSHRC.md)
 
 <br>
