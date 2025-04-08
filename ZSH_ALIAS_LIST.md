@@ -16,18 +16,10 @@ alias myip="curl https://ipecho.net/plain; echo"
 alias ehosts="sudo vim /private/etc/hosts"
 alias pbcopy="clip.exe"
 alias pbpaste="powershell.exe -command 'Get-Clipboard' | head -n -1"
-
-
-# Projects code
-PROJCS=$HOME/projects
-alias dev="cd $PROJCS && ll"
-alias sdev="dev"
 alias c="code"
-
 
 # ERLANG
 alias erlang="echo Erlang version is: ; erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell ; echo use the command erl to start the Erlang CLI"
-
 
 # Ruby/Rails
 alias echomigrate="echo Performing rails migration"
@@ -46,7 +38,6 @@ alias rg='rails g'
 alias rfix="chmod u+x bin/rails"
 alias rpid="lsof -wni tcp:3000"
 alias rstop="kill -9 "
-
 
 # GIT commands
 alias gbr="git branch "
@@ -67,7 +58,6 @@ alias gpush="git push"
 alias gstat="git status"
 alias glog="git log --pretty=full"
 alias glogm="git log --pretty=medium"
-
 
 # rbenv list
 alias rbv="rbenv version"                        # shows the current ruby version
