@@ -1,4 +1,4 @@
-[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
+[Home](README.md) | [Custmize the Ubuntu Environment](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-the-ubuntu-environment.md)
 
 <br/>
 
@@ -102,4 +102,4 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 <br/>
 
-[Home](README.md) | [Customize Ubuntu](customize-ubuntu.md#copy-the-zshrc-content)
+[Home](README.md) | [Custmize the Ubuntu Environment](https://github.com/scott-knight/linux-on-windows-11/blob/main/customize-the-ubuntu-environment.md)
