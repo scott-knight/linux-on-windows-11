@@ -6,17 +6,20 @@ This content demonstrates how to setup Linux on Windows 11, to semi-replicate a 
 
 I use this documentation for my own purposes, but you, the reader, are allowed to use this information for your own purposes as well. These instructions are given only for demonstration purposes, they are not a definitive guide. Follow (use) these instructions at your own risk. You bear the full responsibility of the outcome for following (using) them. By using these instructions, you agree to own and accept the full liablity of the outcome or result. Additionally, you are welcome to fork this project/information and/or submit pull requests (PRs), to add to the information. I retain the right to accept or reject any PR for any reason. You are welcome to write up your own doc and post it where you want if you don't agree with what's posted.
 
-### INFO
-Below is the step-by-step guide describing how to install all the bits needed to get a Linux (Ubuntu) instance installed, set up, and customized to a state where you can use a console session to write and push code. I created this guide as a safety measure for restoring a destroyed Windows 11 installation and/or my Ubuntu installation (which has happened several times). That being said, this is the list of things that need to be done in order to get things working:
+### Setup WSL, TERMNIAL, oh-my-posh, VSCode
+Steps 1-3 are Windows setup instructions. Once you've completed these steps, you shouldn't have to do them again. Once Windows Terminal is setup, you should be good for the lifetime of your Windows install (pending needed updates if there are any).
 
 1. [Install WSL2](install-wsl2.md)
 2. [Install VSCode (if you want)](install-vscode.md)
 3. [Install Windows Terminal](install-windows-terminal.md)
 4. [Install oh-my-posh and required libraries](install-oh-my-posh-and-required-libraries.md)
 5. [Configure Windows Terminal](configure-windows-terminal.md)
-6. [Install Ubuntu](install-ubuntu.md)
-7. [Customize Ubuntu](customize-ubuntu.md)
-8. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
+
+
+   
+7. [Install Ubuntu](install-ubuntu.md)
+8. [Customize Ubuntu](customize-ubuntu.md)
+9. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
 ### IMPORTANT NOTES
 
