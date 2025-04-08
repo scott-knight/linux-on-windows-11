@@ -66,7 +66,7 @@ Close the terminal and re-open the terminal. You should see something similar to
 
 <br>
 
-## Copy [.zsh_alias_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md}
+## Copy [.zsh_alias_list](https://github.com/scott-knight/linux-on-windows-11/blob/main/ZSH_ALIAS_LIST.md)
 
 Open `.zsh_alias_list`
 
