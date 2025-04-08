@@ -87,7 +87,7 @@ code .
 Next, we need system files for the environment. Run the following:
 
 ```sh
-touch .zsh_functions .zsh_alias_list .zsh_riskonnect .gemrc .gitconfig && mkdir riskonnect.projects
+touch .zsh_functions .zsh_alias_list .zsh_projects .gemrc .gitconfig && mkdir dev.projects
 ```
 
 <br>
