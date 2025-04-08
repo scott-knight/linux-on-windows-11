@@ -21,7 +21,10 @@ Steps 1-3 are Windows setup instructions. Once you've completed these steps, you
    
 1. [Install Ubuntu](install-ubuntu.md)
 2. [Customize Ubuntu](customize-ubuntu.md)
-3. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
+3. [Setup SSH]()
+4. [Setup RBENV / NVM]()
+5. [Custmize the Ubuntu Environment]()
+6. [Unregister (from WSL) and Uninstall](unregister-and-uninstall.md)
 
 <br/>
 
