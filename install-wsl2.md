@@ -1,11 +1,5 @@
 [Home](README.md) | [Next Step](install-vscode.md)
 
-<br/>
-
-This document describes how to install WSL2 on Windows. 
-
-<br>
-
 ## Install WSL
 
 This process is the same for Windows versions 10 and 11. It's possible this has already be done for you. However, if it hasn't, do the following:
@@ -48,4 +42,4 @@ For more information about how to use WSL, please visit the [WSL homepage](https
 
 <br>
 
-[Home](README.md)
+[Home](README.md) | [Next Step](install-vscode.md)
