@@ -42,8 +42,4 @@ After clicking settings you will see a selection for Default Profile. Here you c
 
 <br/>
 
-Now you are ready to [Install Oh-my-Posh and Required Libraries](install-oh-my-posh-and-required-libraries.md)
-
-<br/>
-
-[Home](README.md) | [Previous Step](install-vscode.md)
+[Home](README.md) | [Previous Step](install-vscode.md) | [Next Step](install-oh-my-posh-and-required-libraries.md)
