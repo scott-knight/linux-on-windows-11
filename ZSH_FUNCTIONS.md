@@ -163,8 +163,13 @@ function yarnup() {
 }
 alias yarnui="yarnup"
 
+function wajigup() {
+  wajig update && wajig upgrade -y && wajig autoremove && wajig autoclean &&
+}
+
 function update() {
   echo "Upgrading ALL the things..."
+  wajigup &&
   update_rbenv &&
   upgrade_brew &&
   updateNVM &&
