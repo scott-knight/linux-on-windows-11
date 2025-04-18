@@ -53,6 +53,12 @@ You should use the `wajig` command to update Ubuntu from now on.
 wajig install -y apt-transport-https  autoconf  bison  build-essential  checkinstall  clang  curl  gcc giflib-tools  git  gpg  gnupg2  libncurses-dev libdb-dev libexpat1-dev libffi-dev libfftw3-dev libheif-dev libgdbm-dev libgdbm6 libglib2.0-0 libglib2.0-dev libgsf-1-dev libheif-dev liblzma-dev libjpeg-dev liblcms2-dev libpoppler-glib8 libpoppler-glib-dev libpng-dev libpq-dev libreadline-dev librsvg2-dev libtiff5-dev libssl-dev libwebp-dev libxml2-dev libxslt-dev libyaml-dev lsb-release make  patch  pkg-config  wget  vim  zlib1g-dev  zsh
 ```
 
+OR shorter version
+
+```
+wajig install -y apt-transport-https autoconf bison build-essential checkinstall curl git gpg gnupg2 libssl-dev libyaml-dev lsb-release make patch pkg-config wget vim zsh
+```
+
 <br/>
 
 2. Once everything is installed, run the following:
