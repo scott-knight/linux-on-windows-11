@@ -21,6 +21,20 @@ SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_GIT_BRANCH_SHOW=true
 SPACESHIP_PROMPT_ASYNC=false
 
+# .zhistory
+HISTFILE=$HOME/.zhistory
+HISTSIZE=100000
+SAVEHIST=100000
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_VERIFY
+bindkey "${terminfo[kcuu1]}" history-search-backward
+bindkey "${terminfo[kcud1]}" history-search-forward
+
 # BREW
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BREW_OPT_PATH="/home/linuxbrew/.linuxbrew/opt"
