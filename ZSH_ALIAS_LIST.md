@@ -94,17 +94,6 @@ function fixgit () {
 }
 alias gprune="fixgit"
 # https://stackoverflow.com/questions/10068640/git-error-on-git-pull-unable-to-update-local-ref
-
-# rbenv list
-alias rbv="rbenv version"                        # shows the current ruby version
-alias rbvs="rbenv versions"                      # shows installed ruby versions
-alias rbvlist="rbenv install --list-all"         # show all availabe ruby versions
-alias rehash="rbenv rehash"                      # refreshes rbenv
-alias active="rbenv gemset active"               # shows the active gemset
-alias gemsloc="gem env home"                     # shows the current rubygems environment
-alias gemloc="gem env home"                      # shows the current rubygems environment
-alias gemenv="gem env home"                      # shows the current rubygems environment
-
 ```
 <br/>
 
