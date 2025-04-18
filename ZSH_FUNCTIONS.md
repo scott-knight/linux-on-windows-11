@@ -105,7 +105,7 @@ function upgrade_brew() {
   brew update &&
   echo ''
   echo "Upgrading BREW installs"
-  brew upgrade --greedy &&
+  brew upgrade &&
   echo ''
   echo "Cleaning up BREW"
   brew cleanup &&
