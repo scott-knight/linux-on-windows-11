@@ -16,7 +16,7 @@ Sources: [Powerline Setup](https://docs.microsoft.com/en-us/windows/terminal/tut
 
 These are the steps to install the `Windows PowerShell`. Documentation can be [found here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows).
 
-1. [Download the MSI installer](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-window) for Windows PowerShell.
+1. [Download the MSI installer](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5#installing-the-msi-package) for Windows PowerShell.
 2. Once downloaded, install Windows PowerShell
 3. It will prompt you to select (with a checkbox) to update using Windows Update. Make sure you select this option.
 4. Once installed, it will be selectable in the Windows Terminal as an option.
