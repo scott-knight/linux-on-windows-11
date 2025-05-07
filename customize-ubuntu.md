@@ -134,13 +134,13 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc &&
 5. Add BREW taps
 
 ```sh
-brew tap homebrew/linux-fonts
+ulimit -n 8192 && brew install font-caskaydia-cove-nerd-font font-caskaydia-mono-nerd-font
 ```
 
 6. Install stuff
 
 ```sh
-ulimit -n 8192 && brew install git font-caskaydia-cove-nerd-font font-caskaydia-mono-nerd-font
+ulimit -n 8192 && brew install git libffi openssl zlib
 ```
 
 Once it completes installing, close and reopen the Windows Terminal
